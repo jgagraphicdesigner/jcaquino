@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHL Systems & Funnels — JC Aquino</title>
+<title>GHL Systems & Funnels — The "Wired" Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
 <style>
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
@@ -12,8 +12,8 @@
 .pkg-card:hover{border-color:var(--orange-border);transform:translateY(-4px)}
 .pkg-card.featured{border-color:var(--orange-border);background:rgba(255,77,0,0.04)}
 .pkg-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 16px;border-radius:0 0 10px 10px;background:var(--orange);color:#080808}
-.pkg-name{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;margin-bottom:6px}
-.pkg-price{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:2px;color:var(--orange);line-height:1;margin-bottom:4px}
+.pkg-name{font-family:'Press Start 2P',monospace;font-size:12px;letter-spacing:.5px;line-height:1.7;margin-bottom:10px}
+.pkg-price{font-family:'Press Start 2P',monospace;font-size:52px;letter-spacing:2px;color:var(--orange);line-height:1;margin-bottom:4px}
 .pkg-per{font-size:13px;color:var(--white-dim);margin-bottom:24px}
 .pkg-divider{height:1px;background:var(--frost-border);margin:20px 0}
 .pkg-feature{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white-dim);margin-bottom:10px}
@@ -23,12 +23,49 @@
 .pkg-card:not(.featured) .pkg-cta:hover{border-color:var(--orange-border);background:var(--orange-dim);color:var(--orange)}
 .pkg-card.featured .pkg-cta{background:var(--orange);color:#080808}
 .what-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
-.what-card{background:var(--black3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:28px}
+.what-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:28px}
 .what-icon{width:40px;height:40px;border:1px solid var(--orange-border);border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--orange-dim);margin-bottom:16px}
 .what-icon svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.what-title{font-weight:600;font-size:16px;margin-bottom:8px}
+.what-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px}
 .what-desc{font-size:14px;line-height:1.75;color:var(--white-dim)}
 @media(max-width:900px){.pkg-grid,.what-grid{grid-template-columns:1fr}}
+
+/* Warm hero bg */
+.page-hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(160,50,0,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(100,30,0,0.14) 0%, transparent 50%),
+    linear-gradient(160deg, #1a0a00 0%, #0c0700 60%, #100800 100%);
+  position: relative;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .04;
+  background-image: linear-gradient(rgba(255,100,20,.8) 1px,transparent 1px), linear-gradient(90deg,rgba(255,100,20,.8) 1px,transparent 1px);
+  background-size: 60px 60px;
+}
+.page-hero > * { position: relative; z-index: 1; }
+.page-hero-eyebrow {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; letter-spacing: .14em;
+  text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+.section-heading {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: clamp(16px, 2.5vw, 30px) !important;
+  line-height: 1.55 !important; letter-spacing: 1px;
+}
+.section-heading em { text-shadow: 0 0 20px rgba(255,77,0,.4); }
+.section-label {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+/* Card backgrounds */
+.pkg-card, .what-card { background: rgba(255,130,30,0.06) !important; }
+/* Metric vals */
+.metric-val { font-family: 'Press Start 2P', monospace !important; font-size: 16px !important; text-shadow: 0 0 14px rgba(255,77,0,.4); }
+/* Case tag */
+.case-cat, .case-tag { font-family: 'Press Start 2P', monospace !important; font-size: 8px !important; line-height: 1.7; text-shadow: 0 0 10px rgba(255,77,0,.4); }
+
 </style>
 </head>
 <body>
@@ -53,7 +90,7 @@
   </div>
 </section>
 
-<section style="background:var(--black2)">
+<section style="background:var(--bg2)">
   <div class="section-label reveal">Packages</div>
   <h2 class="section-heading reveal">Full setup.<br><em>No guesswork.</em></h2>
   <div class="pkg-grid">

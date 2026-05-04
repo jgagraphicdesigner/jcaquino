@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Process — JC Aquino</title>
+<title>Process — The "Wired" Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <style>
 .steps{max-width:760px;margin:60px auto 0}
 .step{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:40px 0;border-bottom:1px solid var(--frost-border);position:relative}
 .step:last-child{border-bottom:none}
-.step-num{font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:2px;color:rgba(255,77,0,0.15);line-height:1}
+.step-num{font-family:'Press Start 2P',monospace;font-size:64px;letter-spacing:2px;color:rgba(255,77,0,0.15);line-height:1}
 .step-body{}
 .step-tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
-.step-title{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:2px;margin-bottom:12px}
+.step-title{font-family:'Press Start 2P',monospace;font-size:36px;letter-spacing:2px;margin-bottom:12px}
 .step-desc{font-size:15px;line-height:1.8;color:var(--white-dim)}
 .step-time{display:inline-block;margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.08em;padding:5px 14px;border-radius:20px;border:1px solid var(--frost-border);color:var(--white-dim)}
 .faq{max-width:760px;margin:0 auto}
@@ -23,6 +23,43 @@
 .faq-item.open .faq-q::after{transform:rotate(45deg)}
 .faq-a{font-size:14px;line-height:1.8;color:var(--white-dim);max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s}
 .faq-item.open .faq-a{max-height:200px;padding-top:14px}
+
+/* Warm hero bg */
+.page-hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(160,50,0,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(100,30,0,0.14) 0%, transparent 50%),
+    linear-gradient(160deg, #1a0a00 0%, #0c0700 60%, #100800 100%);
+  position: relative;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .04;
+  background-image: linear-gradient(rgba(255,100,20,.8) 1px,transparent 1px), linear-gradient(90deg,rgba(255,100,20,.8) 1px,transparent 1px);
+  background-size: 60px 60px;
+}
+.page-hero > * { position: relative; z-index: 1; }
+.page-hero-eyebrow {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; letter-spacing: .14em;
+  text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+.section-heading {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: clamp(16px, 2.5vw, 30px) !important;
+  line-height: 1.55 !important; letter-spacing: 1px;
+}
+.section-heading em { text-shadow: 0 0 20px rgba(255,77,0,.4); }
+.section-label {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+/* Card backgrounds */
+.pkg-card, .what-card { background: rgba(255,130,30,0.06) !important; }
+/* Metric vals */
+.metric-val { font-family: 'Press Start 2P', monospace !important; font-size: 16px !important; text-shadow: 0 0 14px rgba(255,77,0,.4); }
+/* Case tag */
+.case-cat, .case-tag { font-family: 'Press Start 2P', monospace !important; font-size: 8px !important; line-height: 1.7; text-shadow: 0 0 10px rgba(255,77,0,.4); }
+
 </style>
 </head>
 <body>
@@ -75,7 +112,7 @@
   </div>
 </section>
 
-<section style="background:var(--black2)">
+<section style="background:var(--bg2)">
   <div class="section-label reveal">FAQs</div>
   <h2 class="section-heading reveal">Common<br><em>questions</em></h2>
   <div class="faq reveal" style="margin-top:48px">

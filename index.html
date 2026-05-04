@@ -1,225 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JC Aquino — Creative Digital Studio</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Aquino — The "Wired" Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <style>
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 80px;position:relative;overflow:hidden}
-.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;display:flex;align-items:center;gap:10px;opacity:0;animation:fadeUp .7s ease .2s forwards}
-.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--orange)}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,140px);line-height:.88;letter-spacing:4px;max-width:1000px;opacity:0;animation:fadeUp .9s ease .4s forwards}
-.hero h1 .lo{color:var(--orange);display:block}
-.hero h1 .ou{-webkit-text-stroke:1.5px var(--white);color:transparent;display:block}
-.hero-sub{max-width:500px;margin-top:32px;font-size:16px;line-height:1.8;color:var(--white-dim);opacity:0;animation:fadeUp .9s ease .6s forwards}
-.hero-actions{display:flex;gap:14px;align-items:center;margin-top:44px;opacity:0;animation:fadeUp .9s ease .8s forwards}
-.hero-scroll{position:absolute;bottom:36px;right:56px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--white-dim);opacity:0;animation:fadeIn 1s ease 1.4s forwards}
-.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--orange));animation:pulse 2s ease infinite}
-@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+/* ══════ HERO ══════ */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 52px 72px;
+  position: relative; overflow: hidden;
+}
 
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--frost-border)}
-.stat-box{background:var(--black2);padding:40px 32px;position:relative;overflow:hidden;transition:background .25s}
-.stat-box:hover{background:var(--black3)}
-.stat-box::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--orange);transition:width .4s}
-.stat-box:hover::after{width:100%}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:58px;letter-spacing:2px;color:var(--orange);line-height:1;margin-bottom:8px}
-.stat-label{font-size:14px;line-height:1.6;color:var(--white-dim)}
+/* Warm studio photo simulation */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 90% 70% at 20% 50%, rgba(160,50,0,0.32) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 80% 30%, rgba(100,30,0,0.20) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 90%, rgba(255,77,0,0.08) 0%, transparent 60%),
+    linear-gradient(160deg, #1a0a00 0%, #0c0700 50%, #100800 100%);
+}
+/* Grid lines overlay */
+.hero-grid {
+  position: absolute; inset: 0; z-index: 1; opacity: .04;
+  background-image:
+    linear-gradient(rgba(255,100,20,.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,100,20,.8) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-content { position: relative; z-index: 2; }
 
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
-.svc-card{background:var(--frost);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:36px 32px;backdrop-filter:blur(20px);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit;display:block}
-.svc-card:hover{border-color:var(--orange-border);transform:translateY(-5px)}
-.svc-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,77,0,0.08) 0%,transparent 55%);opacity:0;transition:opacity .35s;pointer-events:none}
-.svc-card:hover::before{opacity:1}
-.svc-icon{width:44px;height:44px;margin-bottom:22px;border:1px solid var(--orange-border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--orange-dim)}
-.svc-icon svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.svc-num{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--orange);margin-bottom:28px;opacity:.8}
-.svc-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:12px}
-.svc-desc{font-size:14px;line-height:1.8;color:var(--white-dim);margin-bottom:24px}
-.svc-tags{display:flex;flex-wrap:wrap;gap:7px}
-.tag{font-size:11px;font-weight:500;padding:4px 11px;border-radius:20px;border:1px solid var(--frost-border);color:var(--white-dim);background:var(--white-faint)}
-.svc-arrow{margin-top:28px;color:var(--orange);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.hero-eyebrow {
+  font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .25em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 28px;
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: fadeUp .7s ease .2s forwards;
+}
+.hero-eyebrow::before { content: '//'; opacity: .5; }
 
-.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:56px}
-.case-card{background:var(--black3);border:1px solid var(--frost-border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit;display:block}
-.case-card:hover{border-color:var(--orange-border);transform:translateY(-4px)}
-.case-card.wide{grid-column:1/-1;display:grid;grid-template-columns:5fr 4fr}
-.case-visual{min-height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--black)}
-.case-card.wide .case-visual{min-height:320px}
-.cv-glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,77,0,0.11) 0%,transparent 65%)}
-.cv-label{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,48px);letter-spacing:3px;color:rgba(255,255,255,0.055);text-align:center;line-height:1.1;padding:20px;position:relative;z-index:1}
-.cv-badge{position:absolute;top:16px;left:16px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--orange);color:#080808;z-index:2}
-.case-content{padding:28px 32px}
-.case-card.wide .case-content{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
-.case-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
-.case-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:10px;line-height:1.1}
-.case-card.wide .case-title{font-size:30px}
-.case-desc{font-size:14px;line-height:1.75;color:var(--white-dim);margin-bottom:22px}
-.case-metrics{display:flex;gap:28px;border-top:1px solid var(--frost-border);padding-top:18px}
-.metric-val{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--orange)}
-.metric-label{font-size:12px;color:var(--white-dim);margin-top:2px}
+.hero h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(22px, 4.5vw, 58px);
+  line-height: 1.5; letter-spacing: 2px;
+  max-width: 900px;
+  opacity: 0; animation: fadeUp .9s ease .4s forwards;
+}
+.hero h1 .lo { color: var(--orange); text-shadow: 0 0 30px rgba(255,77,0,.5); display: block; }
+.hero h1 .ou { -webkit-text-stroke: 1.5px var(--white); color: transparent; display: block; }
 
-.process-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--frost-border);border-radius:var(--radius);overflow:hidden;margin-top:56px}
-.process-step{background:var(--black2);padding:36px 28px;transition:background .25s}
-.process-step:hover{background:var(--black3)}
-.step-num{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:2px;color:rgba(255,77,0,0.14);line-height:1;margin-bottom:16px}
-.step-title{font-weight:600;font-size:16px;margin-bottom:8px}
-.step-desc{font-size:14px;line-height:1.75;color:var(--white-dim)}
+.hero-sub {
+  max-width: 540px; margin-top: 28px;
+  font-size: 15px; line-height: 1.9; color: var(--white-dim); font-weight: 500;
+  opacity: 0; animation: fadeUp .9s ease .6s forwards;
+}
+.hero-actions {
+  display: flex; gap: 14px; align-items: center; margin-top: 44px;
+  opacity: 0; animation: fadeUp .9s ease .75s forwards;
+}
+.hero-wired {
+  position: absolute; bottom: 32px; right: 52px; z-index: 2;
+  font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .3em; text-transform: uppercase; color: var(--white-dim);
+  opacity: 0; animation: fadeIn 1.2s ease 1.2s forwards;
+}
+.hero-scroll {
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--white-dim);
+  opacity: 0; animation: fadeIn 1s ease 1.4s forwards;
+}
+.scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, transparent, var(--orange)); animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
-.cta-banner{text-align:center;padding:110px 56px;position:relative;overflow:hidden}
-.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:280px;background:radial-gradient(ellipse,rgba(255,77,0,0.13) 0%,transparent 68%);pointer-events:none}
-.cta-banner h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:4px;line-height:.9;margin-bottom:28px;position:relative}
-.cta-banner h2 .ou{-webkit-text-stroke:1.5px var(--white);color:transparent}
-.cta-banner h2 em{color:var(--orange);font-style:normal}
-.cta-sub{font-size:16px;color:var(--white-dim);margin-bottom:40px}
-.cta-sub a{color:var(--orange);text-decoration:none}
+/* ══════ BENTO STATS ══════ */
+.bento-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px; background: rgba(255,255,255,0.06);
+}
+.stat-box {
+  background: var(--bg2); padding: 36px 28px;
+  position: relative; overflow: hidden; transition: background .25s;
+}
+.stat-box:hover { background: var(--bg3); }
+.stat-box::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:0; height:2px; background:var(--orange);
+  transition:width .4s;
+}
+.stat-box:hover::after { width: 100%; }
+.stat-num {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 36px; color: var(--orange); line-height: 1;
+  margin-bottom: 10px; text-shadow: 0 0 20px rgba(255,77,0,.4);
+}
+.stat-label { font-size: 13px; line-height: 1.65; color: var(--white-dim); font-weight: 500; }
 
+/* ══════ BENTO SERVICES ══════ */
+.bento-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 52px;
+}
+.svc-card {
+  background: var(--frost-bg); border: 1px solid var(--frost-border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  backdrop-filter: blur(20px); position: relative; overflow: hidden;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+  text-decoration: none; color: inherit; display: block;
+}
+.svc-card:hover {
+  border-color: var(--orange-border); transform: translateY(-5px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.4), 0 0 40px rgba(255,77,0,.06);
+}
+.svc-card::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(circle at 50% 0%,rgba(255,77,0,.09) 0%,transparent 55%);
+  opacity:0; transition:opacity .35s; pointer-events:none;
+}
+.svc-card:hover::before { opacity: 1; }
+.svc-card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.svc-icon {
+  width: 42px; height: 42px; margin-bottom: 20px;
+  border: 1px solid var(--orange-border); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--orange-dim);
+}
+.svc-icon svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.svc-num { font-family:'Press Start 2P',monospace; font-size:8px; color:var(--orange); margin-bottom:20px; opacity:.7; letter-spacing:.1em; }
+.svc-title { font-family:'Press Start 2P',monospace; font-size:13px; line-height:1.7; letter-spacing:.5px; margin-bottom:12px; }
+.svc-desc { font-size:13px; line-height:1.85; color:var(--white-dim); font-weight:500; margin-bottom:22px; }
+.svc-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.tag { font-size:10px; font-weight:700; padding:4px 10px; border-radius:20px; border:1px solid var(--frost-border); color:var(--white-dim); background:var(--white-faint); letter-spacing:.04em; text-transform:uppercase; }
+.svc-arrow { margin-top:24px; color:var(--orange); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+
+/* ══════ BENTO WORK ══════ */
+.bento-work {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-top: 52px;
+}
+.case-card {
+  background: var(--bg3); border: 1px solid var(--frost-border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+  text-decoration: none; color: inherit; display: block;
+}
+.case-card:hover {
+  border-color: var(--orange-border); transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4), 0 0 30px rgba(255,77,0,.06);
+}
+.case-card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 5fr 4fr; }
+.case-visual {
+  min-height: 200px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  background: var(--bg);
+}
+.case-card.wide .case-visual { min-height: 300px; }
+.cv-glow { position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,77,0,.10) 0%,transparent 65%); }
+.cv-grid {
+  position:absolute;inset:0;opacity:.04;
+  background-image:linear-gradient(rgba(255,100,20,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,100,20,.8) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.cv-label {
+  font-family:'Press Start 2P',monospace;
+  font-size:clamp(16px,2.5vw,28px); letter-spacing:2px;
+  color:rgba(255,255,255,.055); text-align:center;
+  line-height:1.4; padding:20px; position:relative; z-index:1;
+}
+.cv-badge {
+  position:absolute; top:14px; left:14px;
+  font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:5px 12px; border-radius:20px;
+  background:var(--orange); color:#080300; z-index:2; font-family:'Montserrat',sans-serif;
+}
+.case-content { padding:26px 30px; }
+.case-card.wide .case-content { padding:36px 40px; display:flex; flex-direction:column; justify-content:center; }
+.case-cat { font-family:'Press Start 2P',monospace; font-size:8px; letter-spacing:.08em; color:var(--orange); margin-bottom:10px; line-height:1.6; text-shadow:0 0 10px rgba(255,77,0,.4); }
+.case-title { font-family:'Montserrat',sans-serif; font-weight:700; font-size:18px; letter-spacing:-.2px; margin-bottom:10px; line-height:1.3; }
+.case-card.wide .case-title { font-size:24px; }
+.case-desc { font-size:13px; line-height:1.8; color:var(--white-dim); margin-bottom:20px; font-weight:500; }
+.case-metrics { display:flex; gap:24px; border-top:1px solid var(--frost-border); padding-top:16px; }
+.metric-val { font-family:'Press Start 2P',monospace; font-size:18px; color:var(--orange); line-height:1.2; text-shadow:0 0 14px rgba(255,77,0,.4); }
+.metric-label { font-size:11px; color:var(--white-dim); margin-top:4px; font-weight:600; letter-spacing:.03em; }
+
+/* ══════ PROCESS BENTO ══════ */
+.bento-process {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2px; background: rgba(255,255,255,.06);
+  border-radius: var(--radius); overflow: hidden;
+  margin-top: 52px;
+}
+.process-step { background: var(--bg2); padding: 32px 24px; transition: background .25s; }
+.process-step:hover { background: var(--bg3); }
+.step-num { font-family:'Press Start 2P',monospace; font-size:28px; color:rgba(255,77,0,.18); line-height:1; margin-bottom:18px; }
+.step-title { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; margin-bottom:8px; letter-spacing:.02em; }
+.step-desc { font-size:13px; line-height:1.8; color:var(--white-dim); font-weight:500; }
+
+/* ══════ CTA BANNER ══════ */
+.cta-banner {
+  text-align: center; padding: 100px 52px;
+  position: relative; overflow: hidden;
+}
+.cta-glow {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:700px; height:350px;
+  background:radial-gradient(ellipse,rgba(255,77,0,.14) 0%,transparent 68%);
+  pointer-events:none;
+}
+.cta-grid {
+  position:absolute; inset:0; opacity:.03;
+  background-image:linear-gradient(rgba(255,100,20,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,100,20,1) 1px,transparent 1px);
+  background-size:50px 50px;
+}
+.cta-banner h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(18px, 3.5vw, 44px);
+  line-height: 1.6; letter-spacing: 2px;
+  margin-bottom: 24px; position: relative;
+}
+.cta-banner h2 .ou { -webkit-text-stroke: 1.5px var(--white); color: transparent; }
+.cta-banner h2 em { color: var(--orange); font-style: normal; text-shadow: 0 0 30px rgba(255,77,0,.45); }
+.cta-sub { font-size: 15px; color: var(--white-dim); margin-bottom: 40px; font-weight: 500; }
+.cta-sub a { color: var(--orange); text-decoration: none; }
+
+/* RESPONSIVE */
 @media(max-width:900px){
-  .hero{padding:0 24px 60px}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .services-grid{grid-template-columns:1fr}
-  .cases-grid{grid-template-columns:1fr}
-  .case-card.wide{grid-template-columns:1fr}
-  .process-strip{grid-template-columns:1fr 1fr}
-  .cta-banner{padding:80px 24px}
+  .hero { padding: 0 20px 60px; }
+  .hero-wired,.hero-scroll { display: none; }
+  .bento-stats { grid-template-columns: 1fr 1fr; }
+  .bento-services { grid-template-columns: 1fr; }
+  .svc-card.wide { grid-template-columns: 1fr; }
+  .bento-work { grid-template-columns: 1fr; }
+  .case-card.wide { grid-template-columns: 1fr; }
+  .bento-process { grid-template-columns: 1fr 1fr; }
+  .cta-banner { padding: 72px 20px; }
 }
 </style>
 </head>
 <body>
 <main>
 
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-eyebrow">JC Aquino &nbsp;·&nbsp; Creative Digital Studio · Based in the Philippines</div>
-  <h1>
-    <span class="ou">Design.</span>
-    <span>Systems.</span>
-    <span class="lo">Results.</span>
-  </h1>
-  <p class="hero-sub">Ecommerce ad creative, high-converting GHL funnels, and custom web applications — built for brands that refuse to blend in.</p>
-  <div class="hero-actions">
-    <a href="work.html" class="btn-primary">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      View my work
-    </a>
-    <a href="services/ecom-ads.html" class="btn-ghost">Explore services</a>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">JC Aquino &nbsp;·&nbsp; Creative Digital Studio &nbsp;·&nbsp; PH</div>
+    <h1>
+      <span class="ou">Design.</span>
+      Systems.
+      <span class="lo">Results.</span>
+    </h1>
+    <p class="hero-sub">Ecommerce ad creative, high-converting GHL funnels, and custom web apps — built for brands that refuse to blend in.</p>
+    <div class="hero-actions">
+      <a href="work.html" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        View my work
+      </a>
+      <a href="services/ecom-ads.html" class="btn-ghost">Explore services</a>
+    </div>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span>SCROLL</span></div>
+  <div class="hero-wired">THE &ldquo;WIRED&rdquo; DESIGNER</div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
+<!-- MARQUEE -->
 <div class="marquee-bar">
   <div class="marquee-track">
-    <span class="dot">●</span><span>Ecommerce Ads</span><span class="dot">●</span><span>GHL Funnels</span><span class="dot">●</span><span>Landing Pages</span><span class="dot">●</span><span>Email Marketing</span><span class="dot">●</span><span>App Development</span><span class="dot">●</span><span>Lead Generation</span><span class="dot">●</span><span>Static Ad Creative</span><span class="dot">●</span><span>Brand Systems</span><span class="dot">●</span><span>Ecommerce Ads</span><span class="dot">●</span><span>GHL Funnels</span><span class="dot">●</span><span>Landing Pages</span><span class="dot">●</span><span>Email Marketing</span><span class="dot">●</span><span>App Development</span><span class="dot">●</span><span>Lead Generation</span><span class="dot">●</span><span>Static Ad Creative</span><span class="dot">●</span><span>Brand Systems</span><span class="dot">●</span>
+    <span class="dot">●</span><span>Ecommerce Ads</span>
+    <span class="dot">●</span><span>GHL Funnels</span>
+    <span class="dot">●</span><span>Landing Pages</span>
+    <span class="dot">●</span><span>Email Marketing</span>
+    <span class="dot">●</span><span>App Development</span>
+    <span class="dot">●</span><span>Lead Generation</span>
+    <span class="dot">●</span><span>Static Ad Creative</span>
+    <span class="dot">●</span><span>Brand Systems</span>
+    <span class="dot">●</span><span>Ecommerce Ads</span>
+    <span class="dot">●</span><span>GHL Funnels</span>
+    <span class="dot">●</span><span>Landing Pages</span>
+    <span class="dot">●</span><span>Email Marketing</span>
+    <span class="dot">●</span><span>App Development</span>
+    <span class="dot">●</span><span>Lead Generation</span>
+    <span class="dot">●</span><span>Static Ad Creative</span>
+    <span class="dot">●</span><span>Brand Systems</span>
+    <span class="dot">●</span>
   </div>
 </div>
 
-<div class="stats-grid">
-  <div class="stat-box reveal"><div class="stat-num" data-target="5" data-suffix="+">0+</div><div class="stat-label">Years design &amp;<br>development experience</div></div>
-  <div class="stat-box reveal reveal-d1"><div class="stat-num" data-target="50" data-suffix="+">0+</div><div class="stat-label">Ecommerce brands<br>served globally</div></div>
-  <div class="stat-box reveal reveal-d2"><div class="stat-num" data-target="200" data-suffix="+">0+</div><div class="stat-label">Ad creatives<br>produced &amp; tested</div></div>
-  <div class="stat-box reveal reveal-d3"><div class="stat-num" data-target="4" data-suffix="+">0+</div><div class="stat-label">Web apps &amp; SaaS tools<br>shipped</div></div>
+<!-- STATS -->
+<div class="bento-stats">
+  <div class="stat-box reveal">
+    <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+    <div class="stat-label">Years design &amp; dev experience</div>
+  </div>
+  <div class="stat-box reveal reveal-d1">
+    <div class="stat-num" data-target="50" data-suffix="+">0+</div>
+    <div class="stat-label">Ecommerce brands served globally</div>
+  </div>
+  <div class="stat-box reveal reveal-d2">
+    <div class="stat-num" data-target="200" data-suffix="+">0+</div>
+    <div class="stat-label">Ad creatives produced &amp; tested</div>
+  </div>
+  <div class="stat-box reveal reveal-d3">
+    <div class="stat-num" data-target="4" data-suffix="+">0+</div>
+    <div class="stat-label">Web apps &amp; SaaS tools shipped</div>
+  </div>
 </div>
 
+<!-- SERVICES -->
 <section id="services">
-  <div class="section-label reveal">01 — Services</div>
-  <h2 class="section-heading reveal">What I <em>build</em><br>for you</h2>
-  <p class="reveal" style="max-width:480px;color:var(--white-dim);font-size:15px;line-height:1.8;margin-top:12px">Four high-impact skill sets, one creative studio. From the first ad impression to the closed deal.</p>
-  <div class="services-grid">
+  <div class="section-label reveal">01 // Services</div>
+  <h2 class="section-heading reveal">What I<br><em>Build</em><br>For You</h2>
+  <p class="reveal" style="max-width:480px;color:var(--white-dim);font-size:14px;line-height:1.9;margin-top:12px;font-weight:500">Four high-impact skill sets, one studio. From the first ad impression to the closed deal.</p>
+
+  <div class="bento-services">
     <a href="services/ecom-ads.html" class="svc-card reveal reveal-d1">
-      <div class="svc-num">01 / 04</div>
+      <div class="svc-num">// 01</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-      <div class="svc-title">Ecommerce Ad Creative</div>
-      <div class="svc-desc">Scroll-stopping static ads built for conversion. Facebook, Instagram, TikTok, Google Display — creatives that drive measurable ROAS.</div>
-      <div class="svc-tags"><span class="tag">Static Ads</span><span class="tag">Meta / FB</span><span class="tag">A/B Variants</span></div>
+      <div class="svc-title">Ecommerce<br>Ad Creative</div>
+      <div class="svc-desc">Scroll-stopping static ads built for conversion. Facebook, Instagram, TikTok, Google Display.</div>
+      <div class="svc-tags"><span class="tag">Static Ads</span><span class="tag">Meta</span><span class="tag">A/B Variants</span></div>
       <div class="svc-arrow">View service →</div>
     </a>
     <a href="services/ghl-funnels.html" class="svc-card reveal reveal-d2">
-      <div class="svc-num">02 / 04</div>
+      <div class="svc-num">// 02</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="svc-title">GHL Systems &amp; Funnels</div>
-      <div class="svc-desc">Complete done-for-you GoHighLevel setups. Landing pages, lead magnets, email sequences, and CRM automation wired together.</div>
-      <div class="svc-tags"><span class="tag">GoHighLevel</span><span class="tag">Landing Pages</span><span class="tag">Automation</span></div>
+      <div class="svc-title">GHL Systems<br>&amp; Funnels</div>
+      <div class="svc-desc">Complete done-for-you GoHighLevel setups. Landing pages, automations, CRM wired together.</div>
+      <div class="svc-tags"><span class="tag">GoHighLevel</span><span class="tag">Funnels</span><span class="tag">Automation</span></div>
       <div class="svc-arrow">View service →</div>
     </a>
     <a href="services/app-development.html" class="svc-card reveal reveal-d3">
-      <div class="svc-num">03 / 04</div>
+      <div class="svc-num">// 03</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-      <div class="svc-title">App Development</div>
-      <div class="svc-desc">Fast-built web apps and SaaS tools using modern vibe coding workflows. Shipped weeks faster than traditional dev.</div>
-      <div class="svc-tags"><span class="tag">PWA / Web Apps</span><span class="tag">Firebase</span><span class="tag">SaaS</span></div>
+      <div class="svc-title">App<br>Development</div>
+      <div class="svc-desc">Fast-built web apps and SaaS tools. Shipped weeks faster than traditional dev cycles.</div>
+      <div class="svc-tags"><span class="tag">PWA</span><span class="tag">Firebase</span><span class="tag">SaaS</span></div>
       <div class="svc-arrow">View service →</div>
     </a>
-    <a href="services/email-marketing.html" class="svc-card reveal reveal-d1" style="grid-column:1/-1;display:flex;flex-direction:row;gap:40px;align-items:center">
-      <div style="flex:1">
-        <div class="svc-num">04 / 04</div>
+    <a href="services/email-marketing.html" class="svc-card wide reveal">
+      <div>
+        <div class="svc-num">// 04</div>
         <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div class="svc-title">Email Marketing Design</div>
-        <div class="svc-desc">Branded HTML email campaigns that land in inboxes and get opened. Follow-up sequences, newsletters, and nurture campaigns.</div>
+        <div class="svc-desc">Branded HTML campaigns that land in inboxes and drive real action. Follow-up sequences, newsletters, nurture campaigns.</div>
       </div>
-      <div style="flex:1"><div class="svc-tags" style="margin-bottom:16px"><span class="tag">HTML Emails</span><span class="tag">Sequences</span><span class="tag">Newsletters</span><span class="tag">CRM Integration</span></div><div class="svc-arrow">View service →</div></div>
+      <div>
+        <div class="svc-tags" style="margin-bottom:18px"><span class="tag">HTML Emails</span><span class="tag">Sequences</span><span class="tag">Newsletters</span><span class="tag">CRM</span></div>
+        <div class="svc-arrow">View service →</div>
+      </div>
     </a>
   </div>
 </section>
 
-<section id="work" style="background:var(--black2)">
-  <div class="section-label reveal">02 — Selected Work</div>
-  <h2 class="section-heading reveal">Real work.<br><em>Real results.</em></h2>
-  <div class="cases-grid">
+<!-- WORK -->
+<section id="work" style="background:var(--bg2)">
+  <div class="section-label reveal">02 // Selected Work</div>
+  <h2 class="section-heading reveal">Real Work.<br><em>Real Results.</em></h2>
+
+  <div class="bento-work">
     <a href="work.html#app-tracker" class="case-card wide reveal">
-      <div class="case-visual"><div class="cv-glow"></div><div class="cv-badge">Featured</div><div class="cv-label">APP<br>TRACKER<br>v6</div></div>
+      <div class="case-visual">
+        <div class="cv-glow"></div>
+        <div class="cv-grid"></div>
+        <div class="cv-badge">Featured</div>
+        <div class="cv-label">APP<br>TRACKER<br>v6</div>
+      </div>
       <div class="case-content">
-        <div class="case-tag">App Development · Firebase · PWA</div>
+        <div class="case-cat">// App Dev · Firebase · PWA</div>
         <div class="case-title">Aus Property Professionals — Project Tracker</div>
-        <div class="case-desc">A full-featured project management PWA for a leading Australian buyers agency. Kanban boards, annotations, version history, team chat, and a full admin system — live in production.</div>
+        <div class="case-desc">A full-featured project management PWA for a leading Australian buyers agency. Kanban boards, annotations, version history, team chat, @mentions, and a full admin system — live in production.</div>
         <div class="case-metrics">
           <div><div class="metric-val">6</div><div class="metric-label">Versions shipped</div></div>
           <div><div class="metric-val">7</div><div class="metric-label">Workflow stages</div></div>
-          <div><div class="metric-val">Live</div><div class="metric-label">Production</div></div>
+          <div><div class="metric-val">Live</div><div class="metric-label">In production</div></div>
         </div>
       </div>
     </a>
+
     <a href="work.html#ecomswap" class="case-card reveal reveal-d1">
-      <div class="case-visual"><div class="cv-glow"></div><div class="cv-label">ECOM<br>AD<br>CREATIVE</div></div>
+      <div class="case-visual"><div class="cv-glow"></div><div class="cv-grid"></div><div class="cv-label">ECOM<br>AD<br>CREATIVE</div></div>
       <div class="case-content">
-        <div class="case-tag">Ecommerce · Static Ads · Meta</div>
+        <div class="case-cat">// Ecommerce · Static Ads</div>
         <div class="case-title">ecomswap.io — Ad Campaign</div>
-        <div class="case-desc">Full ad creative system across 3 sizes, custom brand palette, platform textures, and motion videos.</div>
+        <div class="case-desc">Full ad creative system. 3 sizes, custom palette, platform textures, motion videos.</div>
         <div class="case-metrics"><div><div class="metric-val">6</div><div class="metric-label">Static formats</div></div><div><div class="metric-val">3</div><div class="metric-label">Video variants</div></div></div>
       </div>
     </a>
+
     <a href="work.html#chicky-boom" class="case-card reveal reveal-d2">
-      <div class="case-visual" style="background:linear-gradient(135deg,#0A0A0A,#1A0800)"><div class="cv-glow"></div><div class="cv-label">BRAND<br>IDENTITY</div></div>
+      <div class="case-visual" style="background:linear-gradient(135deg,#0C0700,#200800)"><div class="cv-glow"></div><div class="cv-grid"></div><div class="cv-label">BRAND<br>IDENTITY</div></div>
       <div class="case-content">
-        <div class="case-tag">Brand Identity · F&amp;B · Philippines</div>
+        <div class="case-cat">// Brand · F&B · Philippines</div>
         <div class="case-title">Chicky Boom — KFC Brand</div>
-        <div class="case-desc">Full brand system — logo, mascot, color palette, tagline, and ad creative for a Filipino F&B concept.</div>
+        <div class="case-desc">Full brand system — logo, SVG mascot, color palette, tagline, and ad creative.</div>
         <div class="case-metrics"><div><div class="metric-val">Full</div><div class="metric-label">Brand system</div></div><div><div class="metric-val">SVG</div><div class="metric-label">Mascot logo</div></div></div>
       </div>
     </a>
   </div>
-  <div style="text-align:center;margin-top:48px" class="reveal">
+
+  <div style="text-align:center;margin-top:44px" class="reveal">
     <a href="work.html" class="btn-ghost">View all case studies →</a>
   </div>
 </section>
 
+<!-- PROCESS -->
 <section id="process">
-  <div class="section-label reveal">03 — How It Works</div>
-  <h2 class="section-heading reveal">Simple process.<br><em>Zero guesswork.</em></h2>
-  <div class="process-strip reveal">
-    <div class="process-step"><div class="step-num">01</div><div class="step-title">Discovery call</div><div class="step-desc">Free 30-min strategy session. We align on your goals, audience, and what success looks like.</div></div>
-    <div class="process-step"><div class="step-num">02</div><div class="step-title">Clear proposal</div><div class="step-desc">A scoped proposal with exact deliverables, timeline, and pricing. No surprises.</div></div>
-    <div class="process-step"><div class="step-num">03</div><div class="step-title">Build &amp; review</div><div class="step-desc">I build with updates at every stage. You review via a dedicated tracker with direct feedback tools.</div></div>
-    <div class="process-step"><div class="step-num">04</div><div class="step-title">Deliver &amp; launch</div><div class="step-desc">Clean handoff with all source files, a walkthrough call, and post-launch support.</div></div>
+  <div class="section-label reveal">03 // Process</div>
+  <h2 class="section-heading reveal">Simple.<br><em>Clear.</em><br>No Guesswork.</h2>
+  <div class="bento-process reveal">
+    <div class="process-step"><div class="step-num">01</div><div class="step-title">Discovery call</div><div class="step-desc">Free 30-min session. We align on goals, audience, and what success looks like.</div></div>
+    <div class="process-step"><div class="step-num">02</div><div class="step-title">Clear proposal</div><div class="step-desc">Exact deliverables, timeline, and pricing sent within 24 hours. No surprises.</div></div>
+    <div class="process-step"><div class="step-num">03</div><div class="step-title">Build &amp; review</div><div class="step-desc">Updates at every stage. You review via a dedicated tracker with direct feedback.</div></div>
+    <div class="process-step"><div class="step-num">04</div><div class="step-title">Deliver &amp; launch</div><div class="step-desc">Clean handoff with all source files, walkthrough call, and post-launch support.</div></div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-banner">
   <div class="cta-glow"></div>
-  <h2 class="reveal">Ready to<br><span class="ou">grow your</span><br><em>brand?</em></h2>
+  <div class="cta-grid"></div>
+  <h2 class="reveal">
+    Ready to<br>
+    <span class="ou">Grow Your</span><br>
+    <em>Brand?</em>
+  </h2>
   <p class="cta-sub reveal">Let's start with a conversation — <a href="mailto:jgagraphicdesigner@gmail.com">jgagraphicdesigner@gmail.com</a></p>
-  <a href="contact.html" class="btn-primary reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Book a free discovery call</a>
+  <a href="contact.html" class="btn-primary reveal" style="margin:0 auto">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Book a free discovery call
+  </a>
 </section>
 
 </main>

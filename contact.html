@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — JC Aquino</title>
+<title>Contact — The "Wired" Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <style>
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:56px;align-items:start}
 .contact-info{display:flex;flex-direction:column;gap:24px}
-.info-card{background:var(--black3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.info-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
 .info-card:hover{border-color:var(--orange-border);transform:translateX(4px)}
 .info-icon{width:42px;height:42px;border:1px solid var(--orange-border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--orange-dim);flex-shrink:0}
 .info-icon svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -19,16 +19,53 @@
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-group{margin-bottom:18px}
 .form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--white-dim);margin-bottom:8px;text-transform:uppercase}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--black3);border:1px solid var(--frost-border);border-radius:10px;padding:13px 16px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color .2s;cursor:text}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg3);border:1px solid var(--frost-border);border-radius:10px;padding:13px 16px;font-family:'Montserrat',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color .2s;cursor:text}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--orange-border)}
-.form-group select option{background:var(--black3)}
+.form-group select option{background:var(--bg3)}
 .form-group textarea{resize:vertical;min-height:120px}
-.form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
+.form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
 .form-submit:hover{box-shadow:0 0 50px rgba(255,77,0,.45);transform:translateY(-2px)}
 .avail-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--white-dim);margin-bottom:32px}
 .avail-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.6);animation:avail 2s ease infinite}
 @keyframes avail{0%,100%{opacity:1}50%{opacity:.5}}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
+
+/* Warm hero bg */
+.page-hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(160,50,0,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(100,30,0,0.14) 0%, transparent 50%),
+    linear-gradient(160deg, #1a0a00 0%, #0c0700 60%, #100800 100%);
+  position: relative;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .04;
+  background-image: linear-gradient(rgba(255,100,20,.8) 1px,transparent 1px), linear-gradient(90deg,rgba(255,100,20,.8) 1px,transparent 1px);
+  background-size: 60px 60px;
+}
+.page-hero > * { position: relative; z-index: 1; }
+.page-hero-eyebrow {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; letter-spacing: .14em;
+  text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+.section-heading {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: clamp(16px, 2.5vw, 30px) !important;
+  line-height: 1.55 !important; letter-spacing: 1px;
+}
+.section-heading em { text-shadow: 0 0 20px rgba(255,77,0,.4); }
+.section-label {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+/* Card backgrounds */
+.pkg-card, .what-card { background: rgba(255,130,30,0.06) !important; }
+/* Metric vals */
+.metric-val { font-family: 'Press Start 2P', monospace !important; font-size: 16px !important; text-shadow: 0 0 14px rgba(255,77,0,.4); }
+/* Case tag */
+.case-cat, .case-tag { font-family: 'Press Start 2P', monospace !important; font-size: 8px !important; line-height: 1.7; text-shadow: 0 0 10px rgba(255,77,0,.4); }
+
 </style>
 </head>
 <body>
