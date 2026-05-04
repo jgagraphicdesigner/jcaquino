@@ -285,12 +285,15 @@ section > *:not(.marquee-bar):not(.bento-stats){max-width:900px;margin-left:auto
 #site-nav .nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
 
 .nav-inner {
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 0 32px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
 }
+.nav-inner .nav-logo { margin-right: auto; }
+.nav-inner .nav-cta  { margin-left: auto; }
