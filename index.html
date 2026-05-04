@@ -46,7 +46,7 @@
 
 .hero h1 {
   font-family: 'Press Start 2P', monospace;
-  font-size: clamp(22px, 4.5vw, 58px);
+  font-size: clamp(28px, 5vw, 68px);
   line-height: 1.5; letter-spacing: 2px;
   max-width: 900px;
   opacity: 0; animation: fadeUp .9s ease .4s forwards;
@@ -55,8 +55,8 @@
 .hero h1 .ou { -webkit-text-stroke: 1.5px var(--white); color: transparent; display: block; }
 
 .hero-sub {
-  max-width: 540px; margin-top: 28px;
-  font-size: 15px; line-height: 1.9; color: var(--white-dim); font-weight: 500;
+  max-width: 600px; margin-top: 28px;
+  font-size: 16px; line-height: 1.9; color: var(--white-dim); font-weight: 500;
   opacity: 0; animation: fadeUp .9s ease .6s forwards;
 }
 .hero-actions {
@@ -82,7 +82,7 @@
 /* ══════ BENTO STATS ══════ */
 .bento-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px; background: rgba(255,255,255,0.06);
 }
 .stat-box {
@@ -98,7 +98,7 @@
 .stat-box:hover::after { width: 100%; }
 .stat-num {
   font-family: 'Press Start 2P', monospace;
-  font-size: 36px; color: var(--orange); line-height: 1;
+  font-size: 42px; color: var(--orange); line-height: 1;
   margin-bottom: 10px; text-shadow: 0 0 20px rgba(255,77,0,.4);
 }
 .stat-label { font-size: 13px; line-height: 1.65; color: var(--white-dim); font-weight: 500; }
@@ -135,8 +135,8 @@
 }
 .svc-icon svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .svc-num { font-family:'Press Start 2P',monospace; font-size:8px; color:var(--orange); margin-bottom:20px; opacity:.7; letter-spacing:.1em; }
-.svc-title { font-family:'Press Start 2P',monospace; font-size:13px; line-height:1.7; letter-spacing:.5px; margin-bottom:12px; }
-.svc-desc { font-size:13px; line-height:1.85; color:var(--white-dim); font-weight:500; margin-bottom:22px; }
+.svc-title { font-family:'Press Start 2P',monospace; font-size:15px; line-height:1.65; letter-spacing:.5px; margin-bottom:12px; }
+.svc-desc { font-size:14px; line-height:1.85; color:var(--white-dim); font-weight:500; margin-bottom:22px; }
 .svc-tags { display:flex; flex-wrap:wrap; gap:6px; }
 .tag { font-size:10px; font-weight:700; padding:4px 10px; border-radius:20px; border:1px solid var(--frost-border); color:var(--white-dim); background:var(--white-faint); letter-spacing:.04em; text-transform:uppercase; }
 .svc-arrow { margin-top:24px; color:var(--orange); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
@@ -185,9 +185,9 @@
 .case-content { padding:26px 30px; }
 .case-card.wide .case-content { padding:36px 40px; display:flex; flex-direction:column; justify-content:center; }
 .case-cat { font-family:'Press Start 2P',monospace; font-size:8px; letter-spacing:.08em; color:var(--orange); margin-bottom:10px; line-height:1.6; text-shadow:0 0 10px rgba(255,77,0,.4); }
-.case-title { font-family:'Montserrat',sans-serif; font-weight:700; font-size:18px; letter-spacing:-.2px; margin-bottom:10px; line-height:1.3; }
-.case-card.wide .case-title { font-size:24px; }
-.case-desc { font-size:13px; line-height:1.8; color:var(--white-dim); margin-bottom:20px; font-weight:500; }
+.case-title { font-family:'Montserrat',sans-serif; font-weight:700; font-size:20px; letter-spacing:-.2px; margin-bottom:10px; line-height:1.3; }
+.case-card.wide .case-title { font-size:26px; }
+.case-desc { font-size:15px; line-height:1.8; color:var(--white-dim); margin-bottom:20px; font-weight:500; }
 .case-metrics { display:flex; gap:24px; border-top:1px solid var(--frost-border); padding-top:16px; }
 .metric-val { font-family:'Press Start 2P',monospace; font-size:18px; color:var(--orange); line-height:1.2; text-shadow:0 0 14px rgba(255,77,0,.4); }
 .metric-label { font-size:11px; color:var(--white-dim); margin-top:4px; font-weight:600; letter-spacing:.03em; }
@@ -298,10 +298,7 @@
 </div>
 
 <!-- STATS -->
-<div class="bento-stats">
-  <div class="stat-box reveal">
-    <div class="stat-num" data-target="5" data-suffix="+">0+</div>
-    <div class="stat-label">Years design &amp; dev experience</div>
+<div class="bento-stats" style="max-width:1200px;margin:0 auto">
   </div>
   <div class="stat-box reveal reveal-d1">
     <div class="stat-num" data-target="50" data-suffix="+">0+</div>

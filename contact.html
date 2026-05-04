@@ -25,9 +25,7 @@
 .form-group textarea{resize:vertical;min-height:120px}
 .form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
 .form-submit:hover{box-shadow:0 0 50px rgba(255,77,0,.45);transform:translateY(-2px)}
-.avail-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--white-dim);margin-bottom:32px}
-.avail-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.6);animation:avail 2s ease infinite}
-@keyframes avail{0%,100%{opacity:1}50%{opacity:.5}}
+50%{opacity:.5}}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
 
 /* Warm hero bg */
@@ -77,7 +75,6 @@
 </section>
 
 <section>
-  <div class="avail-badge reveal"><span class="avail-dot"></span> Currently accepting new clients</div>
   <div class="contact-grid">
     <div class="contact-info reveal">
       <div class="section-label" style="margin-bottom:0">Get in touch</div>
@@ -119,10 +116,10 @@
         <div class="form-group"><label>Budget range</label>
           <select>
             <option value="">Select a range...</option>
-            <option>₱10,000 – ₱30,000</option>
-            <option>₱30,000 – ₱60,000</option>
-            <option>₱60,000 – ₱100,000</option>
-            <option>₱100,000+</option>
+            <option>$200 – $600</option>
+            <option>$600 – $1,200</option>
+            <option>$1,200 – $2,000</option>
+            <option>$2,000+</option>
           </select>
         </div>
         <div class="form-group"><label>Tell me about your project</label><textarea placeholder="What are you building or promoting? What's the main goal?"></textarea></div>

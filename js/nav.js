@@ -86,8 +86,9 @@
   if(dd){
     dd.querySelector('button').addEventListener('click',e=>{e.stopPropagation();dd.classList.toggle('open')});
     document.addEventListener('click',()=>dd.classList.remove('open'));
-    dd.addEventListener('mouseenter',()=>dd.classList.add('open'));
-    dd.addEventListener('mouseleave',()=>dd.classList.remove('open'));
+    let ddTimer;
+    dd.addEventListener('mouseenter',()=>{clearTimeout(ddTimer);dd.classList.add('open');});
+    dd.addEventListener('mouseleave',()=>{ddTimer=setTimeout(()=>dd.classList.remove('open'),180);});
   }
 
   /* Scroll */
