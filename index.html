@@ -82,14 +82,24 @@
 
 /* ══════ BENTO STATS ══════ */
 .bento-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px; background: rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  background: rgba(255,255,255,0.06);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .stat-box {
-  background: var(--bg2); padding: 36px 28px;
+  flex: 1;
+  background: var(--bg2); padding: 36px 32px;
   position: relative; overflow: hidden; transition: background .25s;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
 }
+.stat-box:last-child { border-right: none; }
 .stat-box:hover { background: var(--bg3); }
 .stat-box::after {
   content:''; position:absolute; bottom:0; left:0;
@@ -238,7 +248,8 @@
 @media(max-width:900px){
   .hero { padding: 0 20px 60px; }
   .hero-wired,.hero-scroll { display: none; }
-  .bento-stats { flex-wrap: wrap; } .stat-box { flex: 1 1 calc(50% - 1px); }
+  .bento-stats { flex-wrap: wrap; }
+  .stat-box { flex: 1 1 calc(50% - 1px); border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .bento-services { grid-template-columns: 1fr; }
   .svc-card.wide { grid-template-columns: 1fr; }
   .bento-work { grid-template-columns: 1fr; }
@@ -299,7 +310,7 @@
 </div>
 
 <!-- STATS -->
-<div class="bento-stats" style="max-width:900px;margin:0 auto">
+<div class="bento-stats">
   </div>
   <div class="stat-box reveal reveal-d1">
     <div class="stat-num" data-target="50" data-suffix="+">0+</div>
