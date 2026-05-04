@@ -287,11 +287,11 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
   height: 100%;
-  padding: 0 28px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 7%;
 }
 
 /* Hero background always full viewport width */
