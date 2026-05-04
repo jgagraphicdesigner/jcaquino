@@ -63,15 +63,7 @@
   letter-spacing: .3em; text-transform: uppercase; color: var(--white-dim);
   opacity: 0; animation: fadeIn 1.2s ease 1.2s forwards;
 }
-.hero-scroll {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 2;
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700;
-  letter-spacing: .16em; text-transform: uppercase; color: var(--white-dim);
-  opacity: 0; animation: fadeIn 1s ease 1.4s forwards;
-}
-.scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, transparent, var(--orange)); animation: pulse 2s ease infinite; }
-@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+
 
 /* ══════ BENTO STATS ══════ */
 
@@ -293,8 +285,7 @@
     </div>
   </div>
   <div class="hero-wired">THE &ldquo;WIRED&rdquo; DESIGNER</div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
-</section>
+  </section>
 
 <!-- MARQUEE -->
 <div class="marquee-bar">
