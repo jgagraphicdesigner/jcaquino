@@ -81,6 +81,15 @@
 @keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
 /* ══════ BENTO STATS ══════ */
+
+/* Full-width stats background wrapper */
+.bento-stats-wrap {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
 .bento-stats {
   display: flex;
   flex-direction: row;
@@ -248,7 +257,16 @@
 @media(max-width:900px){
   .hero { padding: 0 20px 60px; }
   .hero-wired,.hero-scroll { display: none; }
-  .bento-stats { flex-wrap: wrap; }
+  
+/* Full-width stats background wrapper */
+.bento-stats-wrap {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.bento-stats { flex-wrap: wrap; }
   .stat-box { flex: 1 1 calc(50% - 1px); border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .bento-services { grid-template-columns: 1fr; }
   .svc-card.wide { grid-template-columns: 1fr; }
@@ -310,7 +328,7 @@
 </div>
 
 <!-- STATS -->
-<div class="bento-stats">
+<div class="bento-stats-wrap"><div class="bento-stats">
   </div>
   <div class="stat-box reveal reveal-d1">
     <div class="stat-num" data-target="50" data-suffix="+">0+</div>
@@ -324,7 +342,7 @@
     <div class="stat-num" data-target="4" data-suffix="+">0+</div>
     <div class="stat-label">Web apps &amp; SaaS tools shipped</div>
   </div>
-</div>
+</div></div>
 
 <!-- SERVICES -->
 <section id="services" style="max-width:100%">
