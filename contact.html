@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — JC Aquino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:56px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.info-card{background:var(--black3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.info-card:hover{border-color:var(--orange-border);transform:translateX(4px)}
+.info-icon{width:42px;height:42px;border:1px solid var(--orange-border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--orange-dim);flex-shrink:0}
+.info-icon svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.info-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.info-val{font-size:15px;font-weight:500;color:var(--white)}
+.form-wrap{background:var(--frost);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:40px 36px;backdrop-filter:blur(20px)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--white-dim);margin-bottom:8px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--black3);border:1px solid var(--frost-border);border-radius:10px;padding:13px 16px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color .2s;cursor:text}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--orange-border)}
+.form-group select option{background:var(--black3)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
+.form-submit:hover{box-shadow:0 0 50px rgba(255,77,0,.45);transform:translateY(-2px)}
+.avail-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--white-dim);margin-bottom:32px}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.6);animation:avail 2s ease infinite}
+@keyframes avail{0%,100%{opacity:1}50%{opacity:.5}}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<section class="page-hero">
+  <div class="page-hero-eyebrow">Let's Work Together</div>
+  <h1>Start a<br><em>project.</em><br><span class="outline">Get results.</span></h1>
+  <p class="page-hero-sub">Whether you need ads, a funnel system, a custom app, or a full brand buildout — let's figure out the best path forward for your business.</p>
+</section>
+
+<section>
+  <div class="avail-badge reveal"><span class="avail-dot"></span> Currently accepting new clients</div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-label" style="margin-bottom:0">Get in touch</div>
+      <h2 class="section-heading" style="font-size:clamp(32px,4vw,52px);margin-bottom:12px">Let's talk<br><em>about your</em><br>project</h2>
+      <p style="font-size:15px;line-height:1.8;color:var(--white-dim);margin-bottom:32px">I typically respond within 24 hours. For urgent projects, email directly and I'll prioritize your inquiry.</p>
+
+      <a href="mailto:jgagraphicdesigner@gmail.com" class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="info-label">Email</div><div class="info-val">jgagraphicdesigner@gmail.com</div></div>
+      </a>
+      <div class="info-card" style="cursor:default">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><div class="info-label">Availability</div><div class="info-val">Mon–Fri · 9AM–6PM PHT</div></div>
+      </div>
+      <div class="info-card" style="cursor:default">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="info-label">Location</div><div class="info-val">Philippines · Remote-first</div></div>
+      </div>
+    </div>
+
+    <div class="form-wrap reveal reveal-d1">
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label>First name</label><input type="text" placeholder="Juan" required></div>
+          <div class="form-group"><label>Last name</label><input type="text" placeholder="dela Cruz" required></div>
+        </div>
+        <div class="form-group"><label>Email address</label><input type="email" placeholder="juan@yourbrand.com" required></div>
+        <div class="form-group"><label>Service needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Ecommerce Ad Creative</option>
+            <option>GHL Systems &amp; Funnels</option>
+            <option>App Development</option>
+            <option>Email Marketing Design</option>
+            <option>Multiple services</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Budget range</label>
+          <select>
+            <option value="">Select a range...</option>
+            <option>₱10,000 – ₱30,000</option>
+            <option>₱30,000 – ₱60,000</option>
+            <option>₱60,000 – ₱100,000</option>
+            <option>₱100,000+</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Tell me about your project</label><textarea placeholder="What are you building or promoting? What's the main goal?"></textarea></div>
+        <button type="submit" class="form-submit">Send message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<script src="js/nav.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'Message sent ✓';
+  btn.style.background = '#22c55e';
+  setTimeout(() => { btn.textContent = 'Send message →'; btn.style.background = ''; }, 3000);
+}
+</script>
+</body>
+</html>

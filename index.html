@@ -7,1042 +7,222 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 <style>
-:root {
-  --orange: #FF4D00;
-  --orange-glow: #FF6B2B;
-  --orange-dim: rgba(255, 77, 0, 0.15);
-  --orange-border: rgba(255, 77, 0, 0.3);
-  --black: #080808;
-  --black2: #0F0F0F;
-  --black3: #161616;
-  --white: #F0EFEB;
-  --white-dim: rgba(240, 239, 235, 0.7);
-  --white-faint: rgba(240, 239, 235, 0.08);
-  --frost: rgba(255, 255, 255, 0.04);
-  --frost-border: rgba(255, 255, 255, 0.09);
-  --radius: 16px;
-  --radius-lg: 24px;
-}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 80px;position:relative;overflow:hidden}
+.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;display:flex;align-items:center;gap:10px;opacity:0;animation:fadeUp .7s ease .2s forwards}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--orange)}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,140px);line-height:.88;letter-spacing:4px;max-width:1000px;opacity:0;animation:fadeUp .9s ease .4s forwards}
+.hero h1 .lo{color:var(--orange);display:block}
+.hero h1 .ou{-webkit-text-stroke:1.5px var(--white);color:transparent;display:block}
+.hero-sub{max-width:500px;margin-top:32px;font-size:16px;line-height:1.8;color:var(--white-dim);opacity:0;animation:fadeUp .9s ease .6s forwards}
+.hero-actions{display:flex;gap:14px;align-items:center;margin-top:44px;opacity:0;animation:fadeUp .9s ease .8s forwards}
+.hero-scroll{position:absolute;bottom:36px;right:56px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--white-dim);opacity:0;animation:fadeIn 1s ease 1.4s forwards}
+.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--orange));animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--frost-border)}
+.stat-box{background:var(--black2);padding:40px 32px;position:relative;overflow:hidden;transition:background .25s}
+.stat-box:hover{background:var(--black3)}
+.stat-box::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--orange);transition:width .4s}
+.stat-box:hover::after{width:100%}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:58px;letter-spacing:2px;color:var(--orange);line-height:1;margin-bottom:8px}
+.stat-label{font-size:14px;line-height:1.6;color:var(--white-dim)}
 
-html { scroll-behavior: smooth; }
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.svc-card{background:var(--frost);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:36px 32px;backdrop-filter:blur(20px);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit;display:block}
+.svc-card:hover{border-color:var(--orange-border);transform:translateY(-5px)}
+.svc-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,77,0,0.08) 0%,transparent 55%);opacity:0;transition:opacity .35s;pointer-events:none}
+.svc-card:hover::before{opacity:1}
+.svc-icon{width:44px;height:44px;margin-bottom:22px;border:1px solid var(--orange-border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--orange-dim)}
+.svc-icon svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-num{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--orange);margin-bottom:28px;opacity:.8}
+.svc-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:12px}
+.svc-desc{font-size:14px;line-height:1.8;color:var(--white-dim);margin-bottom:24px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:11px;font-weight:500;padding:4px 11px;border-radius:20px;border:1px solid var(--frost-border);color:var(--white-dim);background:var(--white-faint)}
+.svc-arrow{margin-top:28px;color:var(--orange);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
 
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  overflow-x: hidden;
-  cursor: none;
-}
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:56px}
+.case-card{background:var(--black3);border:1px solid var(--frost-border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit;display:block}
+.case-card:hover{border-color:var(--orange-border);transform:translateY(-4px)}
+.case-card.wide{grid-column:1/-1;display:grid;grid-template-columns:5fr 4fr}
+.case-visual{min-height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--black)}
+.case-card.wide .case-visual{min-height:320px}
+.cv-glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,77,0,0.11) 0%,transparent 65%)}
+.cv-label{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,48px);letter-spacing:3px;color:rgba(255,255,255,0.055);text-align:center;line-height:1.1;padding:20px;position:relative;z-index:1}
+.cv-badge{position:absolute;top:16px;left:16px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--orange);color:#080808;z-index:2}
+.case-content{padding:28px 32px}
+.case-card.wide .case-content{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
+.case-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.case-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:10px;line-height:1.1}
+.case-card.wide .case-title{font-size:30px}
+.case-desc{font-size:14px;line-height:1.75;color:var(--white-dim);margin-bottom:22px}
+.case-metrics{display:flex;gap:28px;border-top:1px solid var(--frost-border);padding-top:18px}
+.metric-val{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--orange)}
+.metric-label{font-size:12px;color:var(--white-dim);margin-top:2px}
 
-/* Custom cursor */
-#cursor {
-  position: fixed;
-  width: 12px; height: 12px;
-  background: var(--orange);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%,-50%);
-  transition: transform 0.1s, width 0.2s, height 0.2s, opacity 0.2s;
-  box-shadow: 0 0 20px var(--orange), 0 0 40px rgba(255,77,0,0.4);
-}
-#cursor-ring {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1px solid rgba(255,77,0,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%,-50%);
-  transition: transform 0.15s ease, width 0.25s, height 0.25s;
-}
-body:hover #cursor { opacity: 1; }
+.process-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--frost-border);border-radius:var(--radius);overflow:hidden;margin-top:56px}
+.process-step{background:var(--black2);padding:36px 28px;transition:background .25s}
+.process-step:hover{background:var(--black3)}
+.step-num{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:2px;color:rgba(255,77,0,0.14);line-height:1;margin-bottom:16px}
+.step-title{font-weight:600;font-size:16px;margin-bottom:8px}
+.step-desc{font-size:14px;line-height:1.75;color:var(--white-dim)}
 
-/* Grain overlay */
-body::before {
-  content: '';
-  position: fixed; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  background-size: 200px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.5;
-}
+.cta-banner{text-align:center;padding:110px 56px;position:relative;overflow:hidden}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:280px;background:radial-gradient(ellipse,rgba(255,77,0,0.13) 0%,transparent 68%);pointer-events:none}
+.cta-banner h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:4px;line-height:.9;margin-bottom:28px;position:relative}
+.cta-banner h2 .ou{-webkit-text-stroke:1.5px var(--white);color:transparent}
+.cta-banner h2 em{color:var(--orange);font-style:normal}
+.cta-sub{font-size:16px;color:var(--white-dim);margin-bottom:40px}
+.cta-sub a{color:var(--orange);text-decoration:none}
 
-/* Ambient glow blobs */
-.blob {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  animation: blobFloat 12s ease-in-out infinite alternate;
-}
-.blob-1 { width: 600px; height: 600px; background: rgba(255,77,0,0.12); top: -200px; right: -150px; animation-delay: 0s; }
-.blob-2 { width: 400px; height: 400px; background: rgba(255,100,30,0.07); bottom: 20%; left: -100px; animation-delay: -5s; }
-.blob-3 { width: 300px; height: 300px; background: rgba(255,77,0,0.09); top: 50%; left: 40%; animation-delay: -3s; }
-@keyframes blobFloat {
-  from { transform: translate(0,0) scale(1); }
-  to { transform: translate(30px,20px) scale(1.05); }
-}
-
-/* Layout */
-main { position: relative; z-index: 2; }
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 20px 60px;
-  display: flex; align-items: center; justify-content: space-between;
-  backdrop-filter: blur(20px);
-  background: rgba(8,8,8,0.7);
-  border-bottom: 1px solid var(--frost-border);
-  transition: padding 0.3s;
-}
-nav.scrolled { padding: 14px 60px; }
-.nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  letter-spacing: 3px;
-  color: var(--white);
-  text-decoration: none;
-}
-.nav-logo span { color: var(--orange); }
-.nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  color: var(--white-dim);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--orange); }
-.nav-cta {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  padding: 10px 24px;
-  border: 1px solid var(--orange-border);
-  border-radius: 40px;
-  color: var(--orange);
-  background: var(--orange-dim);
-  text-decoration: none;
-  transition: background 0.2s, border-color 0.2s;
-}
-.nav-cta:hover { background: rgba(255,77,0,0.25); border-color: var(--orange); }
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 60px 80px;
-  position: relative;
-  overflow: hidden;
-}
-.hero-eyebrow {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: var(--orange);
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.3s forwards;
-}
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 24px; height: 1px;
-  background: var(--orange);
-  vertical-align: middle;
-  margin-right: 12px;
-}
-.hero h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: clamp(60px, 9vw, 128px);
-  line-height: 0.9;
-  letter-spacing: 4px;
-  max-width: 900px;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.5s forwards;
-}
-.hero h1 .line-orange { color: var(--orange); }
-.hero h1 .line-outline {
-  -webkit-text-stroke: 1.5px var(--white);
-  color: transparent;
-}
-.hero-sub {
-  max-width: 520px;
-  margin-top: 36px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--white-dim);
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.7s forwards;
-}
-.hero-actions {
-  display: flex; gap: 16px; align-items: center;
-  margin-top: 48px;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.9s forwards;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 36px;
-  background: var(--orange);
-  color: #080808;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 40px rgba(255,77,0,0.3);
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 60px rgba(255,77,0,0.5);
-}
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 36px;
-  border: 1px solid var(--frost-border);
-  color: var(--white);
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
-}
-.btn-ghost:hover { border-color: var(--white-dim); background: var(--white-faint); }
-
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 40px; right: 60px;
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--white-dim);
-  opacity: 0;
-  animation: fadeIn 1s ease 1.5s forwards;
-}
-.scroll-line {
-  width: 1px; height: 60px;
-  background: linear-gradient(to bottom, transparent, var(--orange));
-  animation: scrollPulse 2s ease infinite;
-}
-@keyframes scrollPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
-
-/* MARQUEE */
-.marquee-section {
-  padding: 20px 0;
-  border-top: 1px solid var(--frost-border);
-  border-bottom: 1px solid var(--frost-border);
-  overflow: hidden;
-  background: var(--black2);
-}
-.marquee-track {
-  display: flex; gap: 60px;
-  width: max-content;
-  animation: marquee 20s linear infinite;
-}
-.marquee-track span {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-  white-space: nowrap;
-}
-.marquee-track span.accent { color: var(--orange); }
-@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-/* SECTION */
-section { padding: 100px 60px; position: relative; }
-.section-label {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 20px;
-  display: flex; align-items: center; gap: 12px;
-}
-.section-label::after {
-  content: '';
-  flex: 1;
-  max-width: 60px;
-  height: 1px;
-  background: var(--orange);
-  opacity: 0.5;
-}
-.section-heading {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: clamp(40px, 5vw, 68px);
-  line-height: 0.95;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-}
-.section-heading em { color: var(--orange); font-style: normal; }
-
-/* STATS */
-.stats-section {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  background: var(--frost-border);
-}
-.stat-box {
-  background: var(--black);
-  padding: 40px 36px;
-  position: relative;
-  overflow: hidden;
-}
-.stat-box::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 2px;
-  background: var(--orange);
-  transition: width 0.5s;
-}
-.stat-box:hover::before { width: 100%; }
-.stat-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 52px;
-  letter-spacing: 2px;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.stat-label {
-  font-size: 14px;
-  color: var(--white-dim);
-  line-height: 1.5;
-}
-
-/* SERVICES */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 60px;
-}
-.service-card {
-  background: var(--frost);
-  border: 1px solid var(--frost-border);
-  border-radius: var(--radius-lg);
-  padding: 40px 36px;
-  backdrop-filter: blur(20px);
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s;
-  cursor: default;
-}
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(255,77,0,0.08) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-.service-card:hover { border-color: var(--orange-border); transform: translateY(-4px); }
-.service-card:hover::before { opacity: 1; }
-.service-num {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--orange);
-  margin-bottom: 32px;
-  opacity: 0.8;
-}
-.service-icon {
-  width: 48px; height: 48px;
-  margin-bottom: 24px;
-  border: 1px solid var(--orange-border);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--orange-dim);
-}
-.service-icon svg { width: 22px; height: 22px; stroke: var(--orange); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.service-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: -0.2px;
-  margin-bottom: 12px;
-  line-height: 1.2;
-}
-.service-desc {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--white-dim);
-  margin-bottom: 28px;
-}
-.service-tags {
-  display: flex; flex-wrap: wrap; gap: 8px;
-}
-.tag {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  padding: 5px 12px;
-  border-radius: 20px;
-  border: 1px solid var(--frost-border);
-  color: var(--white-dim);
-  background: var(--white-faint);
-}
-
-/* CASE STUDIES */
-.cases-section { background: var(--black2); }
-.cases-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 60px;
-}
-.case-card {
-  background: var(--black3);
-  border: 1px solid var(--frost-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s;
-  cursor: default;
-}
-.case-card:hover { border-color: var(--orange-border); transform: translateY(-4px); }
-.case-card.featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.case-visual {
-  background: var(--black);
-  min-height: 220px;
-  display: flex; align-items: center; justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.case-visual.tall { min-height: 300px; }
-.case-card.featured .case-visual { min-height: 360px; }
-.case-visual-bg {
-  position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255,77,0,0.12) 0%, transparent 65%);
-}
-.case-visual-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: clamp(32px, 4vw, 56px);
-  letter-spacing: 1px;
-  color: rgba(255,255,255,0.06);
-  text-align: center;
-  line-height: 1.1;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
-}
-.case-badge {
-  position: absolute;
-  top: 20px; left: 20px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: var(--orange);
-  color: #080808;
-  font-weight: 500;
-  z-index: 2;
-}
-.case-content { padding: 32px 36px; }
-.case-card.featured .case-content { padding: 40px 48px; display: flex; flex-direction: column; justify-content: center; }
-.case-tag {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 12px;
-}
-.case-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: -0.3px;
-  margin-bottom: 12px;
-  line-height: 1.2;
-}
-.case-card.featured .case-title { font-size: 32px; }
-.case-desc {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--white-dim);
-  margin-bottom: 24px;
-}
-.case-metrics {
-  display: flex; gap: 32px;
-  border-top: 1px solid var(--frost-border);
-  padding-top: 20px;
-}
-.metric-val {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 28px;
-  color: var(--orange);
-  letter-spacing: 2px;
-}
-.metric-label { font-size: 12px; color: var(--white-dim); margin-top: 2px; }
-
-/* PROCESS */
-.process-section { background: var(--black); }
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 60px;
-  background: var(--frost-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.process-step {
-  background: var(--black);
-  padding: 40px 32px;
-  position: relative;
-  transition: background 0.3s;
-}
-.process-step:hover { background: var(--black3); }
-.step-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 64px;
-  letter-spacing: 2px;
-  color: rgba(255,77,0,0.15);
-  line-height: 1;
-  margin-bottom: 20px;
-}
-.step-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: -0.3px;
-  margin-bottom: 10px;
-}
-.step-desc { font-size: 14px; line-height: 1.8; color: var(--white-dim); }
-
-/* CTA SECTION */
-.cta-section {
-  padding: 120px 60px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.cta-glow {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  width: 600px; height: 300px;
-  background: radial-gradient(ellipse, rgba(255,77,0,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.cta-section h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: clamp(42px, 6vw, 84px);
-  letter-spacing: 2px;
-  line-height: 0.95;
-  margin-bottom: 32px;
-  position: relative;
-}
-.cta-section h2 .cta-outline {
-  -webkit-text-stroke: 1.5px var(--white);
-  color: transparent;
-}
-.cta-email {
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  color: var(--white-dim);
-  margin-bottom: 40px;
-}
-.cta-email a { color: var(--orange); text-decoration: none; }
-.cta-section .btn-primary { margin: 0 auto; font-size: 16px; padding: 18px 48px; }
-
-/* FOOTER */
-footer {
-  padding: 40px 60px;
-  border-top: 1px solid var(--frost-border);
-  display: flex; align-items: center; justify-content: space-between;
-  background: var(--black);
-}
-.footer-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--white);
-}
-.footer-logo span { color: var(--orange); }
-.footer-copy {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--white-dim);
-}
-.footer-links { display: flex; gap: 24px; }
-.footer-links a {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--white-dim);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: var(--orange); }
-
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-
-/* MOBILE */
-@media (max-width: 900px) {
-  nav { padding: 18px 24px; }
-  nav.scrolled { padding: 12px 24px; }
-  .nav-links { display: none; }
-  section, .hero { padding: 60px 24px; }
-  .hero { padding-bottom: 60px; }
-  .stats-section { grid-template-columns: 1fr 1fr; padding: 0; }
-  .services-grid { grid-template-columns: 1fr; }
-  .cases-grid { grid-template-columns: 1fr; }
-  .case-card.featured { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  footer { flex-direction: column; gap: 20px; text-align: center; }
-  .footer-links { flex-wrap: wrap; justify-content: center; }
-  .hero-scroll-hint { display: none; }
-  .cta-section { padding: 80px 24px; }
+@media(max-width:900px){
+  .hero{padding:0 24px 60px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .cases-grid{grid-template-columns:1fr}
+  .case-card.wide{grid-template-columns:1fr}
+  .process-strip{grid-template-columns:1fr 1fr}
+  .cta-banner{padding:80px 24px}
 }
 </style>
 </head>
 <body>
-
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-<div class="blob blob-3"></div>
-
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">JC<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Let's talk →</a>
-</nav>
-
 <main>
 
-<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-eyebrow">JC Aquino &nbsp;·&nbsp; Creative Digital Studio</div>
+  <div class="hero-eyebrow">JC Aquino &nbsp;·&nbsp; Creative Digital Studio · Based in the Philippines</div>
   <h1>
-    Design.<br>
-    <span class="line-outline">Systems.</span><br>
-    <span class="line-orange">Results.</span>
+    <span class="ou">Design.</span>
+    <span>Systems.</span>
+    <span class="lo">Results.</span>
   </h1>
-  <p class="hero-sub">
-    Ecommerce ad creative, high-converting GHL funnels, and custom web applications — built for brands that refuse to blend in.
-  </p>
+  <p class="hero-sub">Ecommerce ad creative, high-converting GHL funnels, and custom web applications — built for brands that refuse to blend in.</p>
   <div class="hero-actions">
-    <a href="#work" class="btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <a href="work.html" class="btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       View my work
     </a>
-    <a href="#services" class="btn-ghost">What I do</a>
+    <a href="services/ecom-ads.html" class="btn-ghost">Explore services</a>
   </div>
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>SCROLL</span>
-  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>SCROLL</span></div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-section">
+<div class="marquee-bar">
   <div class="marquee-track">
-    <span class="accent">●</span>
-    <span>Ecommerce Ads</span>
-    <span class="accent">●</span>
-    <span>GHL Funnels</span>
-    <span class="accent">●</span>
-    <span>Landing Pages</span>
-    <span class="accent">●</span>
-    <span>Email Marketing</span>
-    <span class="accent">●</span>
-    <span>App Development</span>
-    <span class="accent">●</span>
-    <span>Lead Generation</span>
-    <span class="accent">●</span>
-    <span>Static Ad Creative</span>
-    <span class="accent">●</span>
-    <span>Brand Systems</span>
-    <span class="accent">●</span>
-    <span>Ecommerce Ads</span>
-    <span class="accent">●</span>
-    <span>GHL Funnels</span>
-    <span class="accent">●</span>
-    <span>Landing Pages</span>
-    <span class="accent">●</span>
-    <span>Email Marketing</span>
-    <span class="accent">●</span>
-    <span>App Development</span>
-    <span class="accent">●</span>
-    <span>Lead Generation</span>
-    <span class="accent">●</span>
-    <span>Static Ad Creative</span>
-    <span class="accent">●</span>
-    <span>Brand Systems</span>
-    <span class="accent">●</span>
+    <span class="dot">●</span><span>Ecommerce Ads</span><span class="dot">●</span><span>GHL Funnels</span><span class="dot">●</span><span>Landing Pages</span><span class="dot">●</span><span>Email Marketing</span><span class="dot">●</span><span>App Development</span><span class="dot">●</span><span>Lead Generation</span><span class="dot">●</span><span>Static Ad Creative</span><span class="dot">●</span><span>Brand Systems</span><span class="dot">●</span><span>Ecommerce Ads</span><span class="dot">●</span><span>GHL Funnels</span><span class="dot">●</span><span>Landing Pages</span><span class="dot">●</span><span>Email Marketing</span><span class="dot">●</span><span>App Development</span><span class="dot">●</span><span>Lead Generation</span><span class="dot">●</span><span>Static Ad Creative</span><span class="dot">●</span><span>Brand Systems</span><span class="dot">●</span>
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-section">
-  <div class="stat-box">
-    <div class="stat-num" data-target="5">0</div>
-    <div class="stat-label">Years of design &amp;<br>development experience</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-num" data-target="50">0</div>
-    <div class="stat-label">Ecommerce brands<br>served globally</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-num" data-target="200">0</div>
-    <div class="stat-label">Ad creatives<br>produced &amp; tested</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-num" data-target="3">0</div>
-    <div class="stat-label">SaaS &amp; web apps<br>built from scratch</div>
-  </div>
+<div class="stats-grid">
+  <div class="stat-box reveal"><div class="stat-num" data-target="5" data-suffix="+">0+</div><div class="stat-label">Years design &amp;<br>development experience</div></div>
+  <div class="stat-box reveal reveal-d1"><div class="stat-num" data-target="50" data-suffix="+">0+</div><div class="stat-label">Ecommerce brands<br>served globally</div></div>
+  <div class="stat-box reveal reveal-d2"><div class="stat-num" data-target="200" data-suffix="+">0+</div><div class="stat-label">Ad creatives<br>produced &amp; tested</div></div>
+  <div class="stat-box reveal reveal-d3"><div class="stat-num" data-target="4" data-suffix="+">0+</div><div class="stat-label">Web apps &amp; SaaS tools<br>shipped</div></div>
 </div>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="section-label reveal">01 — Services</div>
   <h2 class="section-heading reveal">What I <em>build</em><br>for you</h2>
-  <p class="reveal" style="max-width:480px;color:var(--white-dim);font-size:15px;line-height:1.75;margin-top:16px">Three high-impact skill sets, one creative studio. From the first ad impression to the closed deal.</p>
-
+  <p class="reveal" style="max-width:480px;color:var(--white-dim);font-size:15px;line-height:1.8;margin-top:12px">Four high-impact skill sets, one creative studio. From the first ad impression to the closed deal.</p>
   <div class="services-grid">
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-num">01 / 03</div>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+    <a href="services/ecom-ads.html" class="svc-card reveal reveal-d1">
+      <div class="svc-num">01 / 04</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="svc-title">Ecommerce Ad Creative</div>
+      <div class="svc-desc">Scroll-stopping static ads built for conversion. Facebook, Instagram, TikTok, Google Display — creatives that drive measurable ROAS.</div>
+      <div class="svc-tags"><span class="tag">Static Ads</span><span class="tag">Meta / FB</span><span class="tag">A/B Variants</span></div>
+      <div class="svc-arrow">View service →</div>
+    </a>
+    <a href="services/ghl-funnels.html" class="svc-card reveal reveal-d2">
+      <div class="svc-num">02 / 04</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="svc-title">GHL Systems &amp; Funnels</div>
+      <div class="svc-desc">Complete done-for-you GoHighLevel setups. Landing pages, lead magnets, email sequences, and CRM automation wired together.</div>
+      <div class="svc-tags"><span class="tag">GoHighLevel</span><span class="tag">Landing Pages</span><span class="tag">Automation</span></div>
+      <div class="svc-arrow">View service →</div>
+    </a>
+    <a href="services/app-development.html" class="svc-card reveal reveal-d3">
+      <div class="svc-num">03 / 04</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="svc-title">App Development</div>
+      <div class="svc-desc">Fast-built web apps and SaaS tools using modern vibe coding workflows. Shipped weeks faster than traditional dev.</div>
+      <div class="svc-tags"><span class="tag">PWA / Web Apps</span><span class="tag">Firebase</span><span class="tag">SaaS</span></div>
+      <div class="svc-arrow">View service →</div>
+    </a>
+    <a href="services/email-marketing.html" class="svc-card reveal reveal-d1" style="grid-column:1/-1;display:flex;flex-direction:row;gap:40px;align-items:center">
+      <div style="flex:1">
+        <div class="svc-num">04 / 04</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="svc-title">Email Marketing Design</div>
+        <div class="svc-desc">Branded HTML email campaigns that land in inboxes and get opened. Follow-up sequences, newsletters, and nurture campaigns.</div>
       </div>
-      <div class="service-title">Ecommerce<br>Ad Creative</div>
-      <div class="service-desc">Scroll-stopping static ads built for conversion. Facebook, Instagram, TikTok, Google Display — creatives that compete at the highest level and drive measurable ROAS.</div>
-      <div class="service-tags">
-        <span class="tag">Static Ads</span>
-        <span class="tag">Facebook / Meta</span>
-        <span class="tag">A/B Variants</span>
-        <span class="tag">Retargeting</span>
-        <span class="tag">Product Ads</span>
-      </div>
-    </div>
-
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-num">02 / 03</div>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </div>
-      <div class="service-title">GHL Systems<br>&amp; Funnels</div>
-      <div class="service-desc">Complete done-for-you GoHighLevel setups. Landing pages that convert, lead magnets that capture, email sequences that close — all wired together as one revenue machine.</div>
-      <div class="service-tags">
-        <span class="tag">GoHighLevel</span>
-        <span class="tag">Landing Pages</span>
-        <span class="tag">Lead Magnets</span>
-        <span class="tag">Email Sequences</span>
-        <span class="tag">CRM Automation</span>
-      </div>
-    </div>
-
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-num">03 / 03</div>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      </div>
-      <div class="service-title">Custom App<br>Development</div>
-      <div class="service-desc">Fast-built web applications using modern vibe coding workflows. Project trackers, client portals, dashboards, SaaS tools — shipped weeks faster than traditional dev cycles.</div>
-      <div class="service-tags">
-        <span class="tag">PWA / Web Apps</span>
-        <span class="tag">Firebase</span>
-        <span class="tag">Client Portals</span>
-        <span class="tag">Dashboards</span>
-        <span class="tag">SaaS Tools</span>
-      </div>
-    </div>
+      <div style="flex:1"><div class="svc-tags" style="margin-bottom:16px"><span class="tag">HTML Emails</span><span class="tag">Sequences</span><span class="tag">Newsletters</span><span class="tag">CRM Integration</span></div><div class="svc-arrow">View service →</div></div>
+    </a>
   </div>
 </section>
 
-<!-- CASE STUDIES -->
-<section class="cases-section" id="work">
-  <div class="section-label reveal">02 — Case Studies</div>
+<section id="work" style="background:var(--black2)">
+  <div class="section-label reveal">02 — Selected Work</div>
   <h2 class="section-heading reveal">Real work.<br><em>Real results.</em></h2>
-  <p class="reveal" style="max-width:480px;color:var(--white-dim);font-size:15px;line-height:1.75;margin-top:16px">Projects that moved the needle — from ad creative to fully shipped products.</p>
-
   <div class="cases-grid">
-    <!-- Featured -->
-    <div class="case-card featured reveal">
-      <div class="case-visual" style="background: linear-gradient(135deg, #0F0F0F 0%, #1A0E05 100%);">
-        <div class="case-visual-bg"></div>
-        <div class="case-badge">Featured</div>
-        <div class="case-visual-label">APP<br>TRACKER<br>v6</div>
-      </div>
+    <a href="work.html#app-tracker" class="case-card wide reveal">
+      <div class="case-visual"><div class="cv-glow"></div><div class="cv-badge">Featured</div><div class="cv-label">APP<br>TRACKER<br>v6</div></div>
       <div class="case-content">
         <div class="case-tag">App Development · Firebase · PWA</div>
         <div class="case-title">Aus Property Professionals — Project Tracker</div>
-        <div class="case-desc">A full-featured project management PWA built for a leading Australian buyers agency. Includes kanban boards, annotation tools, version history, team chat, @mentions, real-time notifications, and a custom admin system — deployed and live.</div>
+        <div class="case-desc">A full-featured project management PWA for a leading Australian buyers agency. Kanban boards, annotations, version history, team chat, and a full admin system — live in production.</div>
         <div class="case-metrics">
-          <div>
-            <div class="metric-val">6</div>
-            <div class="metric-label">Major versions shipped</div>
-          </div>
-          <div>
-            <div class="metric-val">7</div>
-            <div class="metric-label">Workflow stages</div>
-          </div>
-          <div>
-            <div class="metric-val">100%</div>
-            <div class="metric-label">Custom-built from scratch</div>
-          </div>
+          <div><div class="metric-val">6</div><div class="metric-label">Versions shipped</div></div>
+          <div><div class="metric-val">7</div><div class="metric-label">Workflow stages</div></div>
+          <div><div class="metric-val">Live</div><div class="metric-label">Production</div></div>
         </div>
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="case-card reveal reveal-delay-1">
-      <div class="case-visual tall">
-        <div class="case-visual-bg" style="background: radial-gradient(circle, rgba(255,77,0,0.1) 0%, transparent 65%)"></div>
-        <div class="case-visual-label">ECOM<br>AD<br>CREATIVE</div>
-      </div>
+    </a>
+    <a href="work.html#ecomswap" class="case-card reveal reveal-d1">
+      <div class="case-visual"><div class="cv-glow"></div><div class="cv-label">ECOM<br>AD<br>CREATIVE</div></div>
       <div class="case-content">
         <div class="case-tag">Ecommerce · Static Ads · Meta</div>
-        <div class="case-title">ecomswap.io — Multi-Platform Ad Campaign</div>
-        <div class="case-desc">Full ad creative system for an ecommerce business marketplace. Static and animated assets across 3 ad sizes, custom brand palette, platform texture system, and motion videos.</div>
-        <div class="case-metrics">
-          <div>
-            <div class="metric-val">6</div>
-            <div class="metric-label">Static ad formats</div>
-          </div>
-          <div>
-            <div class="metric-val">3</div>
-            <div class="metric-label">Video ad variants</div>
-          </div>
-        </div>
+        <div class="case-title">ecomswap.io — Ad Campaign</div>
+        <div class="case-desc">Full ad creative system across 3 sizes, custom brand palette, platform textures, and motion videos.</div>
+        <div class="case-metrics"><div><div class="metric-val">6</div><div class="metric-label">Static formats</div></div><div><div class="metric-val">3</div><div class="metric-label">Video variants</div></div></div>
       </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="case-card reveal reveal-delay-2">
-      <div class="case-visual tall">
-        <div class="case-visual-bg" style="background: radial-gradient(circle, rgba(140,60,200,0.12) 0%, transparent 65%)"></div>
-        <div class="case-visual-label">GHL<br>FUNNEL<br>SYSTEM</div>
-      </div>
+    </a>
+    <a href="work.html#chicky-boom" class="case-card reveal reveal-d2">
+      <div class="case-visual" style="background:linear-gradient(135deg,#0A0A0A,#1A0800)"><div class="cv-glow"></div><div class="cv-label">BRAND<br>IDENTITY</div></div>
       <div class="case-content">
-        <div class="case-tag">GHL · Email Marketing · Lead Gen</div>
-        <div class="case-title">APP — Client Acquisition Email System</div>
-        <div class="case-desc">Complete branded email marketing system for Aus Property Professionals. Follow-up templates, nurture sequences, deposit tables, fee structures, and fully designed HTML email campaigns.</div>
-        <div class="case-metrics">
-          <div>
-            <div class="metric-val">10+</div>
-            <div class="metric-label">Email templates</div>
-          </div>
-          <div>
-            <div class="metric-val">100%</div>
-            <div class="metric-label">Branded HTML</div>
-          </div>
-        </div>
+        <div class="case-tag">Brand Identity · F&amp;B · Philippines</div>
+        <div class="case-title">Chicky Boom — KFC Brand</div>
+        <div class="case-desc">Full brand system — logo, mascot, color palette, tagline, and ad creative for a Filipino F&B concept.</div>
+        <div class="case-metrics"><div><div class="metric-val">Full</div><div class="metric-label">Brand system</div></div><div><div class="metric-val">SVG</div><div class="metric-label">Mascot logo</div></div></div>
       </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="case-card reveal reveal-delay-1" style="grid-column: 1 / -1;">
-      <div style="display:grid;grid-template-columns:1fr 1fr">
-        <div class="case-visual" style="min-height:260px;background:linear-gradient(135deg,#0A0A0A,#0F1A0A)">
-          <div class="case-visual-bg" style="background:radial-gradient(circle,rgba(50,180,80,0.1) 0%,transparent 65%)"></div>
-          <div class="case-visual-label">BRAND<br>IDENTITY<br>+ ADS</div>
-        </div>
-        <div class="case-content" style="display:flex;flex-direction:column;justify-content:center">
-          <div class="case-tag">Brand Identity · Ad Creative · F&amp;B</div>
-          <div class="case-title">Chicky Boom — Korean Fried Chicken Brand</div>
-          <div class="case-desc">Complete brand identity for a new Filipino F&B concept — logo, mascot design, brand color system, tagline, and ad creative. Primary orange palette with playful mascot character targeting Filipino market.</div>
-          <div class="case-metrics">
-            <div>
-              <div class="metric-val">Full</div>
-              <div class="metric-label">Brand system</div>
-            </div>
-            <div>
-              <div class="metric-val">SVG</div>
-              <div class="metric-label">Mascot logo</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:48px" class="reveal">
+    <a href="work.html" class="btn-ghost">View all case studies →</a>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process-section" id="process">
-  <div class="section-label reveal">03 — Process</div>
-  <h2 class="section-heading reveal">How we<br><em>work together</em></h2>
-
-  <div class="process-steps reveal">
-    <div class="process-step">
-      <div class="step-num">01</div>
-      <div class="step-title">Discovery</div>
-      <div class="step-desc">We start with a free strategy call. I learn your brand, goals, audience, and what success looks like for you.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">02</div>
-      <div class="step-title">Strategy</div>
-      <div class="step-desc">I map out the exact deliverables, timelines, and approach — no guesswork, just a clear plan we both agree on.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">03</div>
-      <div class="step-title">Execution</div>
-      <div class="step-desc">I build with precision. You get updates at every stage and direct input on the direction through a dedicated review system.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">04</div>
-      <div class="step-title">Delivery</div>
-      <div class="step-desc">Final assets delivered clean, organized, and ready to deploy. Plus a handoff call so you know exactly what you have.</div>
-    </div>
+<section id="process">
+  <div class="section-label reveal">03 — How It Works</div>
+  <h2 class="section-heading reveal">Simple process.<br><em>Zero guesswork.</em></h2>
+  <div class="process-strip reveal">
+    <div class="process-step"><div class="step-num">01</div><div class="step-title">Discovery call</div><div class="step-desc">Free 30-min strategy session. We align on your goals, audience, and what success looks like.</div></div>
+    <div class="process-step"><div class="step-num">02</div><div class="step-title">Clear proposal</div><div class="step-desc">A scoped proposal with exact deliverables, timeline, and pricing. No surprises.</div></div>
+    <div class="process-step"><div class="step-num">03</div><div class="step-title">Build &amp; review</div><div class="step-desc">I build with updates at every stage. You review via a dedicated tracker with direct feedback tools.</div></div>
+    <div class="process-step"><div class="step-num">04</div><div class="step-title">Deliver &amp; launch</div><div class="step-desc">Clean handoff with all source files, a walkthrough call, and post-launch support.</div></div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section" id="contact">
+<section class="cta-banner">
   <div class="cta-glow"></div>
-  <h2 class="reveal">
-    Ready to<br>
-    <span class="cta-outline">grow your</span><br>
-    <em>brand?</em>
-  </h2>
-  <p class="cta-email reveal">
-    Let's start with a conversation —&nbsp;
-    <a href="mailto:jgagraphicdesigner@gmail.com">jgagraphicdesigner@gmail.com</a>
-  </p>
-  <a href="mailto:jgagraphicdesigner@gmail.com" class="btn-primary reveal">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    Book a free discovery call
-  </a>
+  <h2 class="reveal">Ready to<br><span class="ou">grow your</span><br><em>brand?</em></h2>
+  <p class="cta-sub reveal">Let's start with a conversation — <a href="mailto:jgagraphicdesigner@gmail.com">jgagraphicdesigner@gmail.com</a></p>
+  <a href="contact.html" class="btn-primary reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Book a free discovery call</a>
 </section>
 
 </main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">JC<span>.</span>Aquino</div>
-  <div class="footer-copy">© 2026 JC Aquino. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
-  </div>
-</footer>
-
-<script>
-// Custom cursor
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-(function animateCursor() {
-  rx += (mx - rx) * 0.15;
-  ry += (my - ry) * 0.15;
-  cursor.style.left = mx + 'px';
-  cursor.style.top = my + 'px';
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animateCursor);
-})();
-document.querySelectorAll('a, button, .service-card, .case-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2.5)';
-    ring.style.width = '60px'; ring.style.height = '60px';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    ring.style.width = '36px'; ring.style.height = '36px';
-  });
-});
-
-// Nav scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// Reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.15 });
-reveals.forEach(el => io.observe(el));
-
-// Number counters
-const counters = document.querySelectorAll('[data-target]');
-const counterIO = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-    const target = parseInt(el.dataset.target);
-    const suffix = target >= 100 ? '+' : target === 3 ? '+' : '+';
-    let start = 0, duration = 1800;
-    const step = timestamp => {
-      if (!step.start) step.start = timestamp;
-      const progress = Math.min((timestamp - step.start) / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(ease * target) + suffix;
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-    counterIO.unobserve(el);
-  });
-}, { threshold: 0.5 });
-counters.forEach(el => counterIO.observe(el));
-</script>
+<script src="js/nav.js"></script>
 </body>
 </html>
