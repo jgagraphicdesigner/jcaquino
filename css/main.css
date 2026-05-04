@@ -282,7 +282,7 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .nav-dropdown { margin-top: 0 !important; }
 
 /* Max width containers */
-#site-nav .nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+
 
 .nav-inner {
   display: flex;
@@ -291,6 +291,7 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   gap: 24px;
   height: 100%;
   padding: 0 28px;
+  margin: 0 auto;
 }
 
 /* Hero background always full viewport width */
