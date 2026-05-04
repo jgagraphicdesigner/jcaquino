@@ -6,7 +6,7 @@
 <title>JC Aquino — Creative Digital Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --orange: #FF4D00;
@@ -17,7 +17,7 @@
   --black2: #0F0F0F;
   --black3: #161616;
   --white: #F0EFEB;
-  --white-dim: rgba(240, 239, 235, 0.55);
+  --white-dim: rgba(240, 239, 235, 0.7);
   --white-faint: rgba(240, 239, 235, 0.08);
   --frost: rgba(255, 255, 255, 0.04);
   --frost-border: rgba(255, 255, 255, 0.09);
@@ -32,7 +32,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--black);
   color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
   cursor: none;
@@ -106,17 +106,17 @@ nav {
 }
 nav.scrolled { padding: 14px 60px; }
 .nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.5px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 3px;
   color: var(--white);
   text-decoration: none;
 }
 .nav-logo span { color: var(--orange); }
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   letter-spacing: 0.05em;
   color: var(--white-dim);
@@ -125,7 +125,7 @@ nav.scrolled { padding: 14px 60px; }
 }
 .nav-links a:hover { color: var(--orange); }
 .nav-cta {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   letter-spacing: 0.05em;
   padding: 10px 24px;
@@ -147,9 +147,9 @@ nav.scrolled { padding: 14px 60px; }
   overflow: hidden;
 }
 .hero-eyebrow {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   color: var(--orange);
   text-transform: uppercase;
   margin-bottom: 28px;
@@ -165,11 +165,11 @@ nav.scrolled { padding: 14px 60px; }
   margin-right: 12px;
 }
 .hero h1 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(56px, 8vw, 120px);
-  line-height: 0.92;
-  letter-spacing: -3px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(60px, 9vw, 128px);
+  line-height: 0.9;
+  letter-spacing: 4px;
   max-width: 900px;
   opacity: 0;
   animation: fadeUp 0.9s ease 0.5s forwards;
@@ -199,8 +199,8 @@ nav.scrolled { padding: 14px 60px; }
   padding: 16px 36px;
   background: var(--orange);
   color: #080808;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.02em;
   border-radius: 50px;
@@ -217,7 +217,7 @@ nav.scrolled { padding: 14px 60px; }
   padding: 16px 36px;
   border: 1px solid var(--frost-border);
   color: var(--white);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 600;
   font-size: 14px;
   border-radius: 50px;
@@ -230,7 +230,7 @@ nav.scrolled { padding: 14px 60px; }
   position: absolute;
   bottom: 40px; right: 60px;
   display: flex; flex-direction: column; align-items: center; gap: 8px;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 10px;
   letter-spacing: 0.12em;
   color: var(--white-dim);
@@ -258,7 +258,7 @@ nav.scrolled { padding: 14px 60px; }
   animation: marquee 20s linear infinite;
 }
 .marquee-track span {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -271,9 +271,9 @@ nav.scrolled { padding: 14px 60px; }
 /* SECTION */
 section { padding: 100px 60px; position: relative; }
 .section-label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--orange);
   margin-bottom: 20px;
@@ -288,11 +288,11 @@ section { padding: 100px 60px; position: relative; }
   opacity: 0.5;
 }
 .section-heading {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.0;
-  letter-spacing: -2px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 0.95;
+  letter-spacing: 3px;
   margin-bottom: 16px;
 }
 .section-heading em { color: var(--orange); font-style: normal; }
@@ -321,16 +321,16 @@ section { padding: 100px 60px; position: relative; }
 }
 .stat-box:hover::before { width: 100%; }
 .stat-num {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: 52px;
-  letter-spacing: -3px;
+  letter-spacing: 2px;
   color: var(--orange);
   line-height: 1;
   margin-bottom: 8px;
 }
 .stat-label {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--white-dim);
   line-height: 1.5;
 }
@@ -365,7 +365,7 @@ section { padding: 100px 60px; position: relative; }
 .service-card:hover { border-color: var(--orange-border); transform: translateY(-4px); }
 .service-card:hover::before { opacity: 1; }
 .service-num {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   color: var(--orange);
@@ -382,15 +382,16 @@ section { padding: 100px 60px; position: relative; }
 }
 .service-icon svg { width: 22px; height: 22px; stroke: var(--orange); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .service-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.5px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.2px;
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 .service-desc {
-  font-size: 14px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.8;
   color: var(--white-dim);
   margin-bottom: 28px;
 }
@@ -398,7 +399,7 @@ section { padding: 100px 60px; position: relative; }
   display: flex; flex-wrap: wrap; gap: 8px;
 }
 .tag {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   letter-spacing: 0.05em;
   padding: 5px 12px;
@@ -444,10 +445,10 @@ section { padding: 100px 60px; position: relative; }
   background: radial-gradient(circle at 50% 50%, rgba(255,77,0,0.12) 0%, transparent 65%);
 }
 .case-visual-label {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: clamp(32px, 4vw, 56px);
-  letter-spacing: -2px;
+  letter-spacing: 1px;
   color: rgba(255,255,255,0.06);
   text-align: center;
   line-height: 1.1;
@@ -458,7 +459,7 @@ section { padding: 100px 60px; position: relative; }
 .case-badge {
   position: absolute;
   top: 20px; left: 20px;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -472,7 +473,7 @@ section { padding: 100px 60px; position: relative; }
 .case-content { padding: 32px 36px; }
 .case-card.featured .case-content { padding: 40px 48px; display: flex; flex-direction: column; justify-content: center; }
 .case-tag {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -480,17 +481,17 @@ section { padding: 100px 60px; position: relative; }
   margin-bottom: 12px;
 }
 .case-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: -0.5px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.3px;
   margin-bottom: 12px;
   line-height: 1.2;
 }
 .case-card.featured .case-title { font-size: 32px; }
 .case-desc {
-  font-size: 14px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.8;
   color: var(--white-dim);
   margin-bottom: 24px;
 }
@@ -500,11 +501,11 @@ section { padding: 100px 60px; position: relative; }
   padding-top: 20px;
 }
 .metric-val {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
   color: var(--orange);
-  letter-spacing: -1px;
+  letter-spacing: 2px;
 }
 .metric-label { font-size: 12px; color: var(--white-dim); margin-top: 2px; }
 
@@ -527,22 +528,22 @@ section { padding: 100px 60px; position: relative; }
 }
 .process-step:hover { background: var(--black3); }
 .step-num {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: 64px;
-  letter-spacing: -4px;
+  letter-spacing: 2px;
   color: rgba(255,77,0,0.15);
   line-height: 1;
   margin-bottom: 20px;
 }
 .step-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   letter-spacing: -0.3px;
   margin-bottom: 10px;
 }
-.step-desc { font-size: 13px; line-height: 1.7; color: var(--white-dim); }
+.step-desc { font-size: 14px; line-height: 1.8; color: var(--white-dim); }
 
 /* CTA SECTION */
 .cta-section {
@@ -560,10 +561,10 @@ section { padding: 100px 60px; position: relative; }
   pointer-events: none;
 }
 .cta-section h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: clamp(42px, 6vw, 84px);
-  letter-spacing: -3px;
+  letter-spacing: 2px;
   line-height: 0.95;
   margin-bottom: 32px;
   position: relative;
@@ -573,7 +574,7 @@ section { padding: 100px 60px; position: relative; }
   color: transparent;
 }
 .cta-email {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 14px;
   letter-spacing: 0.05em;
   color: var(--white-dim);
@@ -590,21 +591,21 @@ footer {
   background: var(--black);
 }
 .footer-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   color: var(--white);
 }
 .footer-logo span { color: var(--orange); }
 .footer-copy {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   letter-spacing: 0.08em;
   color: var(--white-dim);
 }
 .footer-links { display: flex; gap: 24px; }
 .footer-links a {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Outfit', sans-serif;
   font-size: 11px;
   letter-spacing: 0.08em;
   color: var(--white-dim);
