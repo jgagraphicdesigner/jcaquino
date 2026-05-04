@@ -21,21 +21,13 @@
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background:
-    radial-gradient(ellipse 120% 80% at 50% 60%, rgba(140,45,0,0.28) 0%, transparent 65%),
-    radial-gradient(ellipse 80% 60% at 10% 40%, rgba(120,35,0,0.18) 0%, transparent 50%),
-    radial-gradient(ellipse 80% 60% at 90% 40%, rgba(120,35,0,0.18) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(180,55,0,0.15) 0%, transparent 55%),
-    linear-gradient(180deg, #1c0c02 0%, #130800 40%, #0f0600 100%);
+    radial-gradient(ellipse 160% 100% at 50% 70%, rgba(130,40,0,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 80% at 0% 50%,  rgba(100,30,0,0.20) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 80% at 100% 50%, rgba(100,30,0,0.20) 0%, transparent 55%),
+    linear-gradient(180deg, #180a01 0%, #120700 50%, #0d0500 100%);
 }
-/* Grid lines overlay */
-.hero-grid {
-  position: absolute; inset: 0; z-index: 1; opacity: .04;
-  background-image:
-    linear-gradient(rgba(255,100,20,.8) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,100,20,.8) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-.hero-content { position: relative; z-index: 2; max-width: 760px; width: 100%; }
+
+.hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; width: 100%; }
 
 .hero-eyebrow {
   font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
@@ -284,8 +276,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
+    <div class="hero-content">
     <div class="hero-eyebrow">JC Aquino &nbsp;·&nbsp; Creative Digital Studio &nbsp;·&nbsp; PH</div>
     <h1>
       <span class="ou">Design.</span>
