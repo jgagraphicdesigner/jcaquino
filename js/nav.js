@@ -23,6 +23,7 @@
   /* Nav */
   document.body.insertAdjacentHTML('afterbegin',`
   <nav id="site-nav">
+    <div class="nav-inner">
     <a href="${base}index.html" class="nav-logo">JC<span>.</span></a>
     <ul class="nav-center">
       <li><a href="${base}index.html" data-page="index.html">Home</a></li>
@@ -58,6 +59,7 @@
       <li><a href="${base}contact.html" data-page="contact.html">Contact</a></li>
     </ul>
     <a href="${base}contact.html" class="nav-cta">Let's talk →</a>
+    </div>
   </nav>`);
 
   /* Footer */
