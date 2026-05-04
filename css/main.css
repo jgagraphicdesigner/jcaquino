@@ -170,7 +170,7 @@ li.open .nav-dropdown{opacity:1;pointer-events:all;transform:translateX(-50%) tr
 
 /* ---------- SECTION ---------- */
 section{padding:72px 52px;position:relative;max-width:100%}
-section > *:not(.marquee-bar):not(.bento-stats){max-width:900px;margin-left:auto;margin-right:auto}
+section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):not(.cta-glow):not(.cta-grid){max-width:900px;margin-left:auto;margin-right:auto}
 .inner{max-width:1200px;margin:0 auto;width:100%}
 
 .section-label{
@@ -295,4 +295,15 @@ section > *:not(.marquee-bar):not(.bento-stats){max-width:900px;margin-left:auto
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Hero background always full viewport width */
+.hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
 }
