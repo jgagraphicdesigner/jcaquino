@@ -48,6 +48,10 @@
             <span class="dd-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
             <span class="dd-text"><span class="dd-title">Email Marketing</span><span class="dd-sub">Campaigns that get results</span></span>
           </a>
+          <a href="${base}services/brand-identity.html" data-page="brand-identity.html">
+            <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg></span>
+            <span class="dd-text"><span class="dd-title">Brand Identity</span><span class="dd-sub">Logos, systems & guidelines</span></span>
+          </a>
           <div class="dd-divider"></div>
           <a href="${base}contact.html" style="padding:8px 14px">
             <span class="dd-text"><span class="dd-title" style="color:var(--orange)">→ Get a free quote</span><span class="dd-sub">Tell me about your project</span></span>
@@ -72,6 +76,7 @@
       <a href="${base}services/ghl-funnels.html">GHL Funnels</a>
       <a href="${base}services/app-development.html">App Dev</a>
       <a href="${base}services/email-marketing.html">Email</a>
+      <a href="${base}services/brand-identity.html">Brand Identity</a>
       <a href="${base}work.html">Work</a>
       <a href="${base}contact.html">Contact</a>
     </nav>
