@@ -287,8 +287,8 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0;
+  justify-content: flex-start;
+  gap: 32px;
   height: 100%;
   width: 100%;
   max-width: 900px;
@@ -324,3 +324,23 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   filter: brightness(0.9);
 }
 
+
+/* Let's Talk inside nav links */
+.nav-center .nav-cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 9px 20px;
+  border: 1.5px solid var(--orange-border);
+  border-radius: 40px;
+  color: var(--orange);
+  background: var(--orange-dim);
+  text-decoration: none;
+  transition: all .2s;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-center .nav-cta:hover {
+  background: rgba(255,77,0,.2);
+  border-color: var(--orange);
+}

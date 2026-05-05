@@ -60,9 +60,8 @@
       </li>
       <li><a href="/work/" data-page="work">Work</a></li>
       <li><a href="/process/" data-page="process">Process</a></li>
-      <li><a href="/contact/" data-page="contact">Contact</a></li>
+      <li><a href="/contact/" class="nav-cta" data-page="contact">Let's talk →</a></li>
     </ul>
-    <a href="/contact/" class="nav-cta">Let's talk →</a>
     </div>
   </nav>`);
 
