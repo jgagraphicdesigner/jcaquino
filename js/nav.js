@@ -70,7 +70,7 @@
   document.body.insertAdjacentHTML('beforeend',`
   <footer id="site-footer">
     <a href="${base}index.html" class="footer-logo"><img src="${base}JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"></a>
-    <div class="footer-wired">THE &ldquo;WIRED&rdquo; DESIGNER</div>
+    <div class="footer-wired">JGA STUDIOS</div>
     <nav class="footer-links">
       <a href="${base}services/ecom-ads.html">Ad Creative</a>
       <a href="${base}services/ghl-funnels.html">GHL Funnels</a>
