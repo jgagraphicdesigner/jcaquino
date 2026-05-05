@@ -32,20 +32,7 @@
 .ctag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid var(--frost-border);color:var(--white-dim);background:var(--white-faint)}
 @media(max-width:900px){.cases-grid{grid-template-columns:1fr}.case-card.wide{grid-template-columns:1fr}}
 
-/* Warm hero bg */
-.page-hero {
-  background:
-    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(160,50,0,0.22) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(100,30,0,0.14) 0%, transparent 50%),
-    linear-gradient(160deg, #1a0a00 0%, #0c0700 60%, #100800 100%);
-  position: relative;
-}
-.page-hero::before {
-  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .04;
-  background-image: linear-gradient(rgba(255,100,20,.8) 1px,transparent 1px), linear-gradient(90deg,rgba(255,100,20,.8) 1px,transparent 1px);
-  background-size: 60px 60px;
-}
-.page-hero > * { position: relative; z-index: 1; }
+
 .page-hero-eyebrow {
   font-family: 'Press Start 2P', monospace !important;
   font-size: 9px !important; letter-spacing: .14em;
@@ -67,6 +54,47 @@
 .metric-val { font-family: 'Press Start 2P', monospace !important; font-size: 16px !important; text-shadow: 0 0 14px rgba(255,77,0,.4); }
 /* Case tag */
 .case-cat, .case-tag { font-family: 'Press Start 2P', monospace !important; font-size: 8px !important; line-height: 1.7; text-shadow: 0 0 10px rgba(255,77,0,.4); }
+
+
+/* ── First section: matches home hero ── */
+.page-hero {
+  background-image: url('/Background_Image.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  min-height: 70vh !important;
+  padding: calc(var(--nav-h) + 48px) 7% 80px !important;
+  justify-content: flex-start !important;
+}
+.page-hero::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(8, 4, 0, 0.52) !important;
+  z-index: 0 !important;
+  background-image: none !important;
+}
+.page-hero > * { position: relative !important; z-index: 1 !important; margin-left: 0 !important; }
+.page-hero-eyebrow {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; letter-spacing: .14em !important;
+  text-shadow: 0 0 12px rgba(255,77,0,.5) !important;
+}
+.page-hero h1 {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: clamp(22px, 4vw, 48px) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 2px !important;
+  max-width: 700px !important;
+  text-align: left !important;
+}
+.page-hero-sub {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  max-width: 520px !important;
+  text-align: left !important;
+}
+.page-hero-actions { justify-content: flex-start !important; }
 
 </style>
 </head>
