@@ -358,10 +358,11 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 }
 .hamburger span {
   display: block;
-  width: 24px; height: 2px;
-  background: var(--white);
-  border-radius: 2px;
+  width: 26px; height: 2.5px;
+  background: #ffffff;
+  border-radius: 3px;
   transition: transform .3s, opacity .3s;
+  box-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
