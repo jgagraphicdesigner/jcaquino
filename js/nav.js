@@ -97,6 +97,23 @@
     dd.addEventListener('mouseleave',()=>{ddTimer=setTimeout(()=>dd.classList.remove('open'),180);});
   }
 
+  /* Hamburger */
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  if(hamburger) {
+    hamburger.addEventListener('click', e => {
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('mobile-open');
+    });
+    document.addEventListener('click', e => {
+      if(!e.target.closest('#site-nav')) {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('mobile-open');
+      }
+    });
+  }
+
   /* Scroll */
   const nav=document.getElementById('site-nav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50),{passive:true});
