@@ -326,7 +326,7 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 
 /* Logo image sizing */
 .nav-logo-img {
-  height: 36px;
+  height: 48px;
   width: auto;
   display: block;
   filter: brightness(1);
