@@ -41,15 +41,21 @@
 
 @media(max-width:900px){.pkg-grid,.what-grid{grid-template-columns:1fr}}
 
-/* ── First section: matches home hero ── */
+
+
+
+/* ── First section: cohesive with home hero ── */
 .page-hero {
   background-image: url('/Background_Image.png') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   min-height: 70vh !important;
-  padding: calc(var(--nav-h) + 48px) 7% 80px !important;
+  padding: calc(var(--nav-h) + 48px) 52px 80px !important;
   justify-content: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .page-hero::before {
   content: '' !important;
@@ -59,10 +65,20 @@
   z-index: 0 !important;
   background-image: none !important;
 }
-.page-hero > * { position: relative !important; z-index: 1 !important; margin-left: 0 !important; }
+/* All direct children go into a 900px left-aligned column */
+.page-hero > * {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
 .page-hero-eyebrow {
   font-family: 'Press Start 2P', monospace !important;
-  font-size: 9px !important; letter-spacing: .14em !important;
+  font-size: 9px !important;
+  letter-spacing: .14em !important;
   text-shadow: 0 0 12px rgba(255,77,0,.5) !important;
 }
 .page-hero h1 {
@@ -70,7 +86,6 @@
   font-size: clamp(22px, 4vw, 48px) !important;
   line-height: 1.5 !important;
   letter-spacing: 2px !important;
-  max-width: 700px !important;
   text-align: left !important;
 }
 .page-hero-sub {
@@ -79,7 +94,9 @@
   max-width: 520px !important;
   text-align: left !important;
 }
-.page-hero-actions { justify-content: flex-start !important; }
+.page-hero-actions {
+  justify-content: flex-start !important;
+}
 
 </style>
 </head>
