@@ -44,6 +44,9 @@
 
 
 
+
+
+
 /* ── First section: cohesive with home hero ── */
 .page-hero {
   background-image: url('/Background_Image.png') !important;
@@ -51,11 +54,14 @@
   background-position: center center !important;
   background-repeat: no-repeat !important;
   min-height: 70vh !important;
-  padding: calc(var(--nav-h) + 48px) 52px 80px !important;
-  justify-content: flex-start !important;
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  padding-top: calc(var(--nav-h) + 48px) !important;
+  padding-bottom: 80px !important;
+  padding-left: max(24px, calc((100vw - 900px) / 2)) !important;
+  padding-right: max(24px, calc((100vw - 900px) / 2)) !important;
 }
 .page-hero::before {
   content: '' !important;
@@ -65,15 +71,13 @@
   z-index: 0 !important;
   background-image: none !important;
 }
-/* All direct children go into a 900px left-aligned column */
 .page-hero > * {
   position: relative !important;
   z-index: 1 !important;
-  width: 100% !important;
-  max-width: 900px !important;
+  text-align: left !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  text-align: left !important;
+  max-width: 700px !important;
 }
 .page-hero-eyebrow {
   font-family: 'Press Start 2P', monospace !important;
@@ -91,11 +95,12 @@
 .page-hero-sub {
   font-size: 15px !important;
   line-height: 1.85 !important;
-  max-width: 520px !important;
   text-align: left !important;
+  max-width: 520px !important;
 }
 .page-hero-actions {
   justify-content: flex-start !important;
+  max-width: none !important;
 }
 
 </style>
