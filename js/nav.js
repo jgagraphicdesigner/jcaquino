@@ -24,7 +24,7 @@
   document.body.insertAdjacentHTML('afterbegin',`
   <nav id="site-nav">
     <div class="nav-inner">
-    <a href="${base}index.html" class="nav-logo">JC<span>.</span></a>
+    <a href="${base}index.html" class="nav-logo"><img src="${base}JGA_logo.svg" alt="JGA Studios" class="nav-logo-img"></a>
     <ul class="nav-center">
       <li><a href="${base}index.html" data-page="index.html">Home</a></li>
       <li class="has-dropdown" id="services-menu">
@@ -65,7 +65,7 @@
   /* Footer */
   document.body.insertAdjacentHTML('beforeend',`
   <footer id="site-footer">
-    <a href="${base}index.html" class="footer-logo">JC<span>.</span></a>
+    <a href="${base}index.html" class="footer-logo"><img src="${base}JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"></a>
     <div class="footer-wired">THE &ldquo;WIRED&rdquo; DESIGNER</div>
     <nav class="footer-links">
       <a href="${base}services/ecom-ads.html">Ad Creative</a>

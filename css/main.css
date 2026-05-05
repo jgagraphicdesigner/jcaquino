@@ -304,3 +304,20 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   left: 0 !important;
   right: 0 !important;
 }
+
+/* Logo image sizing */
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  filter: brightness(1);
+  transition: opacity .2s;
+}
+.nav-logo-img:hover { opacity: .85; }
+
+.footer-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+  filter: brightness(0.9);
+}
