@@ -115,9 +115,16 @@
 /* ══════ BENTO SERVICES ══════ */
 .bento-services {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px; margin-top: 52px;
 }
+/* Top 3 cards: each takes 2 of 6 columns */
+.bento-services .svc-card:nth-child(1),
+.bento-services .svc-card:nth-child(2),
+.bento-services .svc-card:nth-child(3) { grid-column: span 2; }
+/* Bottom 2 cards: each takes 3 of 6 columns */
+.bento-services .svc-card:nth-child(4),
+.bento-services .svc-card:nth-child(5) { grid-column: span 3; }
 .svc-card {
   background: var(--frost-bg); border: 1px solid var(--frost-border);
   border-radius: var(--radius-lg); padding: 32px 28px;
@@ -371,7 +378,7 @@
       <div class="svc-tags"><span class="tag">Logo Design</span><span class="tag">Guidelines</span><span class="tag">Mascots</span></div>
       <div class="svc-arrow">View service →</div>
     </a>
-    <a href="services/email-marketing.html" class="svc-card wide reveal">
+    <a href="services/email-marketing.html" class="svc-card reveal reveal-d2">
       <div>
         <div class="svc-num">// 04</div>
         <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
