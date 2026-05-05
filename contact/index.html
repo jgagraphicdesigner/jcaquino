@@ -72,61 +72,34 @@
 
 
 
-/* ── First section: cohesive with home hero ── */
+
+
+
+/* ── First section hero ── */
 .page-hero {
   background-image: url('/Background_Image.png') !important;
   background-size: cover !important;
   background-position: center center !important;
-  background-repeat: no-repeat !important;
   min-height: 70vh !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  align-items: flex-start !important;
-  padding-top: calc(var(--nav-h) + 48px) !important;
-  padding-bottom: 80px !important;
-  padding-left: max(24px, calc((100vw - 900px) / 2)) !important;
-  padding-right: max(24px, calc((100vw - 900px) / 2)) !important;
+  align-items: center !important;
+  padding: calc(var(--nav-h) + 48px) 24px 80px !important;
 }
 .page-hero::before {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: rgba(8, 4, 0, 0.52) !important;
-  z-index: 0 !important;
-  background-image: none !important;
+  content: '' !important; position: absolute !important; inset: 0 !important;
+  background: rgba(8,4,0,0.52) !important; z-index: 0 !important; background-image: none !important;
 }
 .page-hero > * {
-  position: relative !important;
-  z-index: 1 !important;
-  text-align: left !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: 700px !important;
+  position: relative !important; z-index: 1 !important;
+  width: 100% !important; max-width: 900px !important;
+  text-align: left !important; margin-left: 0 !important; margin-right: 0 !important;
 }
-.page-hero-eyebrow {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 9px !important;
-  letter-spacing: .14em !important;
-  text-shadow: 0 0 12px rgba(255,77,0,.5) !important;
-}
-.page-hero h1 {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: clamp(22px, 4vw, 48px) !important;
-  line-height: 1.5 !important;
-  letter-spacing: 2px !important;
-  text-align: left !important;
-}
-.page-hero-sub {
-  font-size: 15px !important;
-  line-height: 1.85 !important;
-  text-align: left !important;
-  max-width: 520px !important;
-}
-.page-hero-actions {
-  justify-content: flex-start !important;
-  max-width: none !important;
-}
+.page-hero-eyebrow { font-family: 'Press Start 2P', monospace !important; font-size: 9px !important; letter-spacing: .14em !important; text-shadow: 0 0 12px rgba(255,77,0,.5) !important; }
+.page-hero h1 { font-family: 'Press Start 2P', monospace !important; font-size: clamp(22px,4vw,48px) !important; line-height: 1.5 !important; letter-spacing: 2px !important; text-align: left !important; }
+.page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 520px !important; text-align: left !important; }
+.page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
 
 </style>
 </head>
