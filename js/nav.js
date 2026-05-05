@@ -1,5 +1,6 @@
 (function(){
   const base = '/';
+  const inSub = location.pathname.includes('/services/');
   const cur = location.pathname.replace(/\/+$/, '').split('/').pop() || 'home';
 
   /* Cursor */
