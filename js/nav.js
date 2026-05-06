@@ -15,7 +15,7 @@
     requestAnimationFrame(loop);
   })();
   document.addEventListener('mouseover',e=>{
-    if(e.target.closest('a,button,.frost,.case-card,.svc-card,.pkg-card')){
+    if(e.target.closest('a,button,.frost,.case-card,.svc-card,.pkg-card,.team-card,.signal-card,.process-step,.stat-box,.about-panel,.value')){
       c.style.transform='translate(-50%,-50%) scale(2)';r.style.width='52px';r.style.height='52px';
     } else {c.style.transform='translate(-50%,-50%) scale(1)';r.style.width='32px';r.style.height='32px';}
   });
@@ -143,4 +143,187 @@
     entries.forEach(e=>{if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target)}});
   },{threshold:.5});
   document.querySelectorAll('[data-target]').forEach(el=>cio.observe(el));
+  /* HTML5 interactive layer */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+  document.body.classList.add('html5-ready');
+
+  const progress = document.createElement('div');
+  progress.className = 'html5-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  progress.innerHTML = '<span></span>';
+  document.body.appendChild(progress);
+  const progressBar = progress.firstElementChild;
+
+  function updateProgress(){
+    const doc = document.documentElement;
+    const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+    const amount = Math.min(1, Math.max(0, window.scrollY / max));
+    progressBar.style.transform = 'scaleX(' + amount + ')';
+  }
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  window.addEventListener('resize', updateProgress, {passive:true});
+
+  const canvas = document.createElement('canvas');
+  canvas.className = 'html5-stage';
+  canvas.setAttribute('aria-hidden', 'true');
+  document.body.insertBefore(canvas, document.body.firstChild);
+  const ctx = canvas.getContext('2d');
+  const pointer = { x: window.innerWidth * .68, y: window.innerHeight * .38, active: false };
+  let dpr = 1;
+  let particles = [];
+  let frameId = 0;
+
+  function makeParticles(){
+    const area = window.innerWidth * window.innerHeight;
+    const total = Math.max(26, Math.min(76, Math.round(area / 26000)));
+    particles = Array.from({length: total}, (_, i) => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - .5) * .22,
+      vy: (Math.random() - .5) * .18,
+      size: i % 7 === 0 ? 3 : 2,
+      phase: Math.random() * Math.PI * 2
+    }));
+  }
+
+  function resizeCanvas(){
+    if(!ctx) return;
+    dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+    canvas.width = Math.floor(window.innerWidth * dpr);
+    canvas.height = Math.floor(window.innerHeight * dpr);
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    makeParticles();
+    if(reduceMotion) drawStage(0);
+  }
+
+  function drawGrid(ts){
+    const gap = window.innerWidth < 760 ? 64 : 48;
+    const drift = (ts * .012 + window.scrollY * .06) % gap;
+    ctx.save();
+    ctx.globalAlpha = .10;
+    ctx.strokeStyle = 'rgba(255,77,0,.45)';
+    ctx.lineWidth = 1;
+    for(let x = -gap + drift; x < window.innerWidth + gap; x += gap){
+      ctx.beginPath(); ctx.moveTo(Math.round(x) + .5, 0); ctx.lineTo(Math.round(x) + .5, window.innerHeight); ctx.stroke();
+    }
+    for(let y = -gap + drift; y < window.innerHeight + gap; y += gap){
+      ctx.beginPath(); ctx.moveTo(0, Math.round(y) + .5); ctx.lineTo(window.innerWidth, Math.round(y) + .5); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawStage(ts){
+    frameId = 0;
+    if(!ctx) return;
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    drawGrid(ts || 0);
+
+    for(let i = 0; i < particles.length; i++){
+      const p = particles[i];
+      if(!reduceMotion){
+        p.x += p.vx;
+        p.y += p.vy;
+        if(p.x < -12) p.x = window.innerWidth + 12;
+        if(p.x > window.innerWidth + 12) p.x = -12;
+        if(p.y < -12) p.y = window.innerHeight + 12;
+        if(p.y > window.innerHeight + 12) p.y = -12;
+        if(pointer.active){
+          const dx = pointer.x - p.x;
+          const dy = pointer.y - p.y;
+          const dist = Math.hypot(dx, dy);
+          if(dist < 180 && dist > 1){
+            const pull = (1 - dist / 180) * .45;
+            p.x -= (dx / dist) * pull;
+            p.y -= (dy / dist) * pull;
+          }
+        }
+      }
+      const pulse = Math.sin((ts || 0) * .003 + p.phase) * .8;
+      ctx.fillStyle = i % 5 === 0 ? 'rgba(245,240,232,.38)' : 'rgba(255,77,0,.58)';
+      ctx.fillRect(Math.round(p.x), Math.round(p.y), p.size + Math.max(0, pulse), p.size + Math.max(0, pulse));
+    }
+
+    ctx.save();
+    ctx.lineWidth = 1;
+    for(let a = 0; a < particles.length; a++){
+      for(let b = a + 1; b < particles.length; b++){
+        const pa = particles[a], pb = particles[b];
+        const dx = pa.x - pb.x, dy = pa.y - pb.y;
+        const dist = Math.hypot(dx, dy);
+        if(dist < 118){
+          ctx.globalAlpha = (1 - dist / 118) * .16;
+          ctx.strokeStyle = 'rgba(255,114,38,.85)';
+          ctx.beginPath(); ctx.moveTo(pa.x + 1, pa.y + 1); ctx.lineTo(pb.x + 1, pb.y + 1); ctx.stroke();
+        }
+      }
+    }
+    ctx.restore();
+
+    if(pointer.active){
+      ctx.save();
+      ctx.globalAlpha = .25;
+      ctx.strokeStyle = 'rgba(255,77,0,.95)';
+      ctx.lineWidth = 1;
+      const s = 24 + Math.sin((ts || 0) * .006) * 5;
+      ctx.strokeRect(Math.round(pointer.x - s / 2) + .5, Math.round(pointer.y - s / 2) + .5, s, s);
+      ctx.restore();
+    }
+
+    if(!reduceMotion && !document.hidden) frameId = requestAnimationFrame(drawStage);
+  }
+
+  if(ctx){
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, {passive:true});
+    window.addEventListener('pointermove', e => { pointer.x = e.clientX; pointer.y = e.clientY; pointer.active = true; }, {passive:true});
+    window.addEventListener('pointerleave', () => { pointer.active = false; }, {passive:true});
+    if(!reduceMotion) frameId = requestAnimationFrame(drawStage);
+    document.addEventListener('visibilitychange', () => {
+      if(!document.hidden && !reduceMotion && !frameId) frameId = requestAnimationFrame(drawStage);
+    });
+  }
+
+  const tiltTargets = document.querySelectorAll('.frost,.svc-card,.case-card,.pkg-card,.team-card,.signal-card,.process-step,.stat-box,.about-panel,.value');
+  tiltTargets.forEach(el => {
+    el.classList.add('html5-tilt');
+    if(!Array.from(el.children).some(child => child.classList.contains('html5-glint'))){
+      const glint = document.createElement('span');
+      glint.className = 'html5-glint';
+      glint.setAttribute('aria-hidden', 'true');
+      el.appendChild(glint);
+    }
+    if(reduceMotion || coarsePointer) return;
+    el.addEventListener('pointermove', e => {
+      const rect = el.getBoundingClientRect();
+      const x = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+      const y = Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height));
+      el.style.setProperty('--tilt-x', ((x - .5) * 8).toFixed(2) + 'deg');
+      el.style.setProperty('--tilt-y', ((.5 - y) * 8).toFixed(2) + 'deg');
+      el.style.setProperty('--spot-x', (x * 100).toFixed(1) + '%');
+      el.style.setProperty('--spot-y', (y * 100).toFixed(1) + '%');
+      el.classList.add('is-tilting');
+    }, {passive:true});
+    el.addEventListener('pointerleave', () => {
+      el.classList.remove('is-tilting');
+      el.style.removeProperty('--tilt-x');
+      el.style.removeProperty('--tilt-y');
+    }, {passive:true});
+  });
+
+  document.addEventListener('click', e => {
+    const target = e.target.closest('.btn-primary,.btn-ghost,.nav-cta,.html5-tilt');
+    if(!target || reduceMotion) return;
+    const rect = target.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    ripple.className = 'html5-ripple';
+    ripple.setAttribute('aria-hidden', 'true');
+    ripple.style.setProperty('--ripple-x', (e.clientX - rect.left) + 'px');
+    ripple.style.setProperty('--ripple-y', (e.clientY - rect.top) + 'px');
+    target.appendChild(ripple);
+    window.setTimeout(() => ripple.remove(), 720);
+  });
 })();

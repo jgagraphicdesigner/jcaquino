@@ -312,6 +312,106 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
 
+/* ---------- HTML5 INTERACTIVE LAYER ---------- */
+.html5-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: .52;
+  mix-blend-mode: screen;
+}
+.html5-progress {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 250;
+  pointer-events: none;
+  background: rgba(255,255,255,.04);
+}
+.html5-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, transparent, var(--orange), #ffb077);
+  box-shadow: 0 0 18px rgba(255,77,0,.55);
+}
+.html5-tilt {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.html5-tilt.is-tilting {
+  transform: perspective(900px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-4px);
+}
+.html5-tilt > :not(.html5-glint):not(.html5-ripple) {
+  position: relative;
+  z-index: 2;
+}
+.html5-glint {
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  background:
+    radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(255,255,255,.16), transparent 22%),
+    linear-gradient(135deg, transparent 0 36%, rgba(255,77,0,.16) 48%, transparent 60%);
+  transition: opacity .25s ease;
+}
+.html5-tilt:hover .html5-glint,
+.html5-tilt.is-tilting .html5-glint { opacity: 1; }
+.btn-primary,
+.btn-ghost,
+.nav-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.html5-ripple {
+  position: absolute;
+  left: var(--ripple-x, 50%);
+  top: var(--ripple-y, 50%);
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,.34);
+  box-shadow: 0 0 22px rgba(255,77,0,.45);
+  transform: translate(-50%, -50%) scale(0);
+  animation: html5Ripple .7s ease-out forwards;
+}
+@keyframes html5Ripple {
+  to { opacity: 0; transform: translate(-50%, -50%) scale(22); }
+}
+.client-list-grid li {
+  transition: color .22s ease, transform .22s ease, text-shadow .22s ease;
+}
+.client-list-grid li:hover {
+  color: var(--orange);
+  transform: translateX(8px);
+  text-shadow: 0 0 16px rgba(255,77,0,.45);
+}
+@media (prefers-reduced-motion: reduce) {
+  .html5-stage { opacity: .18; }
+  .html5-progress span { transition: none; }
+  .html5-tilt,
+  .html5-tilt.is-tilting { transform: none !important; }
+  .html5-glint,
+  .html5-ripple { display: none; }
+}
+@media(max-width:768px) {
+  .html5-stage { opacity: .28; }
+  .html5-progress { height: 1px; }
+}
 /* ---------- MOBILE ---------- */
 @media(max-width:900px){
   #site-nav{padding:0 20px}
