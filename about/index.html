@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About JGA Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.page-hero {
+  background-image: url('/Background_Image.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 70vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding: calc(var(--nav-h) + 8px) 24px 60px !important;
+}
+.page-hero::before {
+  content: '' !important; position: absolute !important; inset: 0 !important;
+  background: rgba(8,4,0,0.54) !important; z-index: 0 !important; background-image: none !important;
+}
+.page-hero > * {
+  position: relative !important; z-index: 1 !important;
+  width: 100% !important; max-width: 900px !important;
+  text-align: left !important; margin-left: 0 !important; margin-right: 0 !important;
+}
+.page-hero-eyebrow { font-family: 'Press Start 2P', monospace !important; font-size: 9px !important; letter-spacing: .14em !important; text-shadow: 0 0 12px rgba(255,77,0,.5) !important; }
+.page-hero h1 { font-family: 'Press Start 2P', monospace !important; font-size: clamp(22px,4vw,48px) !important; line-height: 1.5 !important; letter-spacing: 2px !important; text-align: left !important; }
+.page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 540px !important; text-align: left !important; }
+.page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
+.section-heading {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: clamp(16px, 2.5vw, 30px) !important;
+  line-height: 1.55 !important; letter-spacing: 1px;
+}
+.section-label {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important; text-shadow: 0 0 12px rgba(255,77,0,.5);
+}
+.section-heading em { text-shadow: 0 0 20px rgba(255,77,0,.4); }
+.story-grid{display:grid;grid-template-columns:5fr 4fr;gap:44px;align-items:start;margin-top:48px}
+.story-copy{font-size:15px;line-height:1.9;color:var(--white-dim);font-weight:500}
+.story-copy p{margin-bottom:18px}
+.about-panel{background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:30px 28px;backdrop-filter:blur(20px)}
+.panel-kicker{font-family:'Press Start 2P',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:18px;line-height:1.7;text-shadow:0 0 10px rgba(255,77,0,.4)}
+.panel-title{font-weight:800;font-size:22px;line-height:1.35;margin-bottom:12px}
+.panel-text{font-size:14px;line-height:1.8;color:var(--white-dim);font-weight:500}
+.signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.signal-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:26px 24px;transition:border-color .25s,transform .25s}
+.signal-card:hover{border-color:var(--orange-border);transform:translateY(-4px)}
+.signal-num{font-family:'Press Start 2P',monospace;font-size:10px;color:var(--orange);letter-spacing:.1em;margin-bottom:18px;text-shadow:0 0 10px rgba(255,77,0,.45)}
+.signal-title{font-weight:800;font-size:17px;line-height:1.35;margin-bottom:10px}
+.signal-desc{font-size:13px;line-height:1.8;color:var(--white-dim);font-weight:500}
+.timeline{max-width:760px;margin:50px auto 0;border-top:1px solid var(--frost-border)}
+.timeline-item{display:grid;grid-template-columns:130px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--frost-border)}
+.timeline-year{font-family:'Press Start 2P',monospace;font-size:13px;color:rgba(255,77,0,.8);line-height:1.6;text-shadow:0 0 12px rgba(255,77,0,.35)}
+.timeline-title{font-weight:800;font-size:18px;margin-bottom:6px}
+.timeline-desc{font-size:14px;line-height:1.8;color:var(--white-dim);font-weight:500}
+.value-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;margin-top:46px}
+.value{background:var(--bg2);padding:26px 20px}
+.value strong{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.value span{display:block;font-size:13px;line-height:1.75;color:var(--white-dim);font-weight:500}
+@media(max-width:900px){.story-grid,.signal-grid,.value-strip{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.story-grid{gap:28px}}
+</style>
+</head>
+<body>
+<main>
+<section class="page-hero">
+  <div class="page-hero-eyebrow">About JGA Studios</div>
+  <h1>Built for<br><em>brands that</em><br><span class="ou">move fast.</span></h1>
+  <p class="page-hero-sub">JGA Studios is a creative and marketing digital studio helping ecommerce and service brands turn sharp design, practical systems, and custom web tools into measurable business momentum.</p>
+  <div class="page-hero-actions">
+    <a href="/work/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>View work</a>
+    <a href="/contact/" class="btn-ghost">Start a project</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-label reveal">Studio Story</div>
+  <h2 class="section-heading reveal">Creative work<br><em>with systems</em><br>behind it.</h2>
+  <div class="story-grid">
+    <div class="story-copy reveal">
+      <p>JGA Studios was built around one clear idea: good creative should not stop at looking good. It should help a brand sell, explain, guide, automate, and grow.</p>
+      <p>That is why the studio brings together ecommerce ad creative, GoHighLevel funnels, email design, app development, and brand identity work. Each service is useful on its own, but strongest when the pieces support one another.</p>
+      <p>From the Philippines, the studio works remote-first with founders, agencies, ecommerce teams, and service businesses that need dependable execution without the heavy agency drag.</p>
+    </div>
+    <div class="about-panel reveal reveal-d1">
+      <div class="panel-kicker">// The Point</div>
+      <div class="panel-title">Design the front end of growth, then connect the engine behind it.</div>
+      <div class="panel-text">Ads create attention. Funnels convert interest. Emails keep momentum. Apps and systems make the operation easier to run. JGA Studios sits right where those parts meet.</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="section-label reveal">What We Believe</div>
+  <h2 class="section-heading reveal">Useful.<br><em>Distinct.</em><br>Built to ship.</h2>
+  <div class="signal-grid">
+    <div class="signal-card reveal reveal-d1"><div class="signal-num">01</div><div class="signal-title">Clarity first</div><div class="signal-desc">Every project starts by tightening the goal, audience, offer, and next action before anything gets designed or built.</div></div>
+    <div class="signal-card reveal reveal-d2"><div class="signal-num">02</div><div class="signal-title">Creative with intent</div><div class="signal-desc">Visuals are built to stop the scroll, explain the offer, and move people toward a decision.</div></div>
+    <div class="signal-card reveal reveal-d3"><div class="signal-num">03</div><div class="signal-title">Systems that work</div><div class="signal-desc">Funnels, automations, apps, and handoffs are kept clean so the team using them can move faster.</div></div>
+  </div>
+  <div class="value-strip reveal">
+    <div class="value"><strong>Fast</strong><span>Clear timelines, lean build cycles, and steady updates.</span></div>
+    <div class="value"><strong>Sharp</strong><span>Bold visuals with structure, hierarchy, and purpose.</span></div>
+    <div class="value"><strong>Practical</strong><span>Work that fits real campaigns, teams, and launch needs.</span></div>
+    <div class="value"><strong>Reliable</strong><span>Clean files, documented handoffs, and support after launch.</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label reveal">How It Grew</div>
+  <h2 class="section-heading reveal">From graphics<br><em>to growth</em><br>systems.</h2>
+  <div class="timeline reveal">
+    <div class="timeline-item"><div class="timeline-year">01</div><div><div class="timeline-title">Design roots</div><div class="timeline-desc">The work started with brand visuals, static ad creative, layouts, logos, and campaign assets for businesses that needed to stand out quickly.</div></div></div>
+    <div class="timeline-item"><div class="timeline-year">02</div><div><div class="timeline-title">Marketing systems</div><div class="timeline-desc">As client needs grew, the studio expanded into landing pages, GoHighLevel funnels, CRM automations, and email campaigns.</div></div></div>
+    <div class="timeline-item"><div class="timeline-year">03</div><div><div class="timeline-title">Custom builds</div><div class="timeline-desc">The next step was app development and SaaS-style tools: project trackers, internal dashboards, and workflow systems built around real operations.</div></div></div>
+    <div class="timeline-item"><div class="timeline-year">04</div><div><div class="timeline-title">Studio model</div><div class="timeline-desc">Today JGA Studios combines creative, funnels, and web apps into one focused production partner for ambitious brands.</div></div></div>
+  </div>
+</section>
+
+<section style="text-align:center;background:var(--bg2)">
+  <div class="section-label reveal" style="justify-content:center">Next Step</div>
+  <h2 class="section-heading reveal">Let's build<br><em>something useful.</em></h2>
+  <p class="reveal" style="color:var(--white-dim);font-size:16px;max-width:460px;margin:16px auto 40px;line-height:1.8">Tell us what you are trying to grow, launch, or fix. We will help shape the cleanest path forward.</p>
+  <a href="/contact/" class="btn-primary reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Book free call</a>
+</section>
+</main>
+<script src="/js/nav.js"></script>
+</body>
+</html>
