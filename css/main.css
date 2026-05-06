@@ -352,8 +352,13 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   transform: perspective(900px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-4px);
 }
 .html5-tilt > :not(.html5-glint):not(.html5-ripple) {
-  position: relative;
   z-index: 2;
+}
+.html5-tilt > :not(.html5-glint):not(.html5-ripple):not(.pkg-badge) {
+  position: relative;
+}
+.html5-tilt > .pkg-badge {
+  z-index: 4;
 }
 .html5-glint {
   position: absolute;
