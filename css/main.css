@@ -348,6 +348,9 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   transform-style: preserve-3d;
   will-change: transform;
 }
+.pkg-card.html5-tilt {
+  overflow: visible;
+}
 .html5-tilt.is-tilting {
   transform: perspective(900px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-4px);
 }
