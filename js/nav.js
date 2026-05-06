@@ -27,6 +27,7 @@
     <div class="nav-inner">
       <ul class="nav-center" id="nav-menu">
         <li><a href="/" data-page="home">Home</a></li>
+        <li><a href="/about/" data-page="about">About</a></li>
         <li class="has-dropdown" id="services-menu">
           <button data-page="services">Services
             <svg class="nav-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 4 4-4"/></svg>
@@ -74,6 +75,7 @@
     <a href="/" class="footer-logo"><img src="/JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"></a>
     <div class="footer-wired">JGA STUDIOS</div>
     <nav class="footer-links">
+      <a href="/about/">About</a>
       <a href="/services/ecom-ads/">Ad Creative</a>
       <a href="/services/ghl-funnels/">GHL Funnels</a>
       <a href="/services/app-development/">App Dev</a>
