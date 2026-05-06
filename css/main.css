@@ -336,6 +336,28 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   transform: translateY(-2px);
   box-shadow: 0 0 22px rgba(255,77,0,.18);
 }
+.case-visual .cv-thumb {
+  position: absolute;
+  inset: 18px;
+  z-index: 1;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: calc(var(--radius-lg) - 8px);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 24px 70px rgba(0,0,0,.42), 0 0 34px rgba(249,199,79,.10);
+  opacity: .94;
+}
+.case-visual .cv-thumb.is-audiobook-thumb {
+  object-position: top center;
+}
+.case-visual .cv-thumb + .cv-badge {
+  z-index: 3;
+}
+@media(max-width:768px){
+  .case-visual .cv-thumb { inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); }
+}
 /* ---------- HTML5 INTERACTIVE LAYER ---------- */
 .html5-stage {
   position: fixed;
