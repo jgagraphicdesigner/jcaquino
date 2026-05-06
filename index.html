@@ -122,22 +122,7 @@
   margin: 0 auto;
 }
 .client-list-head {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 22px;
-  align-items: start;
-}
-.client-list-kicker {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 9px;
-  line-height: 1.35;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--orange);
-  padding: 4px 10px;
-  border-left: 2px solid var(--orange);
-  border-right: 2px solid var(--orange);
-  text-shadow: 0 0 12px rgba(255,77,0,.45);
+  max-width: 820px;
 }
 .client-list-title {
   font-family: 'Press Start 2P', monospace;
@@ -330,7 +315,6 @@
   .cta-banner { padding: 72px 20px; }
 }
 @media(max-width:640px){
-  .client-list-head { grid-template-columns: 1fr; gap: 16px; }
   .client-list-grid { grid-template-columns: 1fr; }
   .client-list-grid li { font-size: 15px; }
 }</style>
@@ -408,7 +392,6 @@
 <section class="client-list-section">
   <div class="client-list-inner">
     <div class="client-list-head reveal">
-      <div class="client-list-kicker">Best of<br>the Best</div>
       <h2 class="client-list-title">CLIENT LIST</h2>
     </div>
     <p class="client-list-copy reveal reveal-d1">We are more than just a creative studio. We have crafted designs, systems, campaigns, and digital experiences for brands, founders, and teams across different industries.</p>
