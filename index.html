@@ -329,7 +329,11 @@
   .bento-process { grid-template-columns: 1fr 1fr; }
   .cta-banner { padding: 72px 20px; }
 }
-</style>
+@media(max-width:640px){
+  .client-list-head { grid-template-columns: 1fr; gap: 16px; }
+  .client-list-grid { grid-template-columns: 1fr; }
+  .client-list-grid li { font-size: 15px; }
+}</style>
 </head>
 <body>
 <main>
