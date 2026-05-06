@@ -350,8 +350,8 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   opacity: .94;
 }
 .case-visual .cv-thumb.is-app-campaign-thumb {
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: top center;
   background: #f7f2ff;
   box-shadow: 0 24px 70px rgba(0,0,0,.42), 0 0 34px rgba(94,51,143,.18);
 }.case-visual .cv-thumb.is-relivex-thumb {
