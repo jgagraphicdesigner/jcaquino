@@ -91,7 +91,7 @@
 }
 .stat-box {
   flex: 1;
-  background: var(--bg2); padding: 36px 32px;
+  background: var(--bg2); padding: 36px 20px;
   position: relative; overflow: hidden; transition: background .25s;
   border-right: 1px solid rgba(255,255,255,0.06);
   text-align: left;
@@ -106,8 +106,8 @@
 .stat-box:hover::after { width: 100%; }
 .stat-num {
   font-family: 'Press Start 2P', monospace;
-  font-size: 42px; color: var(--orange); line-height: 1;
-  margin-bottom: 10px; text-shadow: 0 0 20px rgba(255,77,0,.4);
+  font-size: clamp(28px, 2.8vw, 34px); color: var(--orange); line-height: 1.15;
+  margin-bottom: 12px; text-shadow: 0 0 20px rgba(255,77,0,.4);
 }
 .stat-label { font-size: 13px; line-height: 1.65; color: var(--white-dim); font-weight: 500; }
 
@@ -318,15 +318,19 @@
   <div class="bento-stats">
     <div class="stat-box reveal reveal-d1">
       <div class="stat-num" data-target="50" data-suffix="+">0+</div>
-      <div class="stat-label">Ecommerce brands served globally</div>
+      <div class="stat-label">Brands served globally</div>
     </div>
     <div class="stat-box reveal reveal-d2">
-      <div class="stat-num" data-target="200" data-suffix="+">0+</div>
-      <div class="stat-label">Ad creatives produced &amp; tested</div>
+      <div class="stat-num" data-target="1000" data-suffix="+">0+</div>
+      <div class="stat-label">Ad creatives produced and tested</div>
     </div>
     <div class="stat-box reveal reveal-d3">
       <div class="stat-num" data-target="4" data-suffix="+">0+</div>
-      <div class="stat-label">Web apps &amp; SaaS tools shipped</div>
+      <div class="stat-label">Web &amp; mobile apps created</div>
+    </div>
+    <div class="stat-box reveal reveal-d4">
+      <div class="stat-num" data-target="30" data-suffix="+">0+</div>
+      <div class="stat-label">Landing pages published</div>
     </div>
   </div>
 </div>
