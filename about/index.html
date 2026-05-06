@@ -7,38 +7,82 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/main.css">
 <style>
-.page-hero {
+.about-hero {
+  position: relative !important;
+  overflow: hidden !important;
   background-image: url('/Background_Image.png') !important;
   background-size: cover !important;
   background-position: center center !important;
   min-height: 70vh !important;
   display: flex !important;
-  flex-direction: column !important;
   justify-content: flex-start !important;
   align-items: center !important;
-  padding: calc(var(--nav-h) + 8px) 24px 60px !important;
+  padding: calc(var(--nav-h) + 42px) 24px 72px !important;
 }
-.page-hero::before {
-  content: '' !important; position: absolute !important; inset: 0 !important;
-  background: rgba(8,4,0,0.54) !important; z-index: 0 !important; background-image: none !important;
+.about-hero::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background: rgba(8,4,0,0.58) !important;
+  background-image: none !important;
 }
-.page-hero > * {
-  position: relative !important; z-index: 1 !important;
-  width: 100% !important; max-width: 900px !important;
-  text-align: left !important; margin-left: 0 !important; margin-right: 0 !important;
+.about-hero-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  width: min(100%, 900px) !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
 }
-.page-hero-eyebrow { font-family: 'Press Start 2P', monospace !important; font-size: 9px !important; letter-spacing: .14em !important; text-shadow: 0 0 12px rgba(255,77,0,.5) !important; }
-.page-hero h1 { font-family: 'Press Start 2P', monospace !important; font-size: clamp(22px,4vw,48px) !important; line-height: 1.5 !important; letter-spacing: 2px !important; text-align: left !important; }
-.page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 540px !important; text-align: left !important; }
-.page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
+.about-hero .page-hero-eyebrow,
+.about-hero h1,
+.about-hero .page-hero-sub,
+.about-hero .page-hero-actions {
+  width: 100% !important;
+  max-width: 680px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
+.about-hero .page-hero-eyebrow {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: .14em !important;
+  text-shadow: 0 0 12px rgba(255,77,0,.5) !important;
+}
+.about-hero h1 {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 48px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 2px !important;
+  margin-top: 28px !important;
+}
+.about-hero .page-hero-sub {
+  max-width: 560px !important;
+  margin-top: 24px !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+.about-hero .page-hero-actions {
+  max-width: 560px !important;
+  margin-top: 36px !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
 .section-heading {
   font-family: 'Press Start 2P', monospace !important;
   font-size: clamp(16px, 2.5vw, 30px) !important;
-  line-height: 1.55 !important; letter-spacing: 1px;
+  line-height: 1.55 !important;
+  letter-spacing: 1px;
 }
 .section-label {
   font-family: 'Press Start 2P', monospace !important;
-  font-size: 9px !important; text-shadow: 0 0 12px rgba(255,77,0,.5);
+  font-size: 9px !important;
+  text-shadow: 0 0 12px rgba(255,77,0,.5);
 }
 .section-heading em { text-shadow: 0 0 20px rgba(255,77,0,.4); }
 .story-grid{display:grid;grid-template-columns:5fr 4fr;gap:44px;align-items:start;margin-top:48px}
@@ -48,6 +92,18 @@
 .panel-kicker{font-family:'Press Start 2P',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:18px;line-height:1.7;text-shadow:0 0 10px rgba(255,77,0,.4)}
 .panel-title{font-weight:800;font-size:22px;line-height:1.35;margin-bottom:12px}
 .panel-text{font-size:14px;line-height:1.8;color:var(--white-dim);font-weight:500}
+.team-section{background:var(--bg2)}
+.team-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:52px;align-items:stretch}
+.team-card{min-width:0;background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius);padding:16px;backdrop-filter:blur(20px);transition:border-color .25s,transform .25s,box-shadow .25s}
+.team-card:hover{border-color:var(--orange-border);transform:translateY(-4px);box-shadow:0 18px 50px rgba(255,77,0,.12)}
+.team-card.featured{grid-column:span 2;background:linear-gradient(180deg,rgba(255,77,0,.12),rgba(255,255,255,.035));border-color:rgba(255,77,0,.28)}
+.team-media{height:190px;border:1px solid rgba(255,255,255,.08);border-radius:calc(var(--radius) - 4px);background:radial-gradient(circle at 52% 28%,rgba(255,77,0,.24),transparent 42%),linear-gradient(145deg,rgba(255,138,36,.12),rgba(12,10,8,.95));display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:18px}
+.team-card.featured .team-media{height:240px}
+.team-media img{width:100%;height:100%;object-fit:contain;padding:10px;image-rendering:pixelated;filter:drop-shadow(0 12px 0 rgba(0,0,0,.32))}
+.team-card.featured .team-media img{padding:6px}
+.team-name{font-size:18px;font-weight:800;line-height:1.25;margin-bottom:9px;color:var(--white)}
+.team-role{font-family:'Press Start 2P',monospace;font-size:7px;letter-spacing:.08em;line-height:1.8;text-transform:uppercase;color:var(--orange);overflow-wrap:break-word;text-shadow:0 0 10px rgba(255,77,0,.42)}
+.team-note{font-size:13px;line-height:1.75;color:var(--white-dim);font-weight:500;margin-top:12px}
 .signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
 .signal-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:26px 24px;transition:border-color .25s,transform .25s}
 .signal-card:hover{border-color:var(--orange-border);transform:translateY(-4px)}
@@ -63,18 +119,22 @@
 .value{background:var(--bg2);padding:26px 20px}
 .value strong{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
 .value span{display:block;font-size:13px;line-height:1.75;color:var(--white-dim);font-weight:500}
-@media(max-width:900px){.story-grid,.signal-grid,.value-strip{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.story-grid{gap:28px}}
+@media(max-width:1100px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-card.featured{grid-column:span 2}}
+@media(max-width:900px){.about-hero{padding:calc(var(--nav-h) + 34px) 20px 64px !important}.about-hero h1{font-size:34px !important}.story-grid,.signal-grid,.value-strip{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.story-grid{gap:28px}}
+@media(max-width:640px){.about-hero h1{font-size:24px !important;line-height:1.55 !important}.about-hero .page-hero-sub{font-size:14px !important}.team-grid{grid-template-columns:1fr}.team-card.featured{grid-column:span 1}.team-card.featured .team-media,.team-media{height:220px}}
 </style>
 </head>
 <body>
 <main>
-<section class="page-hero">
-  <div class="page-hero-eyebrow">About JGA Studios</div>
-  <h1>Built for<br><em>brands that</em><br><span class="ou">move fast.</span></h1>
-  <p class="page-hero-sub">JGA Studios is a creative and marketing digital studio helping ecommerce and service brands turn sharp design, practical systems, and custom web tools into measurable business momentum.</p>
-  <div class="page-hero-actions">
-    <a href="/work/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>View work</a>
-    <a href="/contact/" class="btn-ghost">Start a project</a>
+<section class="page-hero about-hero">
+  <div class="about-hero-inner">
+    <div class="page-hero-eyebrow">About JGA Studios</div>
+    <h1>Built for<br><em>brands that</em><br><span class="ou">move fast.</span></h1>
+    <p class="page-hero-sub">JGA Studios is a creative and marketing digital studio helping ecommerce and service brands turn sharp design, practical systems, and custom web tools into measurable business momentum.</p>
+    <div class="page-hero-actions">
+      <a href="/work/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>View work</a>
+      <a href="/contact/" class="btn-ghost">Start a project</a>
+    </div>
   </div>
 </section>
 
@@ -92,6 +152,43 @@
       <div class="panel-title">Design the front end of growth, then connect the engine behind it.</div>
       <div class="panel-text">Ads create attention. Funnels convert interest. Emails keep momentum. Apps and systems make the operation easier to run. JGA Studios sits right where those parts meet.</div>
     </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="section-label reveal">The Team</div>
+  <h2 class="section-heading reveal">Meet the<br><em>people</em><br>behind the build.</h2>
+  <div class="team-grid">
+    <article class="team-card featured reveal reveal-d1">
+      <div class="team-media"><img src="/assets/team/jc-typing.png" alt="JC typing at a workstation"></div>
+      <div class="team-name">JC</div>
+      <div class="team-role">Owner, Creative Director</div>
+      <p class="team-note">Leads the creative direction, brand systems, and the studio's build quality from first idea to final launch.</p>
+    </article>
+    <article class="team-card reveal reveal-d2">
+      <div class="team-media"><img src="/assets/team/christian.svg" alt="Christian automation avatar"></div>
+      <div class="team-name">Christian</div>
+      <div class="team-role">Automation</div>
+      <p class="team-note">Builds the workflows, triggers, and backend logic that keep campaigns moving cleanly.</p>
+    </article>
+    <article class="team-card reveal reveal-d3">
+      <div class="team-media"><img src="/assets/team/sunday.svg" alt="Sunday graphic designer avatar"></div>
+      <div class="team-name">Sunday</div>
+      <div class="team-role">Graphic Designer</div>
+      <p class="team-note">Shapes scroll-stopping visuals, layouts, and campaign assets with a sharp design eye.</p>
+    </article>
+    <article class="team-card reveal reveal-d1">
+      <div class="team-media"><img src="/assets/team/mac.svg" alt="Mac social media manager avatar"></div>
+      <div class="team-name">Mac</div>
+      <div class="team-role">Social Media Manager</div>
+      <p class="team-note">Keeps content calendars, posting flow, and social presence aligned with the brand voice.</p>
+    </article>
+    <article class="team-card reveal reveal-d2">
+      <div class="team-media"><img src="/assets/team/norman.svg" alt="Norman media buyer avatar"></div>
+      <div class="team-name">Norman</div>
+      <div class="team-role">Media Buyer</div>
+      <p class="team-note">Turns campaign strategy into measured ad tests, budgets, and performance decisions.</p>
+    </article>
   </div>
 </section>
 
