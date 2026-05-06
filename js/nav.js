@@ -301,16 +301,20 @@
       const rect = el.getBoundingClientRect();
       const x = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
       const y = Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height));
-      el.style.setProperty('--tilt-x', ((x - .5) * 8).toFixed(2) + 'deg');
-      el.style.setProperty('--tilt-y', ((.5 - y) * 8).toFixed(2) + 'deg');
+      const tiltX = ((x - .5) * 8).toFixed(2) + 'deg';
+      const tiltY = ((.5 - y) * 8).toFixed(2) + 'deg';
+      el.style.setProperty('--tilt-x', tiltX);
+      el.style.setProperty('--tilt-y', tiltY);
       el.style.setProperty('--spot-x', (x * 100).toFixed(1) + '%');
       el.style.setProperty('--spot-y', (y * 100).toFixed(1) + '%');
+      el.style.transform = 'perspective(900px) rotateX(' + tiltY + ') rotateY(' + tiltX + ') translateY(-4px)';
       el.classList.add('is-tilting');
     }, {passive:true});
     el.addEventListener('pointerleave', () => {
       el.classList.remove('is-tilting');
       el.style.removeProperty('--tilt-x');
       el.style.removeProperty('--tilt-y');
+      el.style.removeProperty('transform');
     }, {passive:true});
   });
 
