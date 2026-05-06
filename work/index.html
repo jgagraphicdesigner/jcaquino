@@ -150,6 +150,16 @@
       </div>
     </div>
 
+    <a href="/work/relivex-ecommerce-brand/" class="case-card reveal reveal-d2" data-cat="brand ads" id="relivex-ecommerce-brand">
+      <div class="case-visual" style="background:linear-gradient(135deg,#eef4ef,#dcebe2)"><div class="cv-glow" style="background:radial-gradient(circle,rgba(85,119,107,0.18) 0%,transparent 65%)"></div><img class="cv-thumb is-relivex-thumb" src="/assets/projects/relivex-ecommerce-brand.jpg" alt="ReliveX ecommerce brand product, Shopify, packaging, and community assets"><div class="cv-badge">Ecommerce Brand</div></div>
+      <div class="case-content">
+        <div class="case-cat">Ecommerce Brand · Shopify · Creative Assets</div>
+        <div class="case-title">ReliveX Ecommerce Brand System</div>
+        <div class="case-tags"><span class="ctag">Logo</span><span class="ctag">Packaging</span><span class="ctag">Prints</span><span class="ctag">Shopify Images</span><span class="ctag">Creative Ads</span></div>
+        <div class="case-desc">A practical ecommerce brand toolkit for ReliveX, bringing together logo direction, packaging, print collateral, Shopify website imagery, and creative ads for a pain-relief product and community-led customer journey.</div>
+        <div class="case-metrics"><div><div class="metric-val">Shopify</div><div class="metric-label">Website visuals</div></div><div><div class="metric-val">5</div><div class="metric-label">Asset groups</div></div></div>
+      </div>
+    </a>
     <div class="case-card reveal reveal-d2" data-cat="brand" id="chicky-boom">
       <div class="case-visual" style="background:linear-gradient(135deg,#0A0A0A,#1A0800)"><div class="cv-glow"></div><div class="cv-label">BRAND<br>IDENTITY</div></div>
       <div class="case-content">
@@ -219,7 +229,8 @@ function filter(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.case-card').forEach(card => {
-    if(cat === 'all' || card.dataset.cat === cat) {
+    const cats = (card.dataset.cat || '').split(/\s+/);
+    if(cat === 'all' || cats.includes(cat)) {
       card.style.display = '';
       card.style.opacity = '0';
       setTimeout(() => card.style.opacity = '1', 10);
