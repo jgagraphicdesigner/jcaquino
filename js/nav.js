@@ -27,7 +27,6 @@
     <div class="nav-inner">
       <ul class="nav-center" id="nav-menu">
         <li><a href="/" data-page="home">Home</a></li>
-        <li><a href="/about/" data-page="about">About</a></li>
         <li class="has-dropdown" id="services-menu">
           <button data-page="services">Services
             <svg class="nav-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 4 4-4"/></svg>
@@ -55,13 +54,14 @@
             </a>
             <div class="dd-divider"></div>
             <a href="/contact/" style="padding:8px 14px">
-              <span class="dd-text"><span class="dd-title" style="color:var(--orange)">→ Get a free quote</span><span class="dd-sub">Tell us about your project</span></span>
+              <span class="dd-text"><span class="dd-title" style="color:var(--orange)">&rarr; Get a free quote</span><span class="dd-sub">Tell us about your project</span></span>
             </a>
           </div>
         </li>
+        <li><a href="/about/" data-page="about">About</a></li>
         <li><a href="/work/" data-page="work">Work</a></li>
         <li><a href="/process/" data-page="process">Process</a></li>
-        <li><a href="/contact/" class="nav-cta" data-page="contact">Let\'s talk →</a></li>
+        <li><a href="/contact/" class="nav-cta" data-page="contact">Let's talk &rarr;</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -75,12 +75,12 @@
     <a href="/" class="footer-logo"><img src="/JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"></a>
     <div class="footer-wired">JGA STUDIOS</div>
     <nav class="footer-links">
-      <a href="/about/">About</a>
       <a href="/services/ecom-ads/">Ad Creative</a>
       <a href="/services/ghl-funnels/">GHL Funnels</a>
       <a href="/services/app-development/">App Dev</a>
       <a href="/services/email-marketing/">Email</a>
       <a href="/services/brand-identity/">Brand Identity</a>
+      <a href="/about/">About</a>
       <a href="/work/">Work</a>
       <a href="/contact/">Contact</a>
     </nav>
