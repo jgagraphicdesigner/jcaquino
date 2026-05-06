@@ -312,6 +312,30 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
 
+.case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  margin: 0 0 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--orange-border);
+  color: var(--orange);
+  background: var(--orange-dim);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+}
+.case-link:hover {
+  background: rgba(255,77,0,.18);
+  border-color: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(255,77,0,.18);
+}
 /* ---------- HTML5 INTERACTIVE LAYER ---------- */
 .html5-stage {
   position: fixed;
