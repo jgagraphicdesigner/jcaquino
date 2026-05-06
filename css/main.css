@@ -237,6 +237,37 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   max-width:100%;
 }
 .page-hero>*{max-width:900px;margin-left:0}
+/* Shared page hero alignment */
+.page-hero{align-items:center}
+.page-hero-inner{
+  position:relative;
+  z-index:1;
+  width:min(100%,900px);
+  max-width:900px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.page-hero .page-hero-inner > *{
+  margin-left:0 !important;
+  margin-right:0 !important;
+  text-align:left !important;
+}
+.page-hero .page-hero-inner .page-hero-eyebrow,
+.page-hero .page-hero-inner h1,
+.page-hero .page-hero-inner .page-hero-sub,
+.page-hero .page-hero-inner .page-hero-actions{
+  width:100% !important;
+  max-width:680px !important;
+}
+.page-hero .page-hero-inner .page-hero-sub,
+.page-hero .page-hero-inner .page-hero-actions{
+  max-width:560px !important;
+}
+.page-hero .page-hero-inner .page-hero-actions{
+  justify-content:flex-start !important;
+  flex-wrap:wrap !important;
+}
 .page-hero-eyebrow{
   font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--orange);margin-bottom:24px;
