@@ -350,7 +350,9 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   opacity: .94;
 }
 .case-visual .cv-thumb.is-audiobook-thumb {
-  object-position: top center;
+  object-fit: contain;
+  object-position: center center;
+  background: rgba(18,5,31,.72);
 }
 .case-visual .cv-thumb + .cv-badge {
   z-index: 3;
