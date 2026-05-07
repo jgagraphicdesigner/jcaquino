@@ -350,7 +350,7 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   opacity: .94;
 }
 .case-visual .cv-thumb.is-tracker-thumb {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   background: #130a00;
   box-shadow: 0 24px 70px rgba(0,0,0,.42), 0 0 34px rgba(255,77,0,.16);
