@@ -11,10 +11,10 @@
 <style>
 /* ══════ HERO ══════ */
 .hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: flex-start;
+  min-height: calc(100vh - var(--nav-h));
+  display: flex; flex-direction: column; justify-content: center;
   align-items: center;
-  padding: calc(var(--nav-h) + 8px) 24px 60px;
+  padding: clamp(56px, 8vh, 84px) 24px clamp(56px, 8vh, 84px);
   position: relative; overflow: hidden;
 }
 
@@ -246,7 +246,11 @@
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .hero { padding: 0 20px 60px; }
+  .hero {
+    min-height: calc(100svh - var(--nav-h));
+    justify-content: center;
+    padding: clamp(44px, 7vh, 64px) 20px clamp(56px, 8vh, 76px);
+  }
   
 /* Full-width stats background wrapper */
 .bento-stats-wrap {
@@ -264,6 +268,65 @@
   .case-card.wide { grid-template-columns: 1fr; }
   .bento-process { grid-template-columns: 1fr 1fr; }
   .cta-banner { padding: 72px 20px; }
+}
+@media(max-width:768px){
+  #work .bento-work {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 34px !important;
+  }
+  #work .case-card,
+  #work .case-card.wide {
+    display: block;
+    border-radius: 18px;
+  }
+  #work .case-visual,
+  #work .case-card.wide .case-visual {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+  #work .case-visual .cv-thumb {
+    inset: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 14px;
+  }
+  #work .case-content,
+  #work .case-card.wide .case-content {
+    padding: 24px 20px 26px;
+  }
+  #work .case-cat {
+    font-size: 7px;
+    line-height: 1.8;
+    letter-spacing: .07em;
+    margin-bottom: 12px;
+  }
+  #work .case-title,
+  #work .case-card.wide .case-title {
+    font-size: clamp(22px, 7vw, 28px);
+    line-height: 1.28;
+    margin-bottom: 12px;
+  }
+  #work .case-desc {
+    font-size: 14px;
+    line-height: 1.72;
+    margin-bottom: 18px;
+  }
+  #work .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+  }
+  #work .metric-val {
+    font-size: clamp(13px, 4vw, 16px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+  #work .metric-label {
+    font-size: 10px;
+    line-height: 1.45;
+  }
 }</style>
 </head>
 <body>
