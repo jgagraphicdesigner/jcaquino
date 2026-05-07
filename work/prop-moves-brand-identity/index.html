@@ -16,21 +16,21 @@ html,body{overflow-x:hidden}
 .pm-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 10% 8%,rgba(255,77,0,.14),transparent 22%),radial-gradient(circle at 88% 20%,rgba(255,77,0,.09),transparent 28%),linear-gradient(rgba(255,77,0,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.028) 1px,transparent 1px);background-size:auto,auto,56px 56px,56px 56px;z-index:0}
 .pm-page>*{position:relative;z-index:1}
 .pm-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
-.pm-hero{min-height:calc(100vh - var(--nav-h));padding:calc(var(--nav-h) + 58px) 0 74px;display:flex;align-items:center;background:linear-gradient(180deg,rgba(10,5,0,.98),rgba(18,8,1,.96))}
-.pm-hero-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
-.pm-hero-grid>div:first-child{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:32px;align-items:end}
+.pm-hero{padding:calc(var(--nav-h) + 36px) 0 64px;background:linear-gradient(180deg,rgba(10,5,0,.98),rgba(18,8,1,.96))}
+.pm-hero-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+.pm-hero-copy{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:30px;align-items:end}
 .pm-kicker,.pm-board-head span,.pm-index-label{font-family:'Press Start 2P',monospace;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 16px rgba(255,77,0,.35)}
-.pm-kicker{font-size:9px;line-height:1.9;margin-bottom:22px}
-.pm-title{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3vw,38px);line-height:1.42;letter-spacing:1px;margin:0;max-width:520px}
+.pm-kicker{font-size:9px;line-height:1.9;margin-bottom:12px}
+.pm-title{font-family:'Press Start 2P',monospace;font-size:clamp(16px,1.8vw,24px);line-height:1.6;letter-spacing:1px;margin:0;max-width:420px}
 .pm-title em{color:var(--orange);font-style:normal;text-shadow:0 0 24px rgba(255,77,0,.4)}
-.pm-sub{font-size:16px;line-height:1.9;color:var(--white-dim);font-weight:600;max-width:620px}
-.pm-index{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;max-width:620px}
-.pm-index a{display:inline-grid;place-items:center;width:42px;height:38px;border:1px solid var(--orange-border);border-radius:999px;background:rgba(255,77,0,.055);color:var(--orange);font-family:'Press Start 2P',monospace;font-size:9px;text-decoration:none;transition:transform .18s,border-color .18s,background .18s,color .18s}
+.pm-sub{font-size:14px;line-height:1.8;color:var(--white-dim);font-weight:600;max-width:660px;margin:0}
+.pm-index{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;max-width:660px}
+.pm-index a{display:inline-grid;place-items:center;width:38px;height:35px;border:1px solid var(--orange-border);border-radius:999px;background:rgba(255,77,0,.055);color:var(--orange);font-family:'Press Start 2P',monospace;font-size:8px;text-decoration:none;transition:transform .18s,border-color .18s,background .18s,color .18s}
 .pm-index a:hover,.pm-index a:focus-visible{transform:translateY(-2px);background:var(--orange);color:#070300;border-color:var(--orange);outline:0}
 .pm-hero-frame,.pm-preview{border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52),0 0 46px rgba(255,77,0,.05);padding:14px;overflow:hidden}
 .pm-hero-frame{width:min(100%,1080px);justify-self:center}
 .pm-hero-frame img,.pm-preview img{display:block;width:100%;height:auto;border-radius:14px}
-.pm-hero-frame img{max-height:min(62vh,720px);object-fit:contain}
+.pm-hero-frame img{max-height:min(66vh,720px);object-fit:contain}
 .pm-sequence{padding:88px 0 104px;background:linear-gradient(180deg,rgba(15,7,1,.98),rgba(9,4,0,1))}
 .pm-intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px;align-items:end;margin-bottom:58px}
 .pm-index-label{font-size:9px;line-height:1.9}
@@ -58,7 +58,7 @@ html,body{overflow-x:hidden}
 .pm-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
 .pm-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
 .pm-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
-@media(max-width:980px){.pm-hero-grid,.pm-hero-grid>div:first-child,.pm-intro{grid-template-columns:1fr}.pm-hero{min-height:auto;padding:calc(var(--nav-h) + 44px) 0 68px}.pm-hero-frame img{max-height:none}.pm-board:nth-of-type(n) .pm-preview{width:100%;margin-left:0;margin-right:0}}
+@media(max-width:980px){.pm-hero-grid,.pm-hero-copy,.pm-intro{grid-template-columns:1fr}.pm-hero{min-height:auto;padding:calc(var(--nav-h) + 44px) 0 68px}.pm-hero-frame img{max-height:none}.pm-board:nth-of-type(n) .pm-preview{width:100%;margin-left:0;margin-right:0}}
 @media(max-width:640px){#cursor,#cursor-ring{display:none!important}.pm-shell{width:min(100% - 36px,1180px)}.pm-title{font-size:clamp(25px,10vw,38px);line-height:1.45}.pm-sub,.pm-intro p,.pm-cta p{font-size:15px}.pm-index a{width:39px;height:36px}.pm-hero-frame,.pm-preview{border-radius:17px;padding:10px}.pm-hero-frame img,.pm-preview img{border-radius:10px}.pm-sequence{padding:64px 0 78px}.pm-intro{margin-bottom:44px}.pm-board{margin-bottom:52px}.pm-board-head{gap:12px}.pm-board-head span{font-size:14px;min-width:44px}.pm-board-head strong{font-size:13px}.pm-board-head p{font-size:13px}.pm-dialog{width:calc(100vw - 24px);max-height:84vh}.pm-dialog img{max-height:calc(84vh - 70px)}}
 </style>
 </head>
@@ -66,12 +66,15 @@ html,body{overflow-x:hidden}
 <main class="pm-page">
   <section class="pm-hero">
     <div class="pm-shell pm-hero-grid">
-      <div>
-        <div class="pm-kicker">Case Study // Prop Moves</div>
-        <h1 class="pm-title">Brand<br><em>Identity</em><br>Design</h1>
-        <p class="pm-sub">A focused brand system for an Australian property buyers agency, presented as a numbered material showcase from the approved Prop Moves website folder.</p>
-        <nav class="pm-index" aria-label="Prop Moves numbered material index">
-          <a href="#frame-01" aria-label="Jump to Prop Moves frame 01">01</a>
+      <div class="pm-hero-copy">
+        <div>
+          <div class="pm-kicker">Case Study // Prop Moves</div>
+          <h1 class="pm-title">Prop Moves<br><em>Brand Identity</em></h1>
+        </div>
+        <div>
+          <p class="pm-sub">A focused brand system for an Australian property buyers agency, presented as a numbered material showcase from the approved Prop Moves website folder.</p>
+          <nav class="pm-index" aria-label="Prop Moves numbered material index">
+            <a href="#frame-01" aria-label="Jump to Prop Moves frame 01">01</a>
 <a href="#frame-02" aria-label="Jump to Prop Moves frame 02">02</a>
 <a href="#frame-03" aria-label="Jump to Prop Moves frame 03">03</a>
 <a href="#frame-04" aria-label="Jump to Prop Moves frame 04">04</a>
@@ -81,7 +84,8 @@ html,body{overflow-x:hidden}
 <a href="#frame-08" aria-label="Jump to Prop Moves frame 08">08</a>
 <a href="#frame-09" aria-label="Jump to Prop Moves frame 09">09</a>
 <a href="#frame-10" aria-label="Jump to Prop Moves frame 10">10</a>
-        </nav>
+          </nav>
+        </div>
       </div>
       <button class="pm-hero-frame pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" data-title="01 / Brand Identity Design" aria-label="Open Prop Moves hero frame">
         <img src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" alt="Prop Moves Brand Identity Design" loading="eager">
