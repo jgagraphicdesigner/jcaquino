@@ -70,21 +70,58 @@
   </nav>`);
 
   /* Footer */
+  const footerYear = new Date().getFullYear();
   document.body.insertAdjacentHTML('beforeend',`
-  <footer id="site-footer">
-    <a href="/" class="footer-logo"><img src="/JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"></a>
-    <div class="footer-wired">JGA STUDIOS</div>
-    <nav class="footer-links">
-      <a href="/services/ecom-ads/">Ad Creative</a>
-      <a href="/services/ghl-funnels/">GHL Funnels</a>
-      <a href="/services/app-development/">App Dev</a>
-      <a href="/services/email-marketing/">Email</a>
-      <a href="/services/brand-identity/">Brand Identity</a>
-      <a href="/about/">About</a>
-      <a href="/work/">Work</a>
-      <a href="/contact/">Contact</a>
-    </nav>
+  <footer id="site-footer" aria-label="Site footer">
+    <div class="footer-shell">
+      <section class="footer-cta-panel" aria-label="Start a project">
+        <div>
+          <div class="footer-eyebrow">// Ready when you are</div>
+          <h2>Let's build the next system that moves your brand.</h2>
+          <p>Ad creative, funnels, brand identity, email, and custom apps, shaped into one clear growth path.</p>
+        </div>
+        <a href="/contact/" class="footer-action">Start a project -&gt;</a>
+      </section>
+
+      <div class="footer-main">
+        <div class="footer-brand-block">
+          <a href="/" class="footer-logo" aria-label="JGA Studios home"><img src="/JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"><span>JGA Studios</span></a>
+          <p>Creative and marketing digital studio for ecommerce brands, service businesses, and teams that need sharper design, practical systems, and measurable output.</p>
+          <div class="footer-pills"><span>PH based</span><span>Global clients</span><span>Design + systems</span></div>
+        </div>
+
+        <nav class="footer-column" aria-label="Footer services">
+          <h3>Services</h3>
+          <a href="/services/">All services</a>
+          <a href="/services/ecom-ads/">Ecommerce ad creative</a>
+          <a href="/services/ghl-funnels/">GHL systems &amp; funnels</a>
+          <a href="/services/app-development/">App development</a>
+          <a href="/services/email-marketing/">Email marketing</a>
+          <a href="/services/brand-identity/">Brand identity</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Footer company links">
+          <h3>Studio</h3>
+          <a href="/about/">About</a>
+          <a href="/work/">Work</a>
+          <a href="/process/">Process</a>
+          <a href="/contact/">Let's talk</a>
+        </nav>
+
+        <div class="footer-column footer-contact-block">
+          <h3>Start here</h3>
+          <p>Have a campaign, funnel, app, or identity system to build? Send the details and we'll map the cleanest next step.</p>
+          <a href="/contact/" class="footer-contact-link">Get a quote -&gt;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; ${footerYear} JGA Studios. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="/">Home</a><a href="/services/">Services</a><a href="/contact/">Contact</a></div>
+      </div>
+    </div>
   </footer>`);
+
 
   /* Active page */
   document.querySelectorAll('[data-page]').forEach(el=>{
