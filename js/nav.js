@@ -95,11 +95,24 @@
   /* Dropdown */
   const dd=document.getElementById('services-menu');
   if(dd){
-    dd.querySelector('button').addEventListener('click',e=>{e.stopPropagation();dd.classList.toggle('open')});
+    const ddButton = dd.querySelector('button');
+    const hoverDropdown = window.matchMedia('(hover: hover) and (pointer: fine)');
+    ddButton.addEventListener('click',e=>{
+      e.preventDefault();
+      e.stopPropagation();
+      dd.classList.toggle('open');
+    });
     document.addEventListener('click',()=>dd.classList.remove('open'));
     let ddTimer;
-    dd.addEventListener('mouseenter',()=>{clearTimeout(ddTimer);dd.classList.add('open');});
-    dd.addEventListener('mouseleave',()=>{ddTimer=setTimeout(()=>dd.classList.remove('open'),180);});
+    dd.addEventListener('mouseenter',()=>{
+      if(!hoverDropdown.matches) return;
+      clearTimeout(ddTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      if(!hoverDropdown.matches) return;
+      ddTimer=setTimeout(()=>dd.classList.remove('open'),180);
+    });
   }
 
   /* Hamburger */

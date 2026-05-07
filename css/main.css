@@ -590,6 +590,14 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 /* ── MOBILE NAV ── */
 @media(max-width:768px) {
   .hamburger { display: flex; }
+  #site-nav > .nav-logo { left: 20px; }
+  #site-nav > .nav-inner {
+    left: 0;
+    right: auto;
+    width: 100%;
+    max-width: none;
+    padding: 0 20px;
+  }
 
   .nav-center {
     display: none;
