@@ -228,7 +228,7 @@
 
   function makeParticles(){
     const area = window.innerWidth * window.innerHeight;
-    const total = Math.max(26, Math.min(76, Math.round(area / 26000)));
+    const total = Math.max(34, Math.min(92, Math.round(area / 22000)));
     particles = Array.from({length: total}, (_, i) => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -255,7 +255,7 @@
     const gap = window.innerWidth < 760 ? 64 : 48;
     const drift = (ts * .012 + window.scrollY * .06) % gap;
     ctx.save();
-    ctx.globalAlpha = .10;
+    ctx.globalAlpha = .13;
     ctx.strokeStyle = 'rgba(255,77,0,.45)';
     ctx.lineWidth = 1;
     for(let x = -gap + drift; x < window.innerWidth + gap; x += gap){
@@ -294,7 +294,7 @@
         }
       }
       const pulse = Math.sin((ts || 0) * .003 + p.phase) * .8;
-      ctx.fillStyle = i % 5 === 0 ? 'rgba(245,240,232,.38)' : 'rgba(255,77,0,.58)';
+      ctx.fillStyle = i % 5 === 0 ? 'rgba(245,240,232,.42)' : 'rgba(255,77,0,.68)';
       ctx.fillRect(Math.round(p.x), Math.round(p.y), p.size + Math.max(0, pulse), p.size + Math.max(0, pulse));
     }
 
@@ -305,8 +305,8 @@
         const pa = particles[a], pb = particles[b];
         const dx = pa.x - pb.x, dy = pa.y - pb.y;
         const dist = Math.hypot(dx, dy);
-        if(dist < 118){
-          ctx.globalAlpha = (1 - dist / 118) * .16;
+        if(dist < 128){
+          ctx.globalAlpha = (1 - dist / 128) * .19;
           ctx.strokeStyle = 'rgba(255,114,38,.85)';
           ctx.beginPath(); ctx.moveTo(pa.x + 1, pa.y + 1); ctx.lineTo(pb.x + 1, pb.y + 1); ctx.stroke();
         }

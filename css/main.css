@@ -578,12 +578,15 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 .html5-stage {
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 4;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  opacity: .52;
+  opacity: .24;
   mix-blend-mode: screen;
+}
+body.html5-ready .html5-stage {
+  filter: saturate(1.1) contrast(1.05);
 }
 .html5-progress {
   position: fixed;
@@ -679,7 +682,7 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
   .html5-ripple { display: none; }
 }
 @media(max-width:768px) {
-  .html5-stage { opacity: .28; }
+  .html5-stage { opacity: .18; }
   .html5-progress { height: 1px; }
 }
 /* ---------- MOBILE ---------- */
