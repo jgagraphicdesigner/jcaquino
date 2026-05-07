@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services JGA Studios</title>
+<link rel="icon" href="/JGA_logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css?v=20260507-brand-colors-v1">
+<style>
+.services-hero{min-height:72vh;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:42px;align-items:center;padding:calc(var(--nav-h) + 52px) 24px 76px;position:relative;overflow:hidden;background:var(--bg)}
+.services-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 80% 24%,rgba(255,77,0,.14),transparent 34%),radial-gradient(circle at 16% 82%,rgba(255,77,0,.08),transparent 32%);z-index:0}.services-hero>*{position:relative;z-index:1}.services-copy{width:min(100%,560px);justify-self:end}.services-kicker{font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;line-height:1.9;text-shadow:0 0 12px rgba(255,77,0,.5)}.services-hero h1{font-family:'Press Start 2P',monospace;font-size:clamp(25px,4.4vw,54px);line-height:1.5;letter-spacing:1px;margin-bottom:24px}.services-hero h1 em,.section-heading em{color:var(--orange);font-style:normal;text-shadow:0 0 22px rgba(255,77,0,.35)}.services-sub{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:500;max-width:520px}.services-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.services-panel{justify-self:start;width:min(100%,620px);background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:18px;box-shadow:0 28px 90px rgba(0,0,0,.45),0 0 42px rgba(255,77,0,.06)}.service-map{display:grid;gap:10px}.service-map a{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-decoration:none;color:inherit;background:rgba(255,130,30,.045);border:1px solid var(--frost-border);border-radius:var(--radius);padding:16px;transition:transform .2s,border-color .2s,background .2s}.service-map a:hover{transform:translateY(-2px);border-color:var(--orange-border);background:rgba(255,77,0,.08)}.map-num{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--orange);text-shadow:0 0 12px rgba(255,77,0,.4)}.map-title{font-weight:800;font-size:15px;line-height:1.4}.map-sub{font-size:12px;color:var(--white-dim);line-height:1.6;margin-top:3px}.map-arrow{font-size:18px;color:var(--orange)}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:46px}.service-card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:28px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}.service-card:hover{transform:translateY(-4px);border-color:var(--orange-border);box-shadow:0 20px 52px rgba(0,0,0,.35),0 0 32px rgba(255,77,0,.07)}.service-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(255,77,0,.10),transparent 48%);opacity:.75;pointer-events:none}.service-card>*{position:relative;z-index:1}.service-card.featured{grid-column:1/-1;grid-template-columns:auto minmax(0,1fr) minmax(260px,.6fr);align-items:center}.service-icon{width:54px;height:54px;border:1px solid var(--orange-border);border-radius:12px;background:var(--orange-dim);display:flex;align-items:center;justify-content:center}.service-icon svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.service-num{font-family:'Press Start 2P',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}.service-card h3{font-family:'Press Start 2P',monospace;font-size:clamp(15px,1.8vw,22px);line-height:1.55;letter-spacing:.4px;margin-bottom:12px}.service-card p{font-size:14px;line-height:1.85;color:var(--white-dim);font-weight:500}.service-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.service-tags span{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--white-dim);background:var(--white-faint);border:1px solid var(--frost-border);border-radius:999px;padding:5px 10px}.service-cta{display:inline-flex;margin-top:22px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}.service-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.proof-chip{background:rgba(255,255,255,.035);border:1px solid var(--frost-border);border-radius:var(--radius);padding:16px}.proof-chip strong{display:block;font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.4;color:var(--orange);margin-bottom:8px}.proof-chip span{font-size:11px;line-height:1.55;color:var(--white-dim);font-weight:700}.bundle-section{background:var(--bg2)}.bundle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:42px}.bundle-card{background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:26px}.bundle-card h3{font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.7;color:var(--orange);margin-bottom:14px}.bundle-card p{font-size:13px;line-height:1.8;color:var(--white-dim);font-weight:500}.bundle-card ul{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}.bundle-card li{font-size:13px;line-height:1.65;color:var(--white-dim);border-top:1px solid var(--frost-border);padding-top:10px}.process-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;margin-top:42px}.process-tile{background:var(--bg2);padding:26px 22px}.process-tile strong{font-family:'Press Start 2P',monospace;font-size:22px;color:rgba(255,77,0,.22);display:block;margin-bottom:16px}.process-tile h3{font-size:14px;margin-bottom:8px}.process-tile p{font-size:13px;line-height:1.7;color:var(--white-dim)}
+@media(max-width:1000px){.services-hero,.service-card.featured{grid-template-columns:1fr}.services-copy,.services-panel{justify-self:center}.service-proof,.bundle-grid,.process-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.services-hero{min-height:auto;padding:calc(var(--nav-h) + 38px) 20px 64px}.services-hero h1{font-size:clamp(23px,8vw,34px);line-height:1.45}.services-actions .btn-primary,.services-actions .btn-ghost{width:100%;justify-content:center}.service-grid,.bundle-grid,.process-strip{grid-template-columns:1fr}.service-card,.service-card.featured{grid-template-columns:1fr;padding:24px 20px}.service-proof{grid-template-columns:1fr}.service-map a{grid-template-columns:auto 1fr}.map-arrow{display:none}}
+</style>
+</head>
+<body>
+<main>
+<section class="services-hero">
+  <div class="services-copy">
+    <div class="services-kicker">// Services Directory</div>
+    <h1>Choose the<br><em>build</em><br>you need.</h1>
+    <p class="services-sub">Every JGA service is built around one job: make the brand easier to trust, easier to buy from, and easier to scale. Start with one lane or combine the full system.</p>
+    <div class="services-actions">
+      <a href="/contact/" class="btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Get a quote</a>
+      <a href="/work/" class="btn-ghost">See our work</a>
+    </div>
+  </div>
+  <div class="services-panel">
+    <div class="service-map" aria-label="All JGA services">
+      <a href="/services/ecom-ads/"><span class="map-num">01</span><span><span class="map-title">Ecommerce Ad Creative</span><span class="map-sub">Static ads, campaign visuals, testing variants</span></span><span class="map-arrow">-&gt;</span></a>
+      <a href="/services/ghl-funnels/"><span class="map-num">02</span><span><span class="map-title">GHL Systems & Funnels</span><span class="map-sub">Landing pages, CRM pipelines, automations</span></span><span class="map-arrow">-&gt;</span></a>
+      <a href="/services/app-development/"><span class="map-num">03</span><span><span class="map-title">App Development</span><span class="map-sub">Web apps, mobile apps, internal tools</span></span><span class="map-arrow">-&gt;</span></a>
+      <a href="/services/email-marketing/"><span class="map-num">04</span><span><span class="map-title">Email Marketing</span><span class="map-sub">Campaigns, nurture flows, HTML email systems</span></span><span class="map-arrow">-&gt;</span></a>
+      <a href="/services/brand-identity/"><span class="map-num">05</span><span><span class="map-title">Brand Identity</span><span class="map-sub">Logos, visual systems, guidelines, collateral</span></span><span class="map-arrow">-&gt;</span></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label reveal">01 // All Services</div>
+  <h2 class="section-heading reveal">One studio.<br><em>Five</em><br>build paths.</h2>
+  <div class="service-grid">
+    <a href="/services/ghl-funnels/" class="service-card featured reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+      <div><div class="service-num">Most complete system</div><h3>GHL Systems<br>&amp; Funnels</h3><p>For brands that need the full machine: landing pages, lead capture, pipeline stages, automations, booking flows, CRM setup, and handoff systems built inside GoHighLevel.</p><div class="service-tags"><span>Landing Pages</span><span>Automation</span><span>CRM</span><span>Funnels</span></div><span class="service-cta">View service -&gt;</span></div>
+      <div class="service-proof"><div class="proof-chip"><strong>Lead</strong><span>capture system</span></div><div class="proof-chip"><strong>CRM</strong><span>pipeline build</span></div><div class="proof-chip"><strong>Auto</strong><span>follow-up flow</span></div></div>
+    </a>
+    <a href="/services/ecom-ads/" class="service-card reveal reveal-d1">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div><div class="service-num">01 // Creative</div><h3>Ecommerce<br>Ad Creative</h3><p>Scroll-stopping static ads for Meta, TikTok, Google Display, launches, retargeting, and product offers.</p><div class="service-tags"><span>Static Ads</span><span>Meta</span><span>A/B Variants</span></div><span class="service-cta">View service -&gt;</span></div>
+    </a>
+    <a href="/services/app-development/" class="service-card reveal reveal-d2">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div><div class="service-num">03 // Product</div><h3>App<br>Development</h3><p>Custom web and mobile apps for lead magnets, dashboards, project trackers, client portals, and internal tools.</p><div class="service-tags"><span>Web Apps</span><span>Mobile Apps</span><span>Internal Tools</span></div><span class="service-cta">View service -&gt;</span></div>
+    </a>
+    <a href="/services/email-marketing/" class="service-card reveal reveal-d1">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div><div class="service-num">04 // Nurture</div><h3>Email<br>Marketing</h3><p>Branded HTML emails, nurture sequences, campaign flows, newsletter systems, and automation-ready copy structure.</p><div class="service-tags"><span>HTML Email</span><span>Nurture</span><span>Campaigns</span></div><span class="service-cta">View service -&gt;</span></div>
+    </a>
+    <a href="/services/brand-identity/" class="service-card reveal reveal-d2">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg></div>
+      <div><div class="service-num">05 // Identity</div><h3>Brand<br>Identity</h3><p>Logo systems, visual direction, typography, palettes, brand guidelines, and collateral that makes the brand feel built.</p><div class="service-tags"><span>Logo</span><span>Guidelines</span><span>Collateral</span></div><span class="service-cta">View service -&gt;</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="bundle-section">
+  <div class="section-label reveal">02 // Common Builds</div>
+  <h2 class="section-heading reveal">Pick a lane<br><em>or stack</em><br>the system.</h2>
+  <div class="bundle-grid">
+    <div class="bundle-card reveal"><h3>Launch Build</h3><p>Best for a new offer, campaign, or brand that needs to go live cleanly.</p><ul><li>Landing page or service page</li><li>Ad creative starter set</li><li>Email welcome sequence</li><li>Basic automation handoff</li></ul></div>
+    <div class="bundle-card reveal reveal-d1"><h3>Growth System</h3><p>Best for teams that need a proper lead-gen and follow-up engine.</p><ul><li>GHL funnel and CRM pipeline</li><li>Lead magnet or resource asset</li><li>Nurture automation</li><li>Creative testing support</li></ul></div>
+    <div class="bundle-card reveal reveal-d2"><h3>Brand + Product</h3><p>Best for businesses that need a sharper identity and a custom digital tool.</p><ul><li>Brand identity refresh</li><li>App or portal build</li><li>Website and collateral system</li><li>Launch creative direction</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label reveal">03 // Process</div>
+  <h2 class="section-heading reveal">Simple path.<br><em>Sharp</em><br>execution.</h2>
+  <div class="process-strip reveal">
+    <div class="process-tile"><strong>01</strong><h3>Discovery</h3><p>We map the offer, audience, current assets, and the fastest path to launch.</p></div>
+    <div class="process-tile"><strong>02</strong><h3>Build Plan</h3><p>You get a clear scope, deliverables, timing, and the service stack we recommend.</p></div>
+    <div class="process-tile"><strong>03</strong><h3>Production</h3><p>Design, copy, systems, and build work move in one focused production flow.</p></div>
+    <div class="process-tile"><strong>04</strong><h3>Launch</h3><p>We prepare the final handoff, QA the experience, and help you move it live.</p></div>
+  </div>
+</section>
+
+<section style="text-align:center;background:var(--bg2)">
+  <div class="section-label reveal" style="justify-content:center">Next Step</div>
+  <h2 class="section-heading reveal">Need help<br><em>choosing</em><br>the right service?</h2>
+  <p class="reveal" style="color:var(--white-dim);font-size:16px;max-width:520px;margin:16px auto 40px;line-height:1.8">Tell us what you are trying to launch or fix. We?ll point you to the service path that makes the most sense.</p>
+  <a href="/contact/" class="btn-primary reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
+</section>
+</main>
+<script src="/js/nav.js?v=20260507-mobile-layout-v3"></script>
+</body>
+</html>
