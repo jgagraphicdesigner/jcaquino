@@ -15,7 +15,7 @@ html,body{overflow-x:hidden}
 .sad-page{background:var(--bg);color:var(--white);position:relative}
 .sad-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,77,0,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.026) 1px,transparent 1px);background-size:56px 56px;z-index:0}
 .sad-page>*{position:relative;z-index:1}
-.sad-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.sad-shell{width:min(1320px,calc(100% - 64px));margin:0 auto}
 .sad-hero{background:var(--bg);min-height:74vh!important;display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:42px;align-items:center;padding:calc(var(--nav-h) + 42px) 24px 74px!important;overflow:hidden}
 .sad-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 82% 22%,rgba(255,77,0,.12),transparent 36%),radial-gradient(circle at 12% 82%,rgba(255,77,0,.09),transparent 30%);z-index:0}
 .sad-hero>*{position:relative;z-index:1}
@@ -49,10 +49,10 @@ html,body{overflow-x:hidden}
 .sad-brand-head>span{font-size:18px;line-height:1.2;min-width:64px}
 .sad-brand-head h2{font-family:'Press Start 2P',monospace;font-size:clamp(17px,2vw,24px);line-height:1.45;color:var(--white);margin:0 0 8px}
 .sad-brand-head p{font-size:14px;line-height:1.7;color:var(--white-dim);font-weight:600;margin:0}
-.sad-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.sad-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .sad-card{min-width:0;background:rgba(255,255,255,.026);border:1px solid var(--frost-border);border-radius:18px;overflow:hidden}
 .sad-preview{appearance:none;display:block;width:100%;padding:9px;border:0;border-radius:0;background:rgba(255,255,255,.02);cursor:pointer;box-shadow:none}
-.sad-preview img{display:block;width:100%;height:220px;object-fit:contain;border-radius:12px;background:#080300}
+.sad-card .sad-preview{padding:12px}.sad-card .sad-preview img{display:block;width:100%;height:clamp(320px,28vw,420px);object-fit:contain;border-radius:12px;background:#080300}
 .sad-card figcaption{border-top:1px solid var(--frost-border);padding:13px 14px 15px;min-height:78px}
 .sad-card figcaption span{display:block;font-size:8px;margin-bottom:8px}
 .sad-card figcaption strong{display:block;color:var(--white);font-size:13px;line-height:1.35}
@@ -65,9 +65,9 @@ html,body{overflow-x:hidden}
 .sad-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
 .sad-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
 .sad-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
-@media(max-width:1180px){.sad-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.sad-shell{width:min(100% - 48px,1180px)}.sad-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.sad-card .sad-preview img{height:clamp(300px,42vw,420px)}}
 @media(max-width:1100px){.sad-hero{grid-template-columns:1fr}.sad-hero-copy,.sad-hero-frame{justify-self:center}.sad-intro{grid-template-columns:1fr}}
-@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.sad-shell{width:min(100% - 36px,1180px)}.sad-hero{grid-template-columns:1fr;padding:118px 20px 66px!important;min-height:auto!important}.sad-hero-copy,.sad-hero-frame{width:100%;justify-self:stretch}.sad-title{font-size:clamp(22px,8.7vw,34px);line-height:1.5;letter-spacing:1px}.sad-sub,.sad-intro p,.sad-cta p{font-size:15px}.sad-tags span,.sad-nav a{font-size:10px;padding:8px 11px;white-space:normal}.sad-hero-frame,.sad-preview{border-radius:17px;padding:10px}.sad-hero-frame img,.sad-collage img,.sad-preview img{border-radius:10px;max-height:none}.sad-showcase{padding:64px 0 78px}.sad-intro{margin-bottom:44px}.sad-brand{margin-bottom:58px}.sad-brand-head{gap:12px}.sad-brand-head>span{font-size:14px;min-width:44px}.sad-brand-head h2{font-size:15px}.sad-grid{grid-template-columns:1fr;gap:14px}.sad-preview img{height:auto;max-height:520px}.sad-card figcaption{min-height:auto}.sad-dialog{width:calc(100vw - 24px);max-height:84vh}.sad-dialog img{max-height:calc(84vh - 70px)}}
+@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.sad-shell{width:min(100% - 36px,1180px)}.sad-hero{grid-template-columns:1fr;padding:118px 20px 66px!important;min-height:auto!important}.sad-hero-copy,.sad-hero-frame{width:100%;justify-self:stretch}.sad-title{font-size:clamp(22px,8.7vw,34px);line-height:1.5;letter-spacing:1px}.sad-sub,.sad-intro p,.sad-cta p{font-size:15px}.sad-tags span,.sad-nav a{font-size:10px;padding:8px 11px;white-space:normal}.sad-hero-frame,.sad-preview{border-radius:17px;padding:10px}.sad-hero-frame img,.sad-collage img,.sad-preview img{border-radius:10px;max-height:none}.sad-showcase{padding:64px 0 78px}.sad-intro{margin-bottom:44px}.sad-brand{margin-bottom:58px}.sad-brand-head{gap:12px}.sad-brand-head>span{font-size:14px;min-width:44px}.sad-brand-head h2{font-size:15px}.sad-grid{grid-template-columns:1fr;gap:14px}.sad-card .sad-preview img{height:auto;max-height:520px}.sad-card figcaption{min-height:auto}.sad-dialog{width:calc(100vw - 24px);max-height:84vh}.sad-dialog img{max-height:calc(84vh - 70px)}}
 </style>
 </head>
 <body>
