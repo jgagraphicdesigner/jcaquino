@@ -1,80 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ReliveX Ecommerce Brand System JGA Studios</title>
+<meta name="description" content="ReliveX ecommerce brand case study by JGA Studios, presented as a numbered material showcase.">
 <link rel="icon" href="/JGA_logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/main.css?v=20260507-footer-v1">
 <style>
-.project-hero{background:var(--bg);min-height:72vh !important;display:grid !important;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:40px;align-items:center;padding:calc(var(--nav-h) + 42px) 24px 72px !important;overflow:hidden}.project-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 84% 28%,rgba(255,77,0,.13),transparent 34%),radial-gradient(circle at 12% 82%,rgba(255,77,0,.09),transparent 30%);z-index:0}.project-hero>*{position:relative;z-index:1}.project-hero-copy{width:min(100%,520px);justify-self:end}.project-kicker{font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;line-height:1.8;text-shadow:0 0 12px rgba(255,77,0,.5)}.project-hero h1{font-family:'Press Start 2P',monospace;font-size:clamp(24px,4.4vw,50px);line-height:1.52;letter-spacing:2px;margin-bottom:24px}.project-hero h1 em{color:var(--orange);font-style:normal;text-shadow:0 0 22px rgba(255,77,0,.35)}.project-sub{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:500}.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}.project-meta span{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--orange-border);border-radius:999px;padding:7px 12px;color:var(--orange);background:var(--orange-dim)}.project-hero-art{width:min(100%,680px);justify-self:start;background:rgba(255,255,255,.035);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:14px;box-shadow:0 28px 90px rgba(0,0,0,.45),0 0 42px rgba(255,77,0,.06)}.project-hero-art img{display:block;width:100%;border-radius:calc(var(--radius-lg) - 8px);border:1px solid rgba(255,255,255,.08)}
-.project-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}.project-copy{font-size:15px;line-height:1.9;color:var(--white-dim);font-weight:500}.project-copy p{margin-bottom:18px}.project-panel{background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:28px;backdrop-filter:blur(20px)}.project-panel h3{font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.7;margin-bottom:16px;color:var(--orange)}.detail-list{display:grid;gap:14px}.detail-list div{display:grid;grid-template-columns:120px 1fr;gap:18px;border-top:1px solid var(--frost-border);padding-top:14px}.detail-list strong{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}.detail-list span{font-size:14px;color:var(--white-dim);line-height:1.7}.identity-section,.asset-section{background:var(--bg2)}.identity-grid,.asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}.identity-card,.asset-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:24px}.identity-card h3,.asset-card h3{font-family:'Press Start 2P',monospace;font-size:12px;line-height:1.7;color:var(--orange);margin-bottom:12px}.identity-card p,.asset-card p{font-size:13px;line-height:1.8;color:var(--white-dim)}.palette{display:grid;gap:10px}.swatch{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center}.swatch-chip{height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.16)}.swatch strong{display:block;font-size:13px;color:var(--white)}.swatch span{font-size:12px;color:var(--white-dim)}.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:42px}.resource-card{display:block;background:rgba(255,130,30,.06);border:1px solid var(--frost-border);border-radius:var(--radius);padding:24px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s,box-shadow .2s}.resource-card:hover{border-color:var(--orange-border);transform:translateY(-3px);box-shadow:0 18px 45px rgba(255,77,0,.08)}.resource-label{font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}.resource-title{font-weight:800;font-size:18px;margin-bottom:8px}.resource-desc{font-size:13px;line-height:1.75;color:var(--white-dim)}.resource-action{display:inline-flex;margin-top:16px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
-@media(max-width:900px){.project-hero,.project-grid,.identity-grid,.asset-grid,.resource-grid{grid-template-columns:1fr}.project-hero{padding:calc(var(--nav-h) + 34px) 20px 64px !important}.project-hero-copy,.project-hero-art{justify-self:center}.detail-list div{grid-template-columns:1fr;gap:4px}}
+html,body{overflow-x:hidden}
+.rx-page{background:var(--bg);color:var(--white);position:relative}
+.rx-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,77,0,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.028) 1px,transparent 1px);background-size:56px 56px;z-index:0}
+.rx-page>*{position:relative;z-index:1}
+.rx-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.rx-hero{background:var(--bg);min-height:74vh!important;display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:42px;align-items:center;padding:calc(var(--nav-h) + 42px) 24px 74px!important;overflow:hidden}
+.rx-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 82% 22%,rgba(255,77,0,.12),transparent 36%),radial-gradient(circle at 12% 82%,rgba(255,77,0,.09),transparent 30%);z-index:0}
+.rx-hero>*{position:relative;z-index:1}
+.rx-hero-copy{width:min(100%,560px);justify-self:end}
+.rx-kicker,.rx-board-head span,.rx-index-label{font-family:'Press Start 2P',monospace;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 16px rgba(255,77,0,.35)}
+.rx-kicker{font-size:9px;line-height:1.9;margin-bottom:22px}
+.rx-title{font-family:'Press Start 2P',monospace;font-size:clamp(22px,4vw,48px);line-height:1.52;letter-spacing:2px;margin:0 0 24px;max-width:620px}
+.rx-title em{color:var(--orange);font-style:normal;text-shadow:0 0 24px rgba(255,77,0,.4)}
+.rx-sub{font-size:16px;line-height:1.9;color:var(--white-dim);font-weight:600;max-width:540px;margin:0}
+.rx-tags,.rx-index{display:flex;flex-wrap:wrap;gap:8px}
+.rx-tags{margin-top:26px}
+.rx-tags span{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--orange-border);border-radius:999px;padding:8px 13px;color:var(--orange);background:var(--orange-dim)}
+.rx-hero-frame,.rx-preview{border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52),0 0 46px rgba(255,77,0,.05);padding:14px;overflow:hidden}
+.rx-hero-frame{width:min(100%,720px);justify-self:start;cursor:pointer;text-align:left;transition:transform .22s,border-color .22s,box-shadow .22s}
+.rx-hero-frame:hover,.rx-hero-frame:focus-visible,.rx-preview:hover,.rx-preview:focus-visible{transform:translateY(-4px);border-color:var(--orange-border);box-shadow:0 30px 90px rgba(0,0,0,.62),0 0 52px rgba(255,77,0,.11);outline:0}
+.rx-hero-frame img,.rx-preview img{display:block;width:100%;height:auto;border-radius:14px}
+.rx-hero-frame img{max-height:min(58vh,640px);object-fit:contain}
+.rx-sequence{padding:88px 0 104px;background:linear-gradient(180deg,rgba(15,7,1,.98),rgba(9,4,0,1))}
+.rx-intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px;align-items:end;margin-bottom:58px}
+.rx-index-label{font-size:9px;line-height:1.9}
+.rx-intro h2{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3.2vw,40px);line-height:1.5;letter-spacing:1px;margin:14px 0 0}
+.rx-intro h2 em,.rx-cta h2 em{color:var(--orange);font-style:normal}
+.rx-intro p{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:600;margin:0;max-width:700px}
+.rx-index{margin-top:26px}
+.rx-index a{display:inline-grid;place-items:center;width:38px;height:35px;border:1px solid var(--orange-border);border-radius:999px;background:rgba(255,77,0,.055);color:var(--orange);font-family:'Press Start 2P',monospace;font-size:8px;text-decoration:none;transition:transform .18s,border-color .18s,background .18s,color .18s}
+.rx-index a:hover,.rx-index a:focus-visible{transform:translateY(-2px);background:var(--orange);color:#070300;border-color:var(--orange);outline:0}
+.rx-board{margin:0 0 74px;scroll-margin-top:calc(var(--nav-h) + 26px)}
+.rx-board:last-child{margin-bottom:0}
+.rx-board-head{display:flex;gap:18px;align-items:flex-start;margin:0 0 18px}
+.rx-board-head span{font-size:18px;line-height:1.2;min-width:64px}
+.rx-board-head strong{display:block;font-family:'Press Start 2P',monospace;font-size:clamp(13px,1.5vw,19px);line-height:1.55;color:var(--white);margin-bottom:8px}
+.rx-board-head p{color:var(--white-dim);font-size:14px;line-height:1.7;font-weight:600;margin:0;max-width:680px}
+.rx-preview{appearance:none;width:100%;display:block;cursor:pointer;text-align:left;transition:transform .22s,border-color .22s,box-shadow .22s}
+.rx-board:nth-of-type(3n+1) .rx-preview{width:min(100%,1050px);margin-left:auto}
+.rx-board:nth-of-type(3n+2) .rx-preview{width:min(100%,1050px);margin-right:auto}
+.rx-board:nth-of-type(3n) .rx-preview{width:min(100%,980px);margin-left:auto;margin-right:auto}
+.rx-cta{padding:86px 0;text-align:center;background:var(--bg2);border-top:1px solid var(--frost-border)}
+.rx-cta h2{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3vw,38px);line-height:1.55;letter-spacing:1px;margin:14px auto 22px;max-width:760px}
+.rx-cta p{color:var(--white-dim);font-size:16px;line-height:1.85;max-width:560px;margin:0 auto 34px;font-weight:600}
+.rx-dialog{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;box-sizing:border-box;width:min(calc(100vw - 32px),1180px);max-height:min(90vh,920px);border:1px solid var(--orange-border);border-radius:20px;background:var(--bg);color:var(--white);padding:0;box-shadow:0 32px 130px rgba(0,0,0,.78);overflow:hidden}
+.rx-dialog::backdrop{background:rgba(0,0,0,.8)}
+.rx-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--frost-border);background:rgba(20,9,1,.96)}
+.rx-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
+.rx-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
+.rx-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
+@media(max-width:1100px){.rx-hero{grid-template-columns:1fr}.rx-hero-copy,.rx-hero-frame{justify-self:center}.rx-intro{grid-template-columns:1fr}.rx-board:nth-of-type(n) .rx-preview{width:100%;margin-left:0;margin-right:0}}
+@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.rx-shell{width:min(100% - 36px,1180px)}.rx-hero{grid-template-columns:1fr;padding:118px 20px 66px!important;min-height:auto!important}.rx-hero-copy,.rx-hero-frame{width:100%;justify-self:stretch}.rx-title{font-size:clamp(22px,8.7vw,34px);line-height:1.5;letter-spacing:1px}.rx-sub,.rx-intro p,.rx-cta p{font-size:15px}.rx-tags span{font-size:10px;padding:8px 11px;white-space:normal}.rx-hero-frame,.rx-preview{border-radius:17px;padding:10px}.rx-hero-frame img,.rx-preview img{border-radius:10px;max-height:none}.rx-sequence{padding:64px 0 78px}.rx-intro{margin-bottom:44px}.rx-board{margin-bottom:52px}.rx-board-head{gap:12px}.rx-board-head span{font-size:14px;min-width:44px}.rx-board-head strong{font-size:13px}.rx-board-head p{font-size:13px}.rx-index a{width:39px;height:36px}.rx-dialog{width:calc(100vw - 24px);max-height:84vh}.rx-dialog img{max-height:calc(84vh - 70px)}}
 </style>
 </head>
 <body>
-<main>
-<section class="project-hero">
-  <div class="project-hero-copy">
-    <div class="project-kicker">Case Study // Ecommerce Brand</div>
-    <h1>ReliveX<br><em>Ecommerce</em><br>Brand System</h1>
-    <p class="project-sub">A practical ecommerce brand toolkit covering logo, packaging, print collateral, Shopify website imagery, and creative ads for a pain-relief product experience.</p>
-    <div class="project-meta"><span>Logo</span><span>Packaging</span><span>Prints</span><span>Shopify Images</span><span>Creative Ads</span></div>
-  </div>
-  <div class="project-hero-art"><img src="/assets/projects/relivex-ecommerce-brand.jpg" alt="ReliveX ecommerce brand product, Shopify, packaging, and community assets"></div>
-</section>
-
-<section>
-  <div class="section-label reveal">The Project</div>
-  <h2 class="section-heading reveal">Ecommerce assets<br><em>built around</em><br>trust and relief.</h2>
-  <div class="project-grid">
-    <div class="project-copy reveal">
-      <p>ReliveX needed an ecommerce-ready visual system that could carry the brand from product packaging to online sales touchpoints. The work brought together the core brand look, product presentation, and supporting collateral for the customer journey.</p>
-      <p>The project includes logo direction, packaging, print pieces, Shopify website images, and creative ads. Together, those assets give the brand a consistent presence across the product box, user guide, brochure, community content, and website.</p>
-      <p>The direction uses clean health-tech visuals, a calm mint-green palette, product mockups, and direct benefit-led imagery to support buyer confidence for a pain-relief ecommerce offer.</p>
+<main class="rx-page">
+  <section class="rx-hero">
+    <div class="rx-hero-copy">
+      <div class="rx-kicker">// Ecommerce Brand • Shopify Assets</div>
+      <h1 class="rx-title">ReliveX<br><em>Ecommerce</em><br>Brand System</h1>
+      <p class="rx-sub">A practical ecommerce brand toolkit covering logo, packaging, print collateral, Shopify website imagery, and creative ads for a pain-relief product experience.</p>
+      <div class="rx-tags"><span>Logo</span><span>Packaging</span><span>Prints</span><span>Shopify Images</span><span>Creative Ads</span></div>
     </div>
-    <div class="project-panel reveal reveal-d1">
-      <h3>Build Snapshot</h3>
-      <div class="detail-list">
-        <div><strong>Client</strong><span>ReliveX</span></div>
-        <div><strong>Industry</strong><span>Ecommerce, pain-relief product</span></div>
-        <div><strong>Scope</strong><span>Logo, packaging, prints, Shopify website images, creative ads, brochure, user guide, community brochure</span></div>
-        <div><strong>Platform</strong><span>Shopify website assets and ecommerce product presentation</span></div>
-        <div><strong>Goal</strong><span>Create a consistent brand experience from first ad impression to product education and customer community.</span></div>
+    <button class="rx-hero-frame rx-preview" type="button" data-src="/assets/projects/relivex/relivex-01.png?v=sequence-20260507" data-title="ReliveX Ecommerce Brand System" aria-label="Open ReliveX ecommerce brand overview">
+      <img src="/assets/projects/relivex/relivex-01.png?v=sequence-20260507" alt="ReliveX ecommerce brand overview" loading="eager">
+    </button>
+  </section>
+
+  <section class="rx-sequence">
+    <div class="rx-shell">
+      <div class="rx-intro">
+        <div>
+          <div class="rx-index-label">01-12 // Material Sequence</div>
+          <h2>How the<br><em>ecommerce system</em><br>comes together.</h2>
+        </div>
+        <div>
+          <p>The hero introduces the full ReliveX brand toolkit first. The materials below start with the logo system, then move through packaging, print assets, Shopify listing images, ad creatives, and the website presentation.</p>
+          <nav class="rx-index" aria-label="ReliveX numbered material index">
+            <a href="#frame-01" aria-label="Jump to ReliveX frame 01">01</a>
+<a href="#frame-02" aria-label="Jump to ReliveX frame 02">02</a>
+<a href="#frame-03" aria-label="Jump to ReliveX frame 03">03</a>
+<a href="#frame-04" aria-label="Jump to ReliveX frame 04">04</a>
+<a href="#frame-05" aria-label="Jump to ReliveX frame 05">05</a>
+<a href="#frame-06" aria-label="Jump to ReliveX frame 06">06</a>
+<a href="#frame-07" aria-label="Jump to ReliveX frame 07">07</a>
+<a href="#frame-08" aria-label="Jump to ReliveX frame 08">08</a>
+<a href="#frame-09" aria-label="Jump to ReliveX frame 09">09</a>
+<a href="#frame-10" aria-label="Jump to ReliveX frame 10">10</a>
+<a href="#frame-11" aria-label="Jump to ReliveX frame 11">11</a>
+<a href="#frame-12" aria-label="Jump to ReliveX frame 12">12</a>
+          </nav>
+        </div>
       </div>
+      <figure class="rx-board" id="frame-01" data-index="1" data-title="Logo Design">
+  <div class="rx-board-head">
+    <span>01</span>
+    <div>
+      <strong>Logo Design</strong>
+      <p>Logo direction, typography, core color palette, and trust seal system.</p>
     </div>
   </div>
-</section>
-
-<section class="asset-section">
-  <div class="section-label reveal">Creative System</div>
-  <h2 class="section-heading reveal">Product,<br><em>storefront,</em><br>and community.</h2>
-  <div class="asset-grid">
-    <div class="asset-card reveal"><h3>Product Presence</h3><p>Packaging and product visuals make the ReliveX device and supporting materials feel consistent, clear, and retail-ready.</p></div>
-    <div class="asset-card reveal reveal-d1"><h3>Shopify Assets</h3><p>Website imagery supports the ecommerce flow with clean product presentation and branded benefit-led creative.</p></div>
-    <div class="asset-card reveal reveal-d2"><h3>Customer Education</h3><p>Brochure and guide materials help explain the offer, product use, and community touchpoints after purchase.</p></div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-02.png?v=sequence-20260507" data-title="01 / Logo Design" aria-label="Open Logo Design">
+    <img src="/assets/projects/relivex/relivex-02.png?v=sequence-20260507" alt="ReliveX Logo Design" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-02" data-index="2" data-title="Primary and Secondary Logo">
+  <div class="rx-board-head">
+    <span>02</span>
+    <div>
+      <strong>Primary and Secondary Logo</strong>
+      <p>Main ReliveX logo and secondary mark for flexible brand usage.</p>
+    </div>
   </div>
-</section>
-
-<section>
-  <div class="section-label reveal">Project Links</div>
-  <h2 class="section-heading reveal">Every item<br><em>from the</em><br>source presentation.</h2>
-  <div class="resource-grid">
-    <a class="resource-card reveal" href="https://relivex.nl" target="_blank" rel="noopener"><div class="resource-label">Shopify</div><div class="resource-title">View Shopify Website</div><div class="resource-desc">Live ecommerce website connected to the ReliveX product presentation.</div><span class="resource-action">Open item -></span></a>
-    <a class="resource-card reveal reveal-d1" href="https://drive.google.com/file/d/11ylzPKFjCVJpSiYUJjUMzegPgfh4bAeA/view?usp=sharing" target="_blank" rel="noopener"><div class="resource-label">Brochure</div><div class="resource-title">View Full Brochure</div><div class="resource-desc">Main ReliveX brochure asset from the project source page.</div><span class="resource-action">Open item -></span></a>
-    <a class="resource-card reveal reveal-d2" href="https://drive.google.com/file/d/1cG15mR-juZlEK-dti9ONyEmKUvVRbElx/view?usp=sharing" target="_blank" rel="noopener"><div class="resource-label">User Guide</div><div class="resource-title">View User Guide</div><div class="resource-desc">Customer guide material supporting product usage and onboarding.</div><span class="resource-action">Open item -></span></a>
-    <a class="resource-card reveal reveal-d3" href="https://drive.google.com/file/d/1K824qiVg4leOMinujx6le4xPmuAYk6KK/view?usp=sharing" target="_blank" rel="noopener"><div class="resource-label">Community Brochure</div><div class="resource-title">View Community Two Folded Brochure</div><div class="resource-desc">Community-focused brochure connected to ReliveX customer education.</div><span class="resource-action">Open item -></span></a>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-03.png?v=sequence-20260507" data-title="02 / Primary and Secondary Logo" aria-label="Open Primary and Secondary Logo">
+    <img src="/assets/projects/relivex/relivex-03.png?v=sequence-20260507" alt="ReliveX Primary and Secondary Logo" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-03" data-index="3" data-title="Packaging Design">
+  <div class="rx-board-head">
+    <span>03</span>
+    <div>
+      <strong>Packaging Design</strong>
+      <p>Product box and label presentation for the ecommerce offer.</p>
+    </div>
   </div>
-</section>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-04.png?v=sequence-20260507" data-title="03 / Packaging Design" aria-label="Open Packaging Design">
+    <img src="/assets/projects/relivex/relivex-04.png?v=sequence-20260507" alt="ReliveX Packaging Design" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-04" data-index="4" data-title="Print Materials">
+  <div class="rx-board-head">
+    <span>04</span>
+    <div>
+      <strong>Print Materials</strong>
+      <p>User guide print layout for product education and customer support.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-05.png?v=sequence-20260507" data-title="04 / Print Materials" aria-label="Open Print Materials">
+    <img src="/assets/projects/relivex/relivex-05.png?v=sequence-20260507" alt="ReliveX Print Materials" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-05" data-index="5" data-title="Thank You Card">
+  <div class="rx-board-head">
+    <span>05</span>
+    <div>
+      <strong>Thank You Card</strong>
+      <p>Post-purchase thank-you card and QR code touchpoint.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-06.png?v=sequence-20260507" data-title="05 / Thank You Card" aria-label="Open Thank You Card">
+    <img src="/assets/projects/relivex/relivex-06.png?v=sequence-20260507" alt="ReliveX Thank You Card" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-06" data-index="6" data-title="Habit Tracker">
+  <div class="rx-board-head">
+    <span>06</span>
+    <div>
+      <strong>Habit Tracker</strong>
+      <p>Customer retention material designed to support repeated product use.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-07.png?v=sequence-20260507" data-title="06 / Habit Tracker" aria-label="Open Habit Tracker">
+    <img src="/assets/projects/relivex/relivex-07.png?v=sequence-20260507" alt="ReliveX Habit Tracker" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-07" data-index="7" data-title="Community Brochure">
+  <div class="rx-board-head">
+    <span>07</span>
+    <div>
+      <strong>Community Brochure</strong>
+      <p>Two-fold community brochure for education and rewards messaging.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-08.png?v=sequence-20260507" data-title="07 / Community Brochure" aria-label="Open Community Brochure">
+    <img src="/assets/projects/relivex/relivex-08.png?v=sequence-20260507" alt="ReliveX Community Brochure" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-08" data-index="8" data-title="Regulatory Compliance Information">
+  <div class="rx-board-head">
+    <span>08</span>
+    <div>
+      <strong>Regulatory Compliance Information</strong>
+      <p>Product compliance and supporting information layout.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-09.png?v=sequence-20260507" data-title="08 / Regulatory Compliance Information" aria-label="Open Regulatory Compliance Information">
+    <img src="/assets/projects/relivex/relivex-09.png?v=sequence-20260507" alt="ReliveX Regulatory Compliance Information" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-09" data-index="9" data-title="Shopify Image Listing Designs">
+  <div class="rx-board-head">
+    <span>09</span>
+    <div>
+      <strong>Shopify Image Listing Designs</strong>
+      <p>Product listing visuals for Shopify storefront presentation.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-10.png?v=sequence-20260507" data-title="09 / Shopify Image Listing Designs" aria-label="Open Shopify Image Listing Designs">
+    <img src="/assets/projects/relivex/relivex-10.png?v=sequence-20260507" alt="ReliveX Shopify Image Listing Designs" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-10" data-index="10" data-title="Static Ads">
+  <div class="rx-board-head">
+    <span>10</span>
+    <div>
+      <strong>Static Ads</strong>
+      <p>Static ad creative set for ecommerce acquisition campaigns.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-11.png?v=sequence-20260507" data-title="10 / Static Ads" aria-label="Open Static Ads">
+    <img src="/assets/projects/relivex/relivex-11.png?v=sequence-20260507" alt="ReliveX Static Ads" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-11" data-index="11" data-title="Animated Ads">
+  <div class="rx-board-head">
+    <span>11</span>
+    <div>
+      <strong>Animated Ads</strong>
+      <p>Animated ad concept frames for product-led campaign testing.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-12.png?v=sequence-20260507" data-title="11 / Animated Ads" aria-label="Open Animated Ads">
+    <img src="/assets/projects/relivex/relivex-12.png?v=sequence-20260507" alt="ReliveX Animated Ads" loading="lazy">
+  </button>
+</figure>
+<figure class="rx-board" id="frame-12" data-index="12" data-title="Shopify Website">
+  <div class="rx-board-head">
+    <span>12</span>
+    <div>
+      <strong>Shopify Website</strong>
+      <p>Website product grid and ecommerce storefront presentation.</p>
+    </div>
+  </div>
+  <button class="rx-preview" type="button" data-src="/assets/projects/relivex/relivex-13.png?v=sequence-20260507" data-title="12 / Shopify Website" aria-label="Open Shopify Website">
+    <img src="/assets/projects/relivex/relivex-13.png?v=sequence-20260507" alt="ReliveX Shopify Website" loading="lazy">
+  </button>
+</figure>
+    </div>
+  </section>
 
-<section style="text-align:center;background:var(--bg2)">
-  <div class="section-label reveal" style="justify-content:center">Next Step</div>
-  <h2 class="section-heading reveal">Need ecommerce<br><em>creative that</em><br>feels consistent?</h2>
-  <p class="reveal" style="color:var(--white-dim);font-size:16px;max-width:460px;margin:16px auto 40px;line-height:1.8">We can shape the assets your product needs across ads, store pages, packaging, and customer education.</p>
-  <a href="/contact/" class="btn-primary reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
-</section>
+  <section class="rx-cta">
+    <div class="rx-shell">
+      <div class="rx-index-label">Next Step</div>
+      <h2>Need ecommerce<br><em>creative that</em><br>feels consistent?</h2>
+      <p>We can shape the assets your product needs across ads, store pages, packaging, and customer education.</p>
+      <a href="/contact/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
+    </div>
+  </section>
 </main>
+
+<dialog class="rx-dialog" id="assetDialog">
+  <div class="rx-dialog-top"><strong id="dialogTitle">Asset preview</strong><button class="rx-dialog-close" type="button" id="dialogClose" aria-label="Close preview">x</button></div>
+  <img id="dialogImage" alt="">
+</dialog>
+
 <script src="/js/nav.js?v=20260507-footer-v1"></script>
+<script>
+(function(){
+  const dialog=document.getElementById('assetDialog');
+  const image=document.getElementById('dialogImage');
+  const title=document.getElementById('dialogTitle');
+  document.querySelectorAll('.rx-preview[data-src]').forEach(button=>button.addEventListener('click',()=>{
+    image.src=button.dataset.src;
+    image.alt=button.dataset.title;
+    title.textContent=button.dataset.title;
+    if(dialog && dialog.showModal) dialog.showModal(); else window.open(button.dataset.src,'_blank');
+  }));
+  document.getElementById('dialogClose').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{ if(event.target===dialog) dialog.close(); });
+})();
+</script>
 </body>
 </html>
