@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static Ad Designs JGA Studios</title>
+<meta name="description" content="Static ad design case study by JGA Studios with 50 ecommerce ad creatives across 10 brands.">
+<link rel="icon" href="/JGA_logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css?v=20260507-footer-v1">
+<style>
+html,body{overflow-x:hidden}
+.sad-page{background:var(--bg);color:var(--white);position:relative}
+.sad-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,77,0,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.026) 1px,transparent 1px);background-size:56px 56px;z-index:0}
+.sad-page>*{position:relative;z-index:1}
+.sad-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.sad-hero{background:var(--bg);min-height:74vh!important;display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:42px;align-items:center;padding:calc(var(--nav-h) + 42px) 24px 74px!important;overflow:hidden}
+.sad-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 82% 22%,rgba(255,77,0,.12),transparent 36%),radial-gradient(circle at 12% 82%,rgba(255,77,0,.09),transparent 30%);z-index:0}
+.sad-hero>*{position:relative;z-index:1}
+.sad-hero-copy{width:min(100%,560px);justify-self:end}
+.sad-kicker,.sad-index-label,.sad-brand-head>span,.sad-card figcaption span{font-family:'Press Start 2P',monospace;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 16px rgba(255,77,0,.35)}
+.sad-kicker{font-size:9px;line-height:1.9;margin-bottom:22px}
+.sad-title{font-family:'Press Start 2P',monospace;font-size:clamp(22px,4vw,48px);line-height:1.52;letter-spacing:2px;margin:0 0 24px;max-width:620px}
+.sad-title em{color:var(--orange);font-style:normal;text-shadow:0 0 24px rgba(255,77,0,.4)}
+.sad-sub{font-size:16px;line-height:1.9;color:var(--white-dim);font-weight:600;max-width:540px;margin:0}
+.sad-tags,.sad-nav{display:flex;flex-wrap:wrap;gap:8px}
+.sad-tags{margin-top:26px}
+.sad-tags span,.sad-nav a{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--orange-border);border-radius:999px;padding:8px 13px;color:var(--orange);background:var(--orange-dim);text-decoration:none}
+.sad-nav a:hover,.sad-nav a:focus-visible{background:var(--orange);color:#080300;outline:0}
+.sad-hero-frame,.sad-preview{border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52),0 0 46px rgba(255,77,0,.05);padding:14px;overflow:hidden}
+.sad-hero-frame{width:min(100%,720px);justify-self:start;cursor:pointer;text-align:left;transition:transform .22s,border-color .22s,box-shadow .22s}
+.sad-hero-frame:hover,.sad-hero-frame:focus-visible,.sad-preview:hover,.sad-preview:focus-visible{transform:translateY(-4px);border-color:var(--orange-border);box-shadow:0 30px 90px rgba(0,0,0,.62),0 0 52px rgba(255,77,0,.11);outline:0}
+.sad-hero-frame img{display:block;width:100%;height:auto;border-radius:14px;max-height:min(58vh,640px);object-fit:contain}
+.sad-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sad-collage img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+.sad-showcase{padding:88px 0 104px;background:linear-gradient(180deg,rgba(15,7,1,.98),rgba(9,4,0,1))}
+.sad-intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px;align-items:end;margin-bottom:58px}
+.sad-index-label{font-size:9px;line-height:1.9}
+.sad-intro h2,.sad-cta h2{font-family:'Press Start 2P',monospace;line-height:1.5;letter-spacing:1px}
+.sad-intro h2{font-size:clamp(22px,3.2vw,40px);margin:14px 0 0}
+.sad-intro h2 em,.sad-cta h2 em{color:var(--orange);font-style:normal}
+.sad-intro p{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:600;margin:0;max-width:700px}
+.sad-nav{margin-top:26px}
+.sad-brand{margin:0 0 84px;scroll-margin-top:calc(var(--nav-h) + 28px)}
+.sad-brand:last-child{margin-bottom:0}
+.sad-brand-head{display:flex;gap:18px;align-items:flex-start;margin:0 0 20px}
+.sad-brand-head>span{font-size:18px;line-height:1.2;min-width:64px}
+.sad-brand-head h2{font-family:'Press Start 2P',monospace;font-size:clamp(17px,2vw,24px);line-height:1.45;color:var(--white);margin:0 0 8px}
+.sad-brand-head p{font-size:14px;line-height:1.7;color:var(--white-dim);font-weight:600;margin:0}
+.sad-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.sad-card{min-width:0;background:rgba(255,255,255,.026);border:1px solid var(--frost-border);border-radius:18px;overflow:hidden}
+.sad-preview{appearance:none;display:block;width:100%;padding:9px;border:0;border-radius:0;background:rgba(255,255,255,.02);cursor:pointer;box-shadow:none}
+.sad-preview img{display:block;width:100%;height:220px;object-fit:contain;border-radius:12px;background:#080300}
+.sad-card figcaption{border-top:1px solid var(--frost-border);padding:13px 14px 15px;min-height:78px}
+.sad-card figcaption span{display:block;font-size:8px;margin-bottom:8px}
+.sad-card figcaption strong{display:block;color:var(--white);font-size:13px;line-height:1.35}
+.sad-cta{padding:86px 0;text-align:center;background:var(--bg2);border-top:1px solid var(--frost-border)}
+.sad-cta h2{font-size:clamp(22px,3vw,38px);margin:14px auto 22px;max-width:760px}
+.sad-cta p{color:var(--white-dim);font-size:16px;line-height:1.85;max-width:560px;margin:0 auto 34px;font-weight:600}
+.sad-dialog{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;box-sizing:border-box;width:min(calc(100vw - 32px),1000px);max-height:min(90vh,920px);border:1px solid var(--orange-border);border-radius:20px;background:var(--bg);color:var(--white);padding:0;box-shadow:0 32px 130px rgba(0,0,0,.78);overflow:hidden}
+.sad-dialog::backdrop{background:rgba(0,0,0,.8)}
+.sad-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--frost-border);background:rgba(20,9,1,.96)}
+.sad-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
+.sad-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
+.sad-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
+@media(max-width:1180px){.sad-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1100px){.sad-hero{grid-template-columns:1fr}.sad-hero-copy,.sad-hero-frame{justify-self:center}.sad-intro{grid-template-columns:1fr}}
+@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.sad-shell{width:min(100% - 36px,1180px)}.sad-hero{grid-template-columns:1fr;padding:118px 20px 66px!important;min-height:auto!important}.sad-hero-copy,.sad-hero-frame{width:100%;justify-self:stretch}.sad-title{font-size:clamp(22px,8.7vw,34px);line-height:1.5;letter-spacing:1px}.sad-sub,.sad-intro p,.sad-cta p{font-size:15px}.sad-tags span,.sad-nav a{font-size:10px;padding:8px 11px;white-space:normal}.sad-hero-frame,.sad-preview{border-radius:17px;padding:10px}.sad-hero-frame img,.sad-collage img,.sad-preview img{border-radius:10px;max-height:none}.sad-showcase{padding:64px 0 78px}.sad-intro{margin-bottom:44px}.sad-brand{margin-bottom:58px}.sad-brand-head{gap:12px}.sad-brand-head>span{font-size:14px;min-width:44px}.sad-brand-head h2{font-size:15px}.sad-grid{grid-template-columns:1fr;gap:14px}.sad-preview img{height:auto;max-height:520px}.sad-card figcaption{min-height:auto}.sad-dialog{width:calc(100vw - 24px);max-height:84vh}.sad-dialog img{max-height:calc(84vh - 70px)}}
+</style>
+</head>
+<body>
+<main class="sad-page">
+  <section class="sad-hero">
+    <div class="sad-hero-copy">
+      <div class="sad-kicker">// Ecommerce / Static Ads</div>
+      <h1 class="sad-title">Static Ad<br><em>Designs</em></h1>
+      <p class="sad-sub">A collection of ecommerce static ad creatives built for paid social testing across 10 brands, with five finished ad designs per brand.</p>
+      <div class="sad-tags"><span>50 Static Ads</span><span>10 Brands</span><span>Paid Social</span><span>Creative Testing</span></div>
+    </div>
+    <button class="sad-hero-frame sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/01.png?v=20260508-static-ads" data-title="Static Ad Design Preview" aria-label="Open static ad preview">
+      <div class="sad-collage">
+        <img src="/assets/projects/static-ad-designs/ecomswap/01.png?v=20260508-static-ads" alt="Ecomswap static ad design" loading="eager">
+<img src="/assets/projects/static-ad-designs/curosleep/01.png?v=20260508-static-ads" alt="Curosleep static ad design" loading="eager">
+<img src="/assets/projects/static-ad-designs/only-human/01.png?v=20260508-static-ads" alt="Only Human static ad design" loading="eager">
+<img src="/assets/projects/static-ad-designs/watershop/01.png?v=20260508-static-ads" alt="Watershop static ad design" loading="eager">
+      </div>
+    </button>
+  </section>
+
+  <section class="sad-showcase">
+    <div class="sad-shell">
+      <div class="sad-intro">
+        <div>
+          <div class="sad-index-label">10 Brands // 50 Static Ads</div>
+          <h2>Static ad<br><em>design systems</em><br>by brand.</h2>
+        </div>
+        <div>
+          <p>Each brand set includes five static ad designs ready for ecommerce campaigns, creative testing, and paid social launch variations.</p>
+          <nav class="sad-nav" aria-label="Static ad brand index">
+            <a href="#back9lab" aria-label="Jump to Back9Lab static ads">Back9Lab</a>
+<a href="#curosleep" aria-label="Jump to Curosleep static ads">Curosleep</a>
+<a href="#ecomswap" aria-label="Jump to Ecomswap static ads">Ecomswap</a>
+<a href="#feleva" aria-label="Jump to Feleva static ads">Feleva</a>
+<a href="#lumiquor" aria-label="Jump to Lumiquor static ads">Lumiquor</a>
+<a href="#mb1" aria-label="Jump to MB1 static ads">MB1</a>
+<a href="#nu-body" aria-label="Jump to Nu Body static ads">Nu Body</a>
+<a href="#only-human" aria-label="Jump to Only Human static ads">Only Human</a>
+<a href="#simply-revival" aria-label="Jump to Simply Revival static ads">Simply Revival</a>
+<a href="#watershop" aria-label="Jump to Watershop static ads">Watershop</a>
+          </nav>
+        </div>
+      </div>
+      <section class="sad-brand" id="back9lab">
+  <div class="sad-brand-head">
+    <span>01</span>
+    <div>
+      <h2>Back9Lab</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/back9lab/01.png?v=20260508-static-ads" data-title="Back9Lab Static Ad 01" aria-label="Open Back9Lab Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/back9lab/01.png?v=20260508-static-ads" alt="Back9Lab Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Back9Lab Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/back9lab/02.png?v=20260508-static-ads" data-title="Back9Lab Static Ad 02" aria-label="Open Back9Lab Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/back9lab/02.png?v=20260508-static-ads" alt="Back9Lab Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Back9Lab Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/back9lab/03.png?v=20260508-static-ads" data-title="Back9Lab Static Ad 03" aria-label="Open Back9Lab Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/back9lab/03.png?v=20260508-static-ads" alt="Back9Lab Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Back9Lab Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/back9lab/04.png?v=20260508-static-ads" data-title="Back9Lab Static Ad 04" aria-label="Open Back9Lab Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/back9lab/04.png?v=20260508-static-ads" alt="Back9Lab Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Back9Lab Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/back9lab/05.png?v=20260508-static-ads" data-title="Back9Lab Static Ad 05" aria-label="Open Back9Lab Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/back9lab/05.png?v=20260508-static-ads" alt="Back9Lab Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Back9Lab Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="curosleep">
+  <div class="sad-brand-head">
+    <span>02</span>
+    <div>
+      <h2>Curosleep</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/curosleep/01.png?v=20260508-static-ads" data-title="Curosleep Static Ad 01" aria-label="Open Curosleep Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/curosleep/01.png?v=20260508-static-ads" alt="Curosleep Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Curosleep Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/curosleep/02.png?v=20260508-static-ads" data-title="Curosleep Static Ad 02" aria-label="Open Curosleep Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/curosleep/02.png?v=20260508-static-ads" alt="Curosleep Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Curosleep Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/curosleep/03.png?v=20260508-static-ads" data-title="Curosleep Static Ad 03" aria-label="Open Curosleep Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/curosleep/03.png?v=20260508-static-ads" alt="Curosleep Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Curosleep Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/curosleep/04.png?v=20260508-static-ads" data-title="Curosleep Static Ad 04" aria-label="Open Curosleep Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/curosleep/04.png?v=20260508-static-ads" alt="Curosleep Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Curosleep Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/curosleep/05.png?v=20260508-static-ads" data-title="Curosleep Static Ad 05" aria-label="Open Curosleep Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/curosleep/05.png?v=20260508-static-ads" alt="Curosleep Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Curosleep Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="ecomswap">
+  <div class="sad-brand-head">
+    <span>03</span>
+    <div>
+      <h2>Ecomswap</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/01.png?v=20260508-static-ads" data-title="Ecomswap Static Ad 01" aria-label="Open Ecomswap Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/ecomswap/01.png?v=20260508-static-ads" alt="Ecomswap Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Ecomswap Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/02.png?v=20260508-static-ads" data-title="Ecomswap Static Ad 02" aria-label="Open Ecomswap Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/ecomswap/02.png?v=20260508-static-ads" alt="Ecomswap Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Ecomswap Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/03.png?v=20260508-static-ads" data-title="Ecomswap Static Ad 03" aria-label="Open Ecomswap Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/ecomswap/03.png?v=20260508-static-ads" alt="Ecomswap Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Ecomswap Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/04.png?v=20260508-static-ads" data-title="Ecomswap Static Ad 04" aria-label="Open Ecomswap Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/ecomswap/04.png?v=20260508-static-ads" alt="Ecomswap Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Ecomswap Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/ecomswap/05.png?v=20260508-static-ads" data-title="Ecomswap Static Ad 05" aria-label="Open Ecomswap Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/ecomswap/05.png?v=20260508-static-ads" alt="Ecomswap Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Ecomswap Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="feleva">
+  <div class="sad-brand-head">
+    <span>04</span>
+    <div>
+      <h2>Feleva</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/feleva/01.png?v=20260508-static-ads" data-title="Feleva Static Ad 01" aria-label="Open Feleva Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/feleva/01.png?v=20260508-static-ads" alt="Feleva Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Feleva Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/feleva/02.png?v=20260508-static-ads" data-title="Feleva Static Ad 02" aria-label="Open Feleva Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/feleva/02.png?v=20260508-static-ads" alt="Feleva Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Feleva Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/feleva/03.png?v=20260508-static-ads" data-title="Feleva Static Ad 03" aria-label="Open Feleva Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/feleva/03.png?v=20260508-static-ads" alt="Feleva Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Feleva Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/feleva/04.png?v=20260508-static-ads" data-title="Feleva Static Ad 04" aria-label="Open Feleva Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/feleva/04.png?v=20260508-static-ads" alt="Feleva Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Feleva Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/feleva/05.png?v=20260508-static-ads" data-title="Feleva Static Ad 05" aria-label="Open Feleva Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/feleva/05.png?v=20260508-static-ads" alt="Feleva Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Feleva Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="lumiquor">
+  <div class="sad-brand-head">
+    <span>05</span>
+    <div>
+      <h2>Lumiquor</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/01.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 01" aria-label="Open Lumiquor Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/lumiquor/01.png?v=20260508-static-ads" alt="Lumiquor Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Lumiquor Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/02.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 02" aria-label="Open Lumiquor Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/lumiquor/02.png?v=20260508-static-ads" alt="Lumiquor Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Lumiquor Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/03.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 03" aria-label="Open Lumiquor Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/lumiquor/03.png?v=20260508-static-ads" alt="Lumiquor Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Lumiquor Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/04.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 04" aria-label="Open Lumiquor Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/lumiquor/04.png?v=20260508-static-ads" alt="Lumiquor Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Lumiquor Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/05.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 05" aria-label="Open Lumiquor Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/lumiquor/05.png?v=20260508-static-ads" alt="Lumiquor Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Lumiquor Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="mb1">
+  <div class="sad-brand-head">
+    <span>06</span>
+    <div>
+      <h2>MB1</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/mb1/01.png?v=20260508-static-ads" data-title="MB1 Static Ad 01" aria-label="Open MB1 Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/mb1/01.png?v=20260508-static-ads" alt="MB1 Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>MB1 Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/mb1/02.png?v=20260508-static-ads" data-title="MB1 Static Ad 02" aria-label="Open MB1 Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/mb1/02.png?v=20260508-static-ads" alt="MB1 Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>MB1 Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/mb1/03.png?v=20260508-static-ads" data-title="MB1 Static Ad 03" aria-label="Open MB1 Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/mb1/03.png?v=20260508-static-ads" alt="MB1 Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>MB1 Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/mb1/04.png?v=20260508-static-ads" data-title="MB1 Static Ad 04" aria-label="Open MB1 Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/mb1/04.png?v=20260508-static-ads" alt="MB1 Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>MB1 Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/mb1/05.png?v=20260508-static-ads" data-title="MB1 Static Ad 05" aria-label="Open MB1 Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/mb1/05.png?v=20260508-static-ads" alt="MB1 Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>MB1 Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="nu-body">
+  <div class="sad-brand-head">
+    <span>07</span>
+    <div>
+      <h2>Nu Body</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/nu-body/01.png?v=20260508-static-ads" data-title="Nu Body Static Ad 01" aria-label="Open Nu Body Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/nu-body/01.png?v=20260508-static-ads" alt="Nu Body Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Nu Body Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/nu-body/02.png?v=20260508-static-ads" data-title="Nu Body Static Ad 02" aria-label="Open Nu Body Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/nu-body/02.png?v=20260508-static-ads" alt="Nu Body Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Nu Body Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/nu-body/03.png?v=20260508-static-ads" data-title="Nu Body Static Ad 03" aria-label="Open Nu Body Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/nu-body/03.png?v=20260508-static-ads" alt="Nu Body Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Nu Body Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/nu-body/04.png?v=20260508-static-ads" data-title="Nu Body Static Ad 04" aria-label="Open Nu Body Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/nu-body/04.png?v=20260508-static-ads" alt="Nu Body Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Nu Body Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/nu-body/05.png?v=20260508-static-ads" data-title="Nu Body Static Ad 05" aria-label="Open Nu Body Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/nu-body/05.png?v=20260508-static-ads" alt="Nu Body Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Nu Body Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="only-human">
+  <div class="sad-brand-head">
+    <span>08</span>
+    <div>
+      <h2>Only Human</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/only-human/01.png?v=20260508-static-ads" data-title="Only Human Static Ad 01" aria-label="Open Only Human Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/only-human/01.png?v=20260508-static-ads" alt="Only Human Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Only Human Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/only-human/02.png?v=20260508-static-ads" data-title="Only Human Static Ad 02" aria-label="Open Only Human Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/only-human/02.png?v=20260508-static-ads" alt="Only Human Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Only Human Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/only-human/03.png?v=20260508-static-ads" data-title="Only Human Static Ad 03" aria-label="Open Only Human Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/only-human/03.png?v=20260508-static-ads" alt="Only Human Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Only Human Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/only-human/04.png?v=20260508-static-ads" data-title="Only Human Static Ad 04" aria-label="Open Only Human Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/only-human/04.png?v=20260508-static-ads" alt="Only Human Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Only Human Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/only-human/05.png?v=20260508-static-ads" data-title="Only Human Static Ad 05" aria-label="Open Only Human Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/only-human/05.png?v=20260508-static-ads" alt="Only Human Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Only Human Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="simply-revival">
+  <div class="sad-brand-head">
+    <span>09</span>
+    <div>
+      <h2>Simply Revival</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/simply-revival/01.png?v=20260508-static-ads" data-title="Simply Revival Static Ad 01" aria-label="Open Simply Revival Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/simply-revival/01.png?v=20260508-static-ads" alt="Simply Revival Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Simply Revival Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/simply-revival/02.png?v=20260508-static-ads" data-title="Simply Revival Static Ad 02" aria-label="Open Simply Revival Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/simply-revival/02.png?v=20260508-static-ads" alt="Simply Revival Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Simply Revival Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/simply-revival/03.png?v=20260508-static-ads" data-title="Simply Revival Static Ad 03" aria-label="Open Simply Revival Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/simply-revival/03.png?v=20260508-static-ads" alt="Simply Revival Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Simply Revival Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/simply-revival/04.png?v=20260508-static-ads" data-title="Simply Revival Static Ad 04" aria-label="Open Simply Revival Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/simply-revival/04.png?v=20260508-static-ads" alt="Simply Revival Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Simply Revival Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/simply-revival/05.png?v=20260508-static-ads" data-title="Simply Revival Static Ad 05" aria-label="Open Simply Revival Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/simply-revival/05.png?v=20260508-static-ads" alt="Simply Revival Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Simply Revival Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+<section class="sad-brand" id="watershop">
+  <div class="sad-brand-head">
+    <span>10</span>
+    <div>
+      <h2>Watershop</h2>
+      <p>Five static ad designs built for ecommerce and paid social testing.</p>
+    </div>
+  </div>
+  <div class="sad-grid">
+    <figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/01.png?v=20260508-static-ads" data-title="Watershop Static Ad 01" aria-label="Open Watershop Static Ad 01">
+    <img src="/assets/projects/static-ad-designs/watershop/01.png?v=20260508-static-ads" alt="Watershop Static Ad 01" loading="lazy">
+  </button>
+  <figcaption><span>01</span><strong>Watershop Static Ad 01</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/02.png?v=20260508-static-ads" data-title="Watershop Static Ad 02" aria-label="Open Watershop Static Ad 02">
+    <img src="/assets/projects/static-ad-designs/watershop/02.png?v=20260508-static-ads" alt="Watershop Static Ad 02" loading="lazy">
+  </button>
+  <figcaption><span>02</span><strong>Watershop Static Ad 02</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/03.png?v=20260508-static-ads" data-title="Watershop Static Ad 03" aria-label="Open Watershop Static Ad 03">
+    <img src="/assets/projects/static-ad-designs/watershop/03.png?v=20260508-static-ads" alt="Watershop Static Ad 03" loading="lazy">
+  </button>
+  <figcaption><span>03</span><strong>Watershop Static Ad 03</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/04.png?v=20260508-static-ads" data-title="Watershop Static Ad 04" aria-label="Open Watershop Static Ad 04">
+    <img src="/assets/projects/static-ad-designs/watershop/04.png?v=20260508-static-ads" alt="Watershop Static Ad 04" loading="lazy">
+  </button>
+  <figcaption><span>04</span><strong>Watershop Static Ad 04</strong></figcaption>
+</figure><figure class="sad-card">
+  <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/05.png?v=20260508-static-ads" data-title="Watershop Static Ad 05" aria-label="Open Watershop Static Ad 05">
+    <img src="/assets/projects/static-ad-designs/watershop/05.png?v=20260508-static-ads" alt="Watershop Static Ad 05" loading="lazy">
+  </button>
+  <figcaption><span>05</span><strong>Watershop Static Ad 05</strong></figcaption>
+</figure>
+  </div>
+</section>
+    </div>
+  </section>
+
+  <section class="sad-cta">
+    <div class="sad-shell">
+      <div class="sad-index-label">Next Step</div>
+      <h2>Need ad creative<br><em>built for</em><br>testing?</h2>
+      <p>We can create static ad design sets that give your brand more angles to test, compare, and scale.</p>
+      <a href="/contact/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
+    </div>
+  </section>
+</main>
+
+<dialog class="sad-dialog" id="assetDialog">
+  <div class="sad-dialog-top"><strong id="dialogTitle">Asset preview</strong><button class="sad-dialog-close" type="button" id="dialogClose" aria-label="Close preview">x</button></div>
+  <img id="dialogImage" alt="">
+</dialog>
+
+<script src="/js/nav.js?v=20260507-footer-v1"></script>
+<script>
+(function(){
+  const dialog=document.getElementById('assetDialog');
+  const image=document.getElementById('dialogImage');
+  const title=document.getElementById('dialogTitle');
+  document.querySelectorAll('.sad-preview[data-src]').forEach(button=>button.addEventListener('click',()=>{
+    image.src=button.dataset.src;
+    image.alt=button.dataset.title;
+    title.textContent=button.dataset.title;
+    if(dialog && dialog.showModal) dialog.showModal(); else window.open(button.dataset.src,'_blank');
+  }));
+  document.getElementById('dialogClose').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{ if(event.target===dialog) dialog.close(); });
+})();
+</script>
+</body>
+</html>
