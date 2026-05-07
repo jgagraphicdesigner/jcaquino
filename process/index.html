@@ -84,6 +84,42 @@
 .page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 520px !important; text-align: left !important; }
 .page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
 
+/* Mobile process polish */
+.step-body{min-width:0;}
+@media(max-width:768px){
+  .page-hero{
+    min-height:auto !important;
+    padding:calc(var(--nav-h) + 28px) 20px 52px !important;
+  }
+  .page-hero h1{
+    font-size:clamp(23px,8.4vw,34px) !important;
+    line-height:1.45 !important;
+    letter-spacing:1px !important;
+    max-width:100% !important;
+    overflow-wrap:anywhere;
+  }
+  .page-hero-sub{max-width:100% !important;font-size:14px !important;line-height:1.8 !important;}
+  .steps{width:100%;max-width:100%;margin:34px auto 0;}
+  .step{
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:34px 0;
+    overflow:hidden;
+  }
+  .step-num{font-size:42px;letter-spacing:1px;}
+  .step-tag{font-size:10px;line-height:1.6;letter-spacing:.1em;}
+  .step-title{
+    font-size:clamp(22px,7.3vw,30px);
+    line-height:1.45;
+    letter-spacing:1px;
+    overflow-wrap:anywhere;
+    max-width:100%;
+  }
+  .step-desc{font-size:14px;line-height:1.78;}
+  .step-time{font-size:11px;line-height:1.5;}
+  .faq{max-width:100%;}
+  .faq-q{font-size:15px;line-height:1.45;align-items:flex-start;}
+}
 </style>
 </head>
 <body>

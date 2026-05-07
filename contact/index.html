@@ -26,7 +26,6 @@
 .form-group textarea{resize:vertical;min-height:120px}
 .form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
 .form-submit:hover{box-shadow:0 0 50px rgba(255,77,0,.45);transform:translateY(-2px)}
-50%{opacity:.5}}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
 
 
@@ -102,6 +101,44 @@
 .page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 520px !important; text-align: left !important; }
 .page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
 
+/* Mobile contact polish */
+@media(max-width:768px){
+  .page-hero{
+    min-height:auto !important;
+    padding:calc(var(--nav-h) + 28px) 20px 52px !important;
+  }
+  .page-hero h1{
+    font-size:clamp(23px,8.4vw,32px) !important;
+    line-height:1.45 !important;
+    letter-spacing:1px !important;
+    max-width:100% !important;
+  }
+  .page-hero-sub{
+    max-width:100% !important;
+    font-size:14px !important;
+    line-height:1.8 !important;
+  }
+  .contact-grid{
+    grid-template-columns:1fr !important;
+    gap:28px;
+    margin-top:0;
+    width:100%;
+    min-width:0;
+  }
+  .contact-info{gap:18px;min-width:0;}
+  .contact-info .section-heading{
+    font-size:clamp(20px,7vw,28px) !important;
+    line-height:1.45 !important;
+    letter-spacing:1px !important;
+    overflow-wrap:anywhere;
+  }
+  .contact-info p{font-size:14px !important;line-height:1.75 !important;margin-bottom:20px !important;}
+  .info-card{padding:18px 16px;gap:12px;align-items:flex-start;min-width:0;}
+  .info-icon{width:36px;height:36px;}
+  .info-val{font-size:14px;line-height:1.55;overflow-wrap:anywhere;}
+  .form-wrap{padding:24px 18px;border-radius:18px;}
+  .form-group input,.form-group select,.form-group textarea{font-size:14px;padding:12px 14px;}
+}
 </style>
 </head>
 <body>
