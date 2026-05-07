@@ -4,483 +4,247 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prop Moves Brand Identity JGA Studios</title>
-<meta name="description" content="Prop Moves brand identity case study by JGA Studios, using the approved website asset set.">
+<meta name="description" content="Prop Moves brand identity case study by JGA Studios, presented as a numbered material showcase.">
 <link rel="icon" href="/JGA_logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/main.css?v=20260507-footer-v1">
 <style>
-.pm-hero{background:var(--bg);min-height:72vh!important;display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:44px;align-items:center;padding:calc(var(--nav-h) + 54px) 24px 82px!important;overflow:hidden}
-.pm-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(10,6,0,.98),rgba(28,13,2,.86)),radial-gradient(circle at 80% 22%,rgba(255,77,0,.13),transparent 34%),radial-gradient(circle at 10% 84%,rgba(255,77,0,.09),transparent 30%);z-index:0}
-.pm-hero>*{position:relative;z-index:1}
-.pm-copy{width:min(100%,560px);justify-self:end}
-.pm-kicker,.pm-label{font-family:'Press Start 2P',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);line-height:1.9;text-shadow:0 0 12px rgba(255,77,0,.45)}
-.pm-kicker{margin-bottom:24px}
-.pm-hero h1,.pm-heading{font-family:'Press Start 2P',monospace;letter-spacing:1px}
-.pm-hero h1{font-size:clamp(24px,4.2vw,48px);line-height:1.5;margin-bottom:24px}
-.pm-hero h1 em,.pm-heading em{color:var(--orange);font-style:normal;text-shadow:0 0 22px rgba(255,77,0,.35)}
-.pm-sub{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:500}
-.pm-tags,.pm-jump,.pm-toolbar{display:flex;flex-wrap:wrap;gap:10px}
-.pm-tags{margin-top:30px}
-.pm-jump{margin-top:24px}
-.pm-tags span,.pm-jump a,.pm-filter{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--orange-border);border-radius:999px;padding:8px 13px;color:var(--orange);background:var(--orange-dim);text-decoration:none}
-.pm-filter{appearance:none;cursor:pointer}
-.pm-jump a:hover,.pm-filter:hover,.pm-filter.is-active{background:var(--orange);color:#070300}
-.pm-hero-art{width:min(100%,720px);justify-self:start;background:rgba(255,255,255,.035);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:14px;box-shadow:0 28px 90px rgba(0,0,0,.45),0 0 42px rgba(255,77,0,.06)}
-.pm-hero-art img{display:block;width:100%;border-radius:calc(var(--radius-lg) - 8px);border:1px solid rgba(255,255,255,.08)}
-.pm-copy,.pm-hero-art,.pm-grid,.pm-resource,.pm-gallery,.pm-card{min-width:0;max-width:100%}
-.pm-heading{font-size:clamp(24px,4vw,48px);line-height:1.45;margin:20px 0 30px;max-width:780px}
-.pm-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:28px;align-items:start}
-.pm-copy-block{font-size:15px;line-height:1.9;color:var(--white-dim);font-weight:500}
-.pm-copy-block p{margin-bottom:18px}
-.pm-panel,.pm-note{background:var(--frost-bg);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:28px;backdrop-filter:blur(18px)}
-.pm-panel h3,.pm-note h3{font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.7;margin-bottom:16px;color:var(--orange)}
-.pm-detail{display:grid;gap:14px}
-.pm-detail div{display:grid;grid-template-columns:126px 1fr;gap:18px;border-top:1px solid var(--frost-border);padding-top:14px}
-.pm-detail strong,.pm-card figcaption span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
-.pm-detail span{font-size:14px;color:var(--white-dim);line-height:1.7}
-.pm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
-.pm-stat{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:18px}
-.pm-stat strong{font-family:'Press Start 2P',monospace;color:var(--orange);font-size:18px;display:block;margin-bottom:8px}
-.pm-stat span{font-size:12px;line-height:1.6;color:var(--white-dim);font-weight:700}
-.pm-section-dark{background:var(--bg2)}
-.pm-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
-.pm-note p{font-size:14px;line-height:1.85;color:var(--white-dim)}
-.pm-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
-.pm-gallery.logos{grid-template-columns:repeat(4,minmax(0,1fr))}
-.pm-card{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
-.pm-card:hover{transform:translateY(-3px);border-color:var(--orange-border);box-shadow:0 18px 48px rgba(255,77,0,.08)}
-.pm-card.is-hidden{display:none}
-.pm-open{width:100%;display:block;padding:0;border:0;background:rgba(255,255,255,.025);cursor:pointer}
-.pm-card img{width:100%;height:310px;object-fit:contain;display:block;padding:14px}
-.pm-card.logo-card img{height:180px}
-.pm-card.website-card img{height:470px;object-position:top center}
-.pm-card figcaption{padding:18px;border-top:1px solid var(--frost-border)}
-.pm-card figcaption span{font-family:'Press Start 2P',monospace;font-size:8px;display:block;line-height:1.7;margin-bottom:8px}
-.pm-card figcaption strong{font-size:15px;line-height:1.4;display:block;color:var(--white)}
-.pm-card figcaption p{font-size:12px;color:var(--white-dim);line-height:1.65;margin:8px 0 0}
-.pm-card figcaption a,.pm-resource a{display:inline-flex;margin-top:13px;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);text-decoration:none}
-.pm-toolbar{margin:36px 0 22px}
-.pm-resource{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:rgba(255,130,30,.06);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:28px;margin-top:34px}
-.pm-resource h3{font-family:'Press Start 2P',monospace;font-size:15px;line-height:1.65;color:var(--white);margin-bottom:12px}
-.pm-resource p{font-size:14px;line-height:1.8;color:var(--white-dim)}
-.pm-resource-preview{background:var(--bg3);border:1px solid var(--frost-border);border-radius:var(--radius);padding:14px}
-.pm-resource-preview img{display:block;width:100%;border-radius:10px}
-.pm-dialog{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;box-sizing:border-box;width:min(calc(100vw - 32px),1100px);max-height:min(88vh,900px);border:1px solid var(--orange-border);border-radius:var(--radius-lg);background:var(--bg);color:var(--white);padding:0;box-shadow:0 30px 120px rgba(0,0,0,.72);overflow:hidden}
-.pm-dialog::backdrop{background:rgba(0,0,0,.78)}
-.pm-dialog-top{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--frost-border)}
-.pm-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:11px;line-height:1.6;color:var(--orange)}
-.pm-dialog-top button{border:1px solid var(--orange-border);background:var(--orange-dim);color:var(--orange);border-radius:999px;width:38px;height:38px;font-size:22px;cursor:pointer}
-.pm-dialog img{display:block;width:100%;height:auto;max-height:calc(min(88vh,900px) - 68px);object-fit:contain;background:#070300}
-@media(max-width:1100px){.pm-hero,.pm-grid,.pm-resource{grid-template-columns:1fr}.pm-copy,.pm-hero-art{justify-self:center}.pm-gallery,.pm-gallery.logos,.pm-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.pm-dialog{width:calc(100vw - 28px);max-height:82vh}.pm-dialog img{max-height:calc(82vh - 68px)}html,body{overflow-x:hidden}#cursor,#cursor-ring{display:none!important}.pm-hero,.pm-gallery,.pm-gallery.logos,.pm-two,.pm-stats{grid-template-columns:1fr}.pm-hero{padding:calc(var(--nav-h) + 38px) 20px 66px!important;min-height:auto!important}.pm-copy,.pm-hero-art{width:100%;justify-self:stretch}.pm-hero h1{font-size:clamp(22px,9.2vw,32px);line-height:1.45;max-width:100%}.pm-heading{font-size:clamp(23px,8.6vw,33px);max-width:100%}.pm-tags span,.pm-jump a{white-space:normal;text-align:center;max-width:100%}.pm-detail div{grid-template-columns:1fr;gap:4px}.pm-panel,.pm-note,.pm-resource{padding:22px}.pm-card img,.pm-card.logo-card img,.pm-card.website-card img{height:auto;max-height:520px}.pm-toolbar{gap:8px}.pm-filter{font-size:10px;padding:9px 12px;white-space:normal}}
+html,body{overflow-x:hidden}
+.pm-page{background:var(--bg);color:var(--white);position:relative}
+.pm-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 10% 8%,rgba(255,77,0,.14),transparent 22%),radial-gradient(circle at 88% 20%,rgba(255,77,0,.09),transparent 28%),linear-gradient(rgba(255,77,0,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.028) 1px,transparent 1px);background-size:auto,auto,56px 56px,56px 56px;z-index:0}
+.pm-page>*{position:relative;z-index:1}
+.pm-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.pm-hero{min-height:calc(100vh - var(--nav-h));padding:calc(var(--nav-h) + 58px) 0 74px;display:flex;align-items:center;background:linear-gradient(180deg,rgba(10,5,0,.98),rgba(18,8,1,.96))}
+.pm-hero-grid{display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);gap:42px;align-items:center}
+.pm-kicker,.pm-board-head span,.pm-index-label{font-family:'Press Start 2P',monospace;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 16px rgba(255,77,0,.35)}
+.pm-kicker{font-size:9px;line-height:1.9;margin-bottom:22px}
+.pm-title{font-family:'Press Start 2P',monospace;font-size:clamp(26px,4.6vw,56px);line-height:1.42;letter-spacing:1px;margin:0 0 24px;max-width:640px}
+.pm-title em{color:var(--orange);font-style:normal;text-shadow:0 0 24px rgba(255,77,0,.4)}
+.pm-sub{font-size:16px;line-height:1.9;color:var(--white-dim);font-weight:600;max-width:540px}
+.pm-index{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;max-width:420px}
+.pm-index a{display:inline-grid;place-items:center;width:42px;height:38px;border:1px solid var(--orange-border);border-radius:999px;background:rgba(255,77,0,.055);color:var(--orange);font-family:'Press Start 2P',monospace;font-size:9px;text-decoration:none;transition:transform .18s,border-color .18s,background .18s,color .18s}
+.pm-index a:hover,.pm-index a:focus-visible{transform:translateY(-2px);background:var(--orange);color:#070300;border-color:var(--orange);outline:0}
+.pm-hero-frame,.pm-preview{border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52),0 0 46px rgba(255,77,0,.05);padding:14px;overflow:hidden}
+.pm-hero-frame img,.pm-preview img{display:block;width:100%;height:auto;border-radius:14px}
+.pm-hero-frame img{max-height:min(68vh,720px);object-fit:contain}
+.pm-sequence{padding:88px 0 104px;background:linear-gradient(180deg,rgba(15,7,1,.98),rgba(9,4,0,1))}
+.pm-intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px;align-items:end;margin-bottom:58px}
+.pm-index-label{font-size:9px;line-height:1.9}
+.pm-intro h2{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3.2vw,40px);line-height:1.5;letter-spacing:1px;margin:14px 0 0}
+.pm-intro h2 em{color:var(--orange);font-style:normal}
+.pm-intro p{color:var(--white-dim);font-size:16px;line-height:1.9;font-weight:600;margin:0;max-width:660px}
+.pm-board{margin:0 0 74px;scroll-margin-top:calc(var(--nav-h) + 26px)}
+.pm-board:last-child{margin-bottom:0}
+.pm-board-head{display:flex;gap:18px;align-items:flex-start;margin:0 0 18px}
+.pm-board-head span{font-size:18px;line-height:1.2;min-width:64px}
+.pm-board-head strong{display:block;font-family:'Press Start 2P',monospace;font-size:clamp(13px,1.5vw,19px);line-height:1.55;color:var(--white);margin-bottom:8px}
+.pm-board-head p{color:var(--white-dim);font-size:14px;line-height:1.7;font-weight:600;margin:0;max-width:640px}
+.pm-preview{appearance:none;width:100%;display:block;cursor:pointer;text-align:left;transition:transform .22s,border-color .22s,box-shadow .22s}
+.pm-preview:hover,.pm-preview:focus-visible{transform:translateY(-4px);border-color:var(--orange-border);box-shadow:0 30px 90px rgba(0,0,0,.62),0 0 52px rgba(255,77,0,.11);outline:0}
+.pm-board:nth-of-type(3n+1) .pm-preview{width:min(100%,1050px);margin-left:auto}
+.pm-board:nth-of-type(3n+2) .pm-preview{width:min(100%,1050px);margin-right:auto}
+.pm-board:nth-of-type(3n) .pm-preview{width:min(100%,980px);margin-left:auto;margin-right:auto}
+.pm-cta{padding:86px 0;text-align:center;background:var(--bg2);border-top:1px solid var(--frost-border)}
+.pm-cta h2{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3vw,38px);line-height:1.55;letter-spacing:1px;margin:14px auto 22px;max-width:760px}
+.pm-cta h2 em{color:var(--orange);font-style:normal}
+.pm-cta p{color:var(--white-dim);font-size:16px;line-height:1.85;max-width:560px;margin:0 auto 34px;font-weight:600}
+.pm-dialog{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;box-sizing:border-box;width:min(calc(100vw - 32px),1180px);max-height:min(90vh,920px);border:1px solid var(--orange-border);border-radius:20px;background:var(--bg);color:var(--white);padding:0;box-shadow:0 32px 130px rgba(0,0,0,.78);overflow:hidden}
+.pm-dialog::backdrop{background:rgba(0,0,0,.8)}
+.pm-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--frost-border);background:rgba(20,9,1,.96)}
+.pm-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
+.pm-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
+.pm-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
+@media(max-width:980px){.pm-hero-grid,.pm-intro{grid-template-columns:1fr}.pm-hero{min-height:auto;padding:calc(var(--nav-h) + 44px) 0 68px}.pm-hero-frame img{max-height:none}.pm-board:nth-of-type(n) .pm-preview{width:100%;margin-left:0;margin-right:0}}
+@media(max-width:640px){#cursor,#cursor-ring{display:none!important}.pm-shell{width:min(100% - 36px,1180px)}.pm-title{font-size:clamp(25px,10vw,38px);line-height:1.45}.pm-sub,.pm-intro p,.pm-cta p{font-size:15px}.pm-index a{width:39px;height:36px}.pm-hero-frame,.pm-preview{border-radius:17px;padding:10px}.pm-hero-frame img,.pm-preview img{border-radius:10px}.pm-sequence{padding:64px 0 78px}.pm-intro{margin-bottom:44px}.pm-board{margin-bottom:52px}.pm-board-head{gap:12px}.pm-board-head span{font-size:14px;min-width:44px}.pm-board-head strong{font-size:13px}.pm-board-head p{font-size:13px}.pm-dialog{width:calc(100vw - 24px);max-height:84vh}.pm-dialog img{max-height:calc(84vh - 70px)}}
 </style>
 </head>
 <body>
-<main>
-<section class="pm-hero">
-  <div class="pm-copy">
-    <div class="pm-kicker">Case Study // Brand Identity + Website Assets</div>
-    <h1>Prop Moves<br><em>Brand</em><br>System</h1>
-    <p class="pm-sub">A focused brand identity and growth asset set for an Australian buyers agency: logo direction, brochure presentation, website mockup, social media, banner, billboard, and supporting collateral.</p>
-    <div class="pm-tags"><span>Brand Identity</span><span>Website Assets</span><span>Brochure PDF</span><span>Collateral Suite</span></div>
-    <nav class="pm-jump" aria-label="Prop Moves case study sections"><a href="#brand-system">Brand system</a><a href="#collateral">Collateral</a><a href="#website-assets">Website</a><a href="#all-assets">All assets</a></nav>
-  </div>
-  <div class="pm-hero-art"><img src="/assets/projects/prop-moves/brand-identity-design.png?v=20260507-hero" alt="Prop Moves brand identity design"></div>
-</section>
-<section>
-  <div class="pm-label">The Project</div>
-  <h2 class="pm-heading">A strategic<br><em>property</em><br>brand system.</h2>
-  <div class="pm-grid">
-    <div class="pm-copy-block">
-      <p>Prop Moves needed a visual identity that could communicate premium property strategy, data-led confidence, and practical buyer-agency trust. The direction uses the chess-piece idea as a signal for smart movement and calculated decisions.</p>
-      <p>The approved website pack now shown here is intentionally focused: brand frames, logo exports, brochure visuals, the website mockup, social media, banner, billboard, the full website file link, and the brochure PDF. Nothing outside the approved website folder is used for the public media on this page.</p>
-      <p>The result is a concise case study that keeps the JGA Studios page style while letting the Prop Moves deliverables show as the work itself.</p>
-    </div>
-    <div class="pm-panel">
-      <h3>Build Snapshot</h3>
-      <div class="pm-detail">
-        <div><strong>Client</strong><span>Prop Moves</span></div>
-        <div><strong>Industry</strong><span>Australian buyers agency and property-investment advisory</span></div>
-        <div><strong>Scope</strong><span>Brand identity, logo exports, brochure presentation, website page captures, social media, roll-up banner, billboard, and brochure PDF</span></div>
-        <div><strong>Concept</strong><span>Strategic movement, chess-piece thinking, and premium investment guidance</span></div>
+<main class="pm-page">
+  <section class="pm-hero">
+    <div class="pm-shell pm-hero-grid">
+      <div>
+        <div class="pm-kicker">Case Study // Prop Moves</div>
+        <h1 class="pm-title">Brand<br><em>Identity</em><br>Design</h1>
+        <p class="pm-sub">A focused brand system for an Australian property buyers agency, presented as a numbered material showcase from the approved Prop Moves website folder.</p>
+        <nav class="pm-index" aria-label="Prop Moves numbered material index">
+          <a href="#frame-01" aria-label="Jump to Prop Moves frame 01">01</a>
+<a href="#frame-02" aria-label="Jump to Prop Moves frame 02">02</a>
+<a href="#frame-03" aria-label="Jump to Prop Moves frame 03">03</a>
+<a href="#frame-04" aria-label="Jump to Prop Moves frame 04">04</a>
+<a href="#frame-05" aria-label="Jump to Prop Moves frame 05">05</a>
+<a href="#frame-06" aria-label="Jump to Prop Moves frame 06">06</a>
+<a href="#frame-07" aria-label="Jump to Prop Moves frame 07">07</a>
+<a href="#frame-08" aria-label="Jump to Prop Moves frame 08">08</a>
+<a href="#frame-09" aria-label="Jump to Prop Moves frame 09">09</a>
+<a href="#frame-10" aria-label="Jump to Prop Moves frame 10">10</a>
+        </nav>
       </div>
+      <button class="pm-hero-frame pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" data-title="01 / Brand Identity Design" aria-label="Open Prop Moves hero frame">
+        <img src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" alt="Prop Moves Brand Identity Design" loading="eager">
+      </button>
     </div>
-  </div>
-  <div class="pm-stats"><div class="pm-stat"><strong>14</strong><span>approved gallery assets</span></div><div class="pm-stat"><strong>4</strong><span>logo exports</span></div><div class="pm-stat"><strong>1</strong><span>website mockup + full file link</span></div><div class="pm-stat"><strong>1</strong><span>brochure PDF</span></div></div>
-</section>
-<section id="brand-system" class="pm-section-dark">
-  <div class="pm-label">Brand System</div>
-  <h2 class="pm-heading">Identity frames<br><em>and logo</em><br>exports.</h2>
-  <div class="pm-two"><div class="pm-note"><h3>Identity Direction</h3><p>The identity frames present Prop Moves as a strategic, premium property brand with a visual system built around movement, analysis, and clarity.</p></div><div class="pm-note"><h3>Logo System</h3><p>The approved logo exports are shown as the public logo set for this case study, using only the files provided in the website folder.</p></div></div>
-  <div class="pm-gallery"><figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/brand-identity-design.png" data-title="Brand Identity Design" aria-label="Open Brand Identity Design">
-        <img src="/assets/projects/prop-moves/brand-identity-design.png" alt="Brand Identity Design" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Brand Identity Design</strong>
-        <p>Opening frame for the Prop Moves identity direction.</p>
-        <a href="/assets/projects/prop-moves/brand-identity-design.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/brand-guidelines-overview.png" data-title="Brand Guidelines Overview" aria-label="Open Brand Guidelines Overview">
-        <img src="/assets/projects/prop-moves/brand-guidelines-overview.png" alt="Brand Guidelines Overview" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Brand Guidelines Overview</strong>
-        <p>Logo usage, typography, and color palette overview.</p>
-        <a href="/assets/projects/prop-moves/brand-guidelines-overview.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-primary-secondary.png" data-title="Primary and Secondary Logo" aria-label="Open Primary and Secondary Logo">
-        <img src="/assets/projects/prop-moves/logo-primary-secondary.png" alt="Primary and Secondary Logo" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Primary and Secondary Logo</strong>
-        <p>Primary logo and secondary logo lockups.</p>
-        <a href="/assets/projects/prop-moves/logo-primary-secondary.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/chess-piece-mark.png" data-title="Chess Piece Brand Mark" aria-label="Open Chess Piece Brand Mark">
-        <img src="/assets/projects/prop-moves/chess-piece-mark.png" alt="Chess Piece Brand Mark" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Chess Piece Brand Mark</strong>
-        <p>Chess-inspired symbol used to signal strategy and movement.</p>
-        <a href="/assets/projects/prop-moves/chess-piece-mark.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure></div>
-  <div class="pm-gallery logos"><figure class="pm-card logo-card" data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-01.png" data-title="Logo Export 01" aria-label="Open Logo Export 01">
-        <img src="/assets/projects/prop-moves/logo-export-01.png" alt="Logo Export 01" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 01</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-01.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card logo-card" data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-02.png" data-title="Logo Export 02" aria-label="Open Logo Export 02">
-        <img src="/assets/projects/prop-moves/logo-export-02.png" alt="Logo Export 02" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 02</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-02.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card logo-card" data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-03.png" data-title="Logo Export 03" aria-label="Open Logo Export 03">
-        <img src="/assets/projects/prop-moves/logo-export-03.png" alt="Logo Export 03" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 03</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-03.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card logo-card" data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-04.png" data-title="Logo Export 04" aria-label="Open Logo Export 04">
-        <img src="/assets/projects/prop-moves/logo-export-04.png" alt="Logo Export 04" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 04</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-04.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure></div>
-</section>
-<section id="collateral">
-  <div class="pm-label">Collateral</div>
-  <h2 class="pm-heading">Campaign-ready<br><em>brand</em><br>touchpoints.</h2>
-  <div class="pm-copy-block" style="max-width:820px"><p>The collateral set shows how the Prop Moves identity extends beyond the logo: brochure presentation, roll-up banners, social media, billboard placement, and a wider asset suite for brand consistency.</p></div>
-  <div class="pm-gallery"><figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/collateral-suite.png" data-title="Collateral Suite" aria-label="Open Collateral Suite">
-        <img src="/assets/projects/prop-moves/collateral-suite.png" alt="Collateral Suite" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Collateral Suite</strong>
-        <p>Brand applications across print and presentation materials.</p>
-        <a href="/assets/projects/prop-moves/collateral-suite.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/rollup-banner-mockups.png" data-title="Roll-up Banner Mockups" aria-label="Open Roll-up Banner Mockups">
-        <img src="/assets/projects/prop-moves/rollup-banner-mockups.png" alt="Roll-up Banner Mockups" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Roll-up Banner Mockups</strong>
-        <p>Event and offline visibility assets.</p>
-        <a href="/assets/projects/prop-moves/rollup-banner-mockups.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/social-media-kit.png" data-title="Social Media Kit" aria-label="Open Social Media Kit">
-        <img src="/assets/projects/prop-moves/social-media-kit.png" alt="Social Media Kit" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Social Media Kit</strong>
-        <p>Social-ready branded content direction.</p>
-        <a href="/assets/projects/prop-moves/social-media-kit.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/outdoor-billboard.png" data-title="Outdoor Billboard" aria-label="Open Outdoor Billboard">
-        <img src="/assets/projects/prop-moves/outdoor-billboard.png" alt="Outdoor Billboard" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Outdoor Billboard</strong>
-        <p>Large-format awareness placement.</p>
-        <a href="/assets/projects/prop-moves/outdoor-billboard.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure><figure class="pm-card " data-category="Brochure">
-      <a class="pm-open" href="/assets/projects/prop-moves/prop-moves-brochure.pdf" target="_blank" rel="noopener" aria-label="Open Prop Moves Brochure PDF">
-        <img src="/assets/projects/prop-moves/brochure-preview.png" alt="Prop Moves Brochure PDF preview" loading="lazy">
-      </a>
-      <figcaption>
-        <span>Brochure</span>
-        <strong>Brochure Preview</strong>
-        <p>Presentation frame for the Wealth Creation Plan brochure.</p>
-        <a href="/assets/projects/prop-moves/prop-moves-brochure.pdf" target="_blank" rel="noopener">Open brochure PDF -&gt;</a>
-      </figcaption>
-    </figure></div>
-</section>
-<section id="website-assets" class="pm-section-dark">
-  <div class="pm-label">Website Assets</div>
-  <h2 class="pm-heading">Website mockup<br><em>and full</em><br>file link.</h2>
-  <div class="pm-copy-block" style="max-width:820px"><p>The website assets now show the homepage mockup only. Use the full website file link below to open the complete website design reference.</p></div>
-  <div class="pm-gallery"><figure class="pm-card website-card" data-category="Website">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/website-homepage-mockup.png" data-title="Website Homepage Mockup" aria-label="Open Website Homepage Mockup">
-        <img src="/assets/projects/prop-moves/website-homepage-mockup.png" alt="Website Homepage Mockup" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Website</span>
-        <strong>Website Homepage Mockup</strong>
-        <p>Desktop website mockup for the Prop Moves lead experience.</p>
-        <a href="/assets/projects/prop-moves/website-homepage-mockup.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure></div>
-  <div class="pm-resource">
+  </section>
+
+  <section class="pm-sequence">
+    <div class="pm-shell">
+      <div class="pm-intro">
+        <div>
+          <div class="pm-index-label">01-10 // Material Sequence</div>
+          <h2>How the<br><em>brand system</em><br>comes together.</h2>
+        </div>
+        <p>Instead of separating the work into small cards, this page now follows the portfolio-style presentation: each numbered frame gets room to breathe, so the logo, typography, web, social, brochure, and outdoor materials read as one connected identity system.</p>
+      </div>
+      <figure class="pm-board" id="frame-01" data-index="1" data-title="Brand Identity Design">
+  <div class="pm-board-head">
+    <span>01</span>
     <div>
-      <div class="pm-label">Full Website File</div>
-      <h3>Open the complete Prop Moves website design</h3>
-      <p>Use this Google Drive file to review the full website design reference instead of separate long-form screen captures.</p>
-      <a href="https://drive.google.com/file/d/1-_wBVZsPoY2QH2TTf3el00x0byehb9te/view" target="_blank" rel="noopener">Open full website file -&gt;</a>
+      <strong>Brand Identity Design</strong>
+      <p>Opening visual direction for the Prop Moves brand system.</p>
     </div>
-    <div class="pm-resource-preview"><img src="/assets/projects/prop-moves/website-homepage-mockup.png" alt="Prop Moves website homepage mockup"></div>
   </div>
-  <div class="pm-resource">
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" data-title="01 / Brand Identity Design" aria-label="Open Brand Identity Design">
+    <img src="/assets/projects/prop-moves/prop-moves-01.png?v=sequence-20260507" alt="Prop Moves Brand Identity Design" loading="eager">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-02" data-index="2" data-title="Logo Design">
+  <div class="pm-board-head">
+    <span>02</span>
     <div>
-      <div class="pm-label">Brochure PDF</div>
-      <h3>Prop Moves Brochure</h3>
-      <p>The approved brochure PDF is available as the public resource for this case study.</p>
-      <a href="/assets/projects/prop-moves/prop-moves-brochure.pdf" target="_blank" rel="noopener">Open brochure PDF -&gt;</a>
+      <strong>Logo Design</strong>
+      <p>Logo rationale, typography, and core color palette.</p>
     </div>
-    <div class="pm-resource-preview"><img src="/assets/projects/prop-moves/brochure-preview.png" alt="Prop Moves brochure preview"></div>
   </div>
-</section>
-<section id="all-assets">
-  <div class="pm-label">Interactive Gallery</div>
-  <h2 class="pm-heading">Approved Prop Moves<br><em>website</em><br>assets.</h2>
-  <div class="pm-toolbar" aria-label="Filter Prop Moves assets"><button class="pm-filter is-active" type="button" data-filter="all">All</button><button class="pm-filter" type="button" data-filter="Brand System">Brand</button><button class="pm-filter" type="button" data-filter="Logo">Logo</button><button class="pm-filter" type="button" data-filter="Collateral">Collateral</button><button class="pm-filter" type="button" data-filter="Brochure">Brochure</button><button class="pm-filter" type="button" data-filter="Website">Website</button></div>
-  <div class="pm-gallery" id="assetGallery"><figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/brand-identity-design.png" data-title="Brand Identity Design" aria-label="Open Brand Identity Design">
-        <img src="/assets/projects/prop-moves/brand-identity-design.png" alt="Brand Identity Design" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Brand Identity Design</strong>
-        <p>Opening frame for the Prop Moves identity direction.</p>
-        <a href="/assets/projects/prop-moves/brand-identity-design.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/brand-guidelines-overview.png" data-title="Brand Guidelines Overview" aria-label="Open Brand Guidelines Overview">
-        <img src="/assets/projects/prop-moves/brand-guidelines-overview.png" alt="Brand Guidelines Overview" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Brand Guidelines Overview</strong>
-        <p>Logo usage, typography, and color palette overview.</p>
-        <a href="/assets/projects/prop-moves/brand-guidelines-overview.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-primary-secondary.png" data-title="Primary and Secondary Logo" aria-label="Open Primary and Secondary Logo">
-        <img src="/assets/projects/prop-moves/logo-primary-secondary.png" alt="Primary and Secondary Logo" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Primary and Secondary Logo</strong>
-        <p>Primary logo and secondary logo lockups.</p>
-        <a href="/assets/projects/prop-moves/logo-primary-secondary.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brand System">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/chess-piece-mark.png" data-title="Chess Piece Brand Mark" aria-label="Open Chess Piece Brand Mark">
-        <img src="/assets/projects/prop-moves/chess-piece-mark.png" alt="Chess Piece Brand Mark" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Brand System</span>
-        <strong>Chess Piece Brand Mark</strong>
-        <p>Chess-inspired symbol used to signal strategy and movement.</p>
-        <a href="/assets/projects/prop-moves/chess-piece-mark.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-01.png" data-title="Logo Export 01" aria-label="Open Logo Export 01">
-        <img src="/assets/projects/prop-moves/logo-export-01.png" alt="Logo Export 01" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 01</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-01.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-02.png" data-title="Logo Export 02" aria-label="Open Logo Export 02">
-        <img src="/assets/projects/prop-moves/logo-export-02.png" alt="Logo Export 02" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 02</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-02.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-03.png" data-title="Logo Export 03" aria-label="Open Logo Export 03">
-        <img src="/assets/projects/prop-moves/logo-export-03.png" alt="Logo Export 03" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 03</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-03.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Logo">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/logo-export-04.png" data-title="Logo Export 04" aria-label="Open Logo Export 04">
-        <img src="/assets/projects/prop-moves/logo-export-04.png" alt="Logo Export 04" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Logo</span>
-        <strong>Logo Export 04</strong>
-        <p>Prop Moves logo export from the approved website folder.</p>
-        <a href="/assets/projects/prop-moves/logo-export-04.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/collateral-suite.png" data-title="Collateral Suite" aria-label="Open Collateral Suite">
-        <img src="/assets/projects/prop-moves/collateral-suite.png" alt="Collateral Suite" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Collateral Suite</strong>
-        <p>Brand applications across print and presentation materials.</p>
-        <a href="/assets/projects/prop-moves/collateral-suite.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/rollup-banner-mockups.png" data-title="Roll-up Banner Mockups" aria-label="Open Roll-up Banner Mockups">
-        <img src="/assets/projects/prop-moves/rollup-banner-mockups.png" alt="Roll-up Banner Mockups" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Roll-up Banner Mockups</strong>
-        <p>Event and offline visibility assets.</p>
-        <a href="/assets/projects/prop-moves/rollup-banner-mockups.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/social-media-kit.png" data-title="Social Media Kit" aria-label="Open Social Media Kit">
-        <img src="/assets/projects/prop-moves/social-media-kit.png" alt="Social Media Kit" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Social Media Kit</strong>
-        <p>Social-ready branded content direction.</p>
-        <a href="/assets/projects/prop-moves/social-media-kit.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Collateral">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/outdoor-billboard.png" data-title="Outdoor Billboard" aria-label="Open Outdoor Billboard">
-        <img src="/assets/projects/prop-moves/outdoor-billboard.png" alt="Outdoor Billboard" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Collateral</span>
-        <strong>Outdoor Billboard</strong>
-        <p>Large-format awareness placement.</p>
-        <a href="/assets/projects/prop-moves/outdoor-billboard.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Brochure">
-      <a class="pm-open" href="/assets/projects/prop-moves/prop-moves-brochure.pdf" target="_blank" rel="noopener" aria-label="Open Prop Moves Brochure PDF">
-        <img src="/assets/projects/prop-moves/brochure-preview.png" alt="Prop Moves Brochure PDF preview" loading="lazy">
-      </a>
-      <figcaption>
-        <span>Brochure</span>
-        <strong>Brochure Preview</strong>
-        <p>Presentation frame for the Wealth Creation Plan brochure.</p>
-        <a href="/assets/projects/prop-moves/prop-moves-brochure.pdf" target="_blank" rel="noopener">Open brochure PDF -&gt;</a>
-      </figcaption>
-    </figure>
-<figure class="pm-card " data-category="Website">
-      <button class="pm-open" type="button" data-src="/assets/projects/prop-moves/website-homepage-mockup.png" data-title="Website Homepage Mockup" aria-label="Open Website Homepage Mockup">
-        <img src="/assets/projects/prop-moves/website-homepage-mockup.png" alt="Website Homepage Mockup" loading="lazy">
-      </button>
-      <figcaption>
-        <span>Website</span>
-        <strong>Website Homepage Mockup</strong>
-        <p>Desktop website mockup for the Prop Moves lead experience.</p>
-        <a href="/assets/projects/prop-moves/website-homepage-mockup.png" target="_blank" rel="noopener">Open full asset -&gt;</a>
-      </figcaption>
-    </figure></div>
-</section>
-<section style="text-align:center;background:var(--bg2)">
-  <div class="pm-label" style="justify-content:center">Next Step</div>
-  <h2 class="pm-heading" style="margin-left:auto;margin-right:auto">Need a brand<br><em>that moves</em><br>with purpose?</h2>
-  <p style="color:var(--white-dim);font-size:16px;max-width:500px;margin:16px auto 40px;line-height:1.8">We can build a visual identity system around the way your brand earns trust, teaches the market, and creates momentum.</p>
-  <a href="/contact/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
-</section>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-02.png?v=sequence-20260507" data-title="02 / Logo Design" aria-label="Open Logo Design">
+    <img src="/assets/projects/prop-moves/prop-moves-02.png?v=sequence-20260507" alt="Prop Moves Logo Design" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-03" data-index="3" data-title="Primary and Secondary Logo">
+  <div class="pm-board-head">
+    <span>03</span>
+    <div>
+      <strong>Primary and Secondary Logo</strong>
+      <p>Main and secondary logo lockups for flexible usage.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-03.png?v=sequence-20260507" data-title="03 / Primary and Secondary Logo" aria-label="Open Primary and Secondary Logo">
+    <img src="/assets/projects/prop-moves/prop-moves-03.png?v=sequence-20260507" alt="Prop Moves Primary and Secondary Logo" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-04" data-index="4" data-title="Visual Identity">
+  <div class="pm-board-head">
+    <span>04</span>
+    <div>
+      <strong>Visual Identity</strong>
+      <p>Brand applications, collateral previews, and system direction.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-04.png?v=sequence-20260507" data-title="04 / Visual Identity" aria-label="Open Visual Identity">
+    <img src="/assets/projects/prop-moves/prop-moves-04.png?v=sequence-20260507" alt="Prop Moves Visual Identity" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-05" data-index="5" data-title="Roll-up Banner Mockups">
+  <div class="pm-board-head">
+    <span>05</span>
+    <div>
+      <strong>Roll-up Banner Mockups</strong>
+      <p>Offline visibility assets for events and property conversations.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-05.png?v=sequence-20260507" data-title="05 / Roll-up Banner Mockups" aria-label="Open Roll-up Banner Mockups">
+    <img src="/assets/projects/prop-moves/prop-moves-05.png?v=sequence-20260507" alt="Prop Moves Roll-up Banner Mockups" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-06" data-index="6" data-title="Chess Piece Brand Mark">
+  <div class="pm-board-head">
+    <span>06</span>
+    <div>
+      <strong>Chess Piece Brand Mark</strong>
+      <p>Strategic movement symbol used throughout the identity.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-06.png?v=sequence-20260507" data-title="06 / Chess Piece Brand Mark" aria-label="Open Chess Piece Brand Mark">
+    <img src="/assets/projects/prop-moves/prop-moves-06.png?v=sequence-20260507" alt="Prop Moves Chess Piece Brand Mark" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-07" data-index="7" data-title="Website Starter">
+  <div class="pm-board-head">
+    <span>07</span>
+    <div>
+      <strong>Website Starter</strong>
+      <p>Digital website direction for the Prop Moves lead experience.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-07.png?v=sequence-20260507" data-title="07 / Website Starter" aria-label="Open Website Starter">
+    <img src="/assets/projects/prop-moves/prop-moves-07.png?v=sequence-20260507" alt="Prop Moves Website Starter" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-08" data-index="8" data-title="Social Media">
+  <div class="pm-board-head">
+    <span>08</span>
+    <div>
+      <strong>Social Media</strong>
+      <p>Social content direction and branded post examples.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-08.png?v=sequence-20260507" data-title="08 / Social Media" aria-label="Open Social Media">
+    <img src="/assets/projects/prop-moves/prop-moves-08.png?v=sequence-20260507" alt="Prop Moves Social Media" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-09" data-index="9" data-title="Brochure">
+  <div class="pm-board-head">
+    <span>09</span>
+    <div>
+      <strong>Brochure</strong>
+      <p>Presentation design for the Prop Moves wealth creation plan.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-09.png?v=sequence-20260507" data-title="09 / Brochure" aria-label="Open Brochure">
+    <img src="/assets/projects/prop-moves/prop-moves-09.png?v=sequence-20260507" alt="Prop Moves Brochure" loading="lazy">
+  </button>
+</figure>
+<figure class="pm-board" id="frame-10" data-index="10" data-title="Outdoor Billboard">
+  <div class="pm-board-head">
+    <span>10</span>
+    <div>
+      <strong>Outdoor Billboard</strong>
+      <p>Large-format brand placement and closing thank-you visual.</p>
+    </div>
+  </div>
+  <button class="pm-preview" type="button" data-src="/assets/projects/prop-moves/prop-moves-10.png?v=sequence-20260507" data-title="10 / Outdoor Billboard" aria-label="Open Outdoor Billboard">
+    <img src="/assets/projects/prop-moves/prop-moves-10.png?v=sequence-20260507" alt="Prop Moves Outdoor Billboard" loading="lazy">
+  </button>
+</figure>
+    </div>
+  </section>
+
+  <section class="pm-cta">
+    <div class="pm-shell">
+      <div class="pm-index-label">Next Step</div>
+      <h2>Need a brand<br><em>that moves</em><br>with purpose?</h2>
+      <p>We can build a visual identity system around the way your brand earns trust, teaches the market, and creates momentum.</p>
+      <a href="/contact/" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Start a project</a>
+    </div>
+  </section>
 </main>
-<dialog class="pm-dialog" id="assetDialog"><div class="pm-dialog-top"><strong id="dialogTitle">Asset preview</strong><button type="button" id="dialogClose" aria-label="Close preview">x</button></div><img id="dialogImage" alt=""></dialog>
+
+<dialog class="pm-dialog" id="assetDialog">
+  <div class="pm-dialog-top"><strong id="dialogTitle">Asset preview</strong><button class="pm-dialog-close" type="button" id="dialogClose" aria-label="Close preview">x</button></div>
+  <img id="dialogImage" alt="">
+</dialog>
+
 <script src="/js/nav.js?v=20260507-footer-v1"></script>
 <script>
 (function(){
-  const buttons=[...document.querySelectorAll('.pm-filter')];
-  const cards=[...document.querySelectorAll('#assetGallery .pm-card')];
-  buttons.forEach(btn=>btn.addEventListener('click',()=>{
-    const filter=btn.dataset.filter;
-    buttons.forEach(b=>b.classList.toggle('is-active',b===btn));
-    cards.forEach(card=>card.classList.toggle('is-hidden',filter!=='all' && card.dataset.category!==filter));
-  }));
   const dialog=document.getElementById('assetDialog');
   const image=document.getElementById('dialogImage');
   const title=document.getElementById('dialogTitle');
-  document.querySelectorAll('.pm-open[data-src]').forEach(btn=>btn.addEventListener('click',()=>{
-    image.src=btn.dataset.src;
-    image.alt=btn.dataset.title;
-    title.textContent=btn.dataset.title;
-    if(dialog && dialog.showModal) dialog.showModal(); else window.open(btn.dataset.src,'_blank');
+  document.querySelectorAll('.pm-preview[data-src]').forEach(button=>button.addEventListener('click',()=>{
+    image.src=button.dataset.src;
+    image.alt=button.dataset.title;
+    title.textContent=button.dataset.title;
+    if(dialog && dialog.showModal) dialog.showModal(); else window.open(button.dataset.src,'_blank');
   }));
   document.getElementById('dialogClose').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{ if(event.target===dialog) dialog.close(); });
