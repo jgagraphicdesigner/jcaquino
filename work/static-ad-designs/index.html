@@ -52,7 +52,7 @@ html,body{overflow-x:hidden}
 .sad-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;width:100%;max-width:none!important;margin:0}.sad-grid .sad-card{grid-column:span 2}.sad-grid .sad-card:nth-child(4){grid-column:2 / span 2}.sad-grid .sad-card:nth-child(5){grid-column:4 / span 2}
 .sad-card{min-width:0;background:rgba(255,255,255,.026);border:1px solid var(--frost-border);border-radius:18px;overflow:hidden}
 .sad-preview{appearance:none;display:block;width:100%;padding:9px;border:0;border-radius:0;background:rgba(255,255,255,.02);cursor:pointer;box-shadow:none}
-.sad-card .sad-preview{padding:12px;aspect-ratio:1/1;display:grid;place-items:center}.sad-card .sad-preview img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:12px;background:#080300}
+.sad-card{--sad-preview-ratio:1/1}.sad-card .sad-preview{padding:12px;aspect-ratio:var(--sad-preview-ratio);display:grid;place-items:center}.sad-card.is-portrait{--sad-preview-ratio:9/16}.sad-card.is-landscape{--sad-preview-ratio:16/9}.sad-card .sad-preview img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:12px;background:#080300}
 .sad-card figcaption{border-top:1px solid var(--frost-border);padding:13px 14px 15px;min-height:78px}
 .sad-card figcaption span{display:block;font-size:8px;margin-bottom:8px}
 .sad-card figcaption strong{display:block;color:var(--white);font-size:13px;line-height:1.35}
@@ -269,27 +269,27 @@ html,body{overflow-x:hidden}
     </div>
   </div>
   <div class="sad-grid">
-    <figure class="sad-card">
+    <figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/01.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 01" aria-label="Open Lumiquor Static Ad 01">
     <img src="/assets/projects/static-ad-designs/lumiquor/01.png?v=20260508-static-ads" alt="Lumiquor Static Ad 01" loading="lazy">
   </button>
   <figcaption><span>01</span><strong>Lumiquor Static Ad 01</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/02.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 02" aria-label="Open Lumiquor Static Ad 02">
     <img src="/assets/projects/static-ad-designs/lumiquor/02.png?v=20260508-static-ads" alt="Lumiquor Static Ad 02" loading="lazy">
   </button>
   <figcaption><span>02</span><strong>Lumiquor Static Ad 02</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/03.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 03" aria-label="Open Lumiquor Static Ad 03">
     <img src="/assets/projects/static-ad-designs/lumiquor/03.png?v=20260508-static-ads" alt="Lumiquor Static Ad 03" loading="lazy">
   </button>
   <figcaption><span>03</span><strong>Lumiquor Static Ad 03</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/04.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 04" aria-label="Open Lumiquor Static Ad 04">
     <img src="/assets/projects/static-ad-designs/lumiquor/04.png?v=20260508-static-ads" alt="Lumiquor Static Ad 04" loading="lazy">
   </button>
   <figcaption><span>04</span><strong>Lumiquor Static Ad 04</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/lumiquor/05.png?v=20260508-static-ads" data-title="Lumiquor Static Ad 05" aria-label="Open Lumiquor Static Ad 05">
     <img src="/assets/projects/static-ad-designs/lumiquor/05.png?v=20260508-static-ads" alt="Lumiquor Static Ad 05" loading="lazy">
   </button>
@@ -464,17 +464,17 @@ html,body{overflow-x:hidden}
     <img src="/assets/projects/static-ad-designs/watershop/02.png?v=20260508-static-ads" alt="Watershop Static Ad 02" loading="lazy">
   </button>
   <figcaption><span>02</span><strong>Watershop Static Ad 02</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-landscape">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/03.png?v=20260508-static-ads" data-title="Watershop Static Ad 03" aria-label="Open Watershop Static Ad 03">
     <img src="/assets/projects/static-ad-designs/watershop/03.png?v=20260508-static-ads" alt="Watershop Static Ad 03" loading="lazy">
   </button>
   <figcaption><span>03</span><strong>Watershop Static Ad 03</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-portrait">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/04.png?v=20260508-static-ads" data-title="Watershop Static Ad 04" aria-label="Open Watershop Static Ad 04">
     <img src="/assets/projects/static-ad-designs/watershop/04.png?v=20260508-static-ads" alt="Watershop Static Ad 04" loading="lazy">
   </button>
   <figcaption><span>04</span><strong>Watershop Static Ad 04</strong></figcaption>
-</figure><figure class="sad-card">
+</figure><figure class="sad-card is-landscape">
   <button class="sad-preview" type="button" data-src="/assets/projects/static-ad-designs/watershop/05.png?v=20260508-static-ads" data-title="Watershop Static Ad 05" aria-label="Open Watershop Static Ad 05">
     <img src="/assets/projects/static-ad-designs/watershop/05.png?v=20260508-static-ads" alt="Watershop Static Ad 05" loading="lazy">
   </button>
