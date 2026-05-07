@@ -97,6 +97,7 @@
   if(dd){
     const ddButton = dd.querySelector('button');
     const hoverDropdown = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const mobileDropdown = () => window.matchMedia('(max-width: 768px)').matches || document.getElementById('nav-menu')?.classList.contains('mobile-open');
     ddButton.addEventListener('click',e=>{
       e.preventDefault();
       e.stopPropagation();
@@ -105,12 +106,12 @@
     document.addEventListener('click',()=>dd.classList.remove('open'));
     let ddTimer;
     dd.addEventListener('mouseenter',()=>{
-      if(!hoverDropdown.matches) return;
+      if(!hoverDropdown.matches || mobileDropdown()) return;
       clearTimeout(ddTimer);
       dd.classList.add('open');
     });
     dd.addEventListener('mouseleave',()=>{
-      if(!hoverDropdown.matches) return;
+      if(!hoverDropdown.matches || mobileDropdown()) return;
       ddTimer=setTimeout(()=>dd.classList.remove('open'),180);
     });
   }
