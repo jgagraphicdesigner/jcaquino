@@ -533,7 +533,7 @@
   const dialog=document.getElementById('assetDialog');
   const image=document.getElementById('dialogImage');
   const title=document.getElementById('dialogTitle');
-  document.querySelectorAll('.pm-open').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.pm-open[data-src]').forEach(btn=>btn.addEventListener('click',()=>{
     image.src=btn.dataset.src;
     image.alt=btn.dataset.title;
     title.textContent=btn.dataset.title;
