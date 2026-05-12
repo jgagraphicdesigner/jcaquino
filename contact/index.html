@@ -17,7 +17,13 @@
 .info-icon svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .info-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
 .info-val{font-size:15px;font-weight:500;color:var(--white)}
+.contact-form-col{align-self:end}
 .form-wrap{background:var(--frost);border:1px solid var(--frost-border);border-radius:var(--radius-lg);padding:40px 36px;backdrop-filter:blur(20px)}
+.contact-direct-card{min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;background:linear-gradient(145deg,rgba(255,130,30,.06),rgba(255,255,255,.025));box-shadow:0 24px 70px rgba(0,0,0,.32),0 0 34px rgba(255,77,0,.05)}
+.contact-direct-img{display:block;width:min(230px,70%);max-width:100%;height:auto;filter:drop-shadow(0 18px 34px rgba(0,0,0,.42))}
+.contact-direct-note{max-width:300px;color:var(--white-dim);font-size:13px;line-height:1.7;font-weight:600;margin:-4px 0 0}
+.contact-direct{display:flex;justify-content:center;width:100%}
+.contact-direct .btn-primary{width:min(100%,260px);justify-content:center}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-group{margin-bottom:18px}
 .form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--white-dim);margin-bottom:8px;text-transform:uppercase}
@@ -27,7 +33,7 @@
 .form-group textarea{resize:vertical;min-height:120px}
 .form-submit{width:100%;padding:15px;background:var(--orange);color:#080808;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:40px;cursor:none;transition:box-shadow .2s,transform .2s;margin-top:6px}
 .form-submit:hover{box-shadow:0 0 50px rgba(255,77,0,.45);transform:translateY(-2px)}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:32px}.contact-form-col{align-self:stretch}.form-row{grid-template-columns:1fr}}
 
 
 .page-hero-eyebrow {
@@ -126,6 +132,7 @@
     width:100%;
     min-width:0;
   }
+  .contact-form-col{align-self:stretch;}
   .contact-info{gap:18px;min-width:0;}
   .contact-info .section-heading{
     font-size:clamp(20px,7vw,28px) !important;
@@ -138,6 +145,8 @@
   .info-icon{width:36px;height:36px;}
   .info-val{font-size:14px;line-height:1.55;overflow-wrap:anywhere;}
   .form-wrap{padding:24px 18px;border-radius:18px;}
+  .contact-direct-card{min-height:auto;padding-top:26px;padding-bottom:28px;gap:18px;}
+  .contact-direct-img{width:min(210px,74%);}
   .form-group input,.form-group select,.form-group textarea{font-size:14px;padding:12px 14px;}
 }
 </style>
@@ -175,9 +184,11 @@
 
     <div class="contact-form-col reveal reveal-d1">
       <div id="ty-banner" class="ty-banner">✓ Message sent! I'll get back to you within 24 hours.</div>
-      <div class="form-wrap">
-      <div class="contact-direct"><a class="btn-primary" href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" target="_blank" rel="noopener">Hire me on Upwork</a></div>
-    </div>
+      <div class="form-wrap contact-direct-card">
+        <img class="contact-direct-img" src="/assets/gifs/jc-typing.gif?v=20260512-pixel-cta" alt="JC pixel art typing animation" loading="lazy" decoding="async">
+        <p class="contact-direct-note">For project inquiries, Upwork is the cleanest place to send details and start the conversation.</p>
+        <div class="contact-direct"><a class="btn-primary" href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" target="_blank" rel="noopener">Hire me on Upwork</a></div>
+      </div>
     </div>
   </div>
 </section>
