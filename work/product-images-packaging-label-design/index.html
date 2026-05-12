@@ -42,7 +42,9 @@ html,body{overflow-x:hidden}
 .pp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .pp-card{min-width:0;margin:0;background:rgba(255,255,255,.026);border:1px solid var(--frost-border);border-radius:16px;overflow:hidden}
 .pp-preview{appearance:none;width:100%;border:0;padding:10px;background:rgba(255,255,255,.02);cursor:pointer;display:block}
-.pp-preview img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#080300}
+.pp-preview img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#080300;box-sizing:border-box}
+.pp-card-label .pp-preview{background:#f8f4eb}
+.pp-card-label .pp-preview img{object-fit:contain;background:#f8f4eb;padding:8px}
 .pp-card figcaption{border-top:1px solid var(--frost-border);padding:12px 13px 14px;min-height:68px}
 .pp-card span{display:block;font-size:8px;margin-bottom:8px}
 .pp-card strong{display:block;font-size:12px;line-height:1.35;color:var(--white)}
@@ -67,7 +69,7 @@ html,body{overflow-x:hidden}
       <div class="pp-kicker">// Ecommerce / Product Creative</div>
       <h1 class="pp-title">Product Images,<br><em>Packaging &amp; Label Design</em></h1>
       <p class="pp-sub">A focused collection of ecommerce product imagery, packaging directions, and label design visuals for supplement, pet, wellness, and consumer product brands.</p>
-      <div class="pp-tags"><span>52 Web Images</span><span>7 Brands</span><span>Packaging</span><span>Label Design</span></div>
+      <div class="pp-tags"><span>65 Web Images</span><span>7 Brands</span><span>Packaging</span><span>Label Design</span></div>
     </div>
     <div class="pp-collage" aria-label="Product image and packaging design preview">
       <img src="assets/projects/product-images-packaging-label-design/curosleep/04.jpg?v=20260512-product-packaging" alt="Curosleep product image design preview">
@@ -84,7 +86,7 @@ html,body{overflow-x:hidden}
           <div class="pp-num">01 / Gallery</div>
           <h2>Product-ready<br><em>brand visuals.</em></h2>
         </div>
-        <p>These pieces show how I build ecommerce visuals beyond ad design: product render layouts, benefit-led image systems, packaging mockups, and label artwork that can support storefronts, campaigns, and product launches.</p>
+        <p>These pieces show how I build ecommerce visuals beyond ad design: product render layouts, benefit-led image systems, packaging mockups, and converted PDF label artwork that can support storefronts, campaigns, and product launches.</p>
       </div>
       <div id="pp-gallery"></div>
     </div>
@@ -112,15 +114,15 @@ html,body{overflow-x:hidden}
 const assetBase = 'assets/projects/product-images-packaging-label-design/';
 const collections = [
   { no:'01', slug:'curosleep', name:'Curosleep', count:9, note:'Sleep support product images built with clean supplement positioning and benefit-focused ecommerce visuals.' },
-  { no:'02', slug:'fuel-good', name:'Fuel Good', count:4, note:'Packaging and product image directions for a bright consumer wellness brand.' },
-  { no:'03', slug:'lumiquor', name:'Lumiquor', count:7, note:'Pet supplement product images and label-led visuals across multiple product variants.' },
+  { no:'02', slug:'fuel-good', name:'Fuel Good', count:5, note:'Packaging and product image directions for a bright consumer wellness brand.', titles:{'05':'Fuel Good Packaging Label Design'} },
+  { no:'03', slug:'lumiquor', name:'Lumiquor', count:12, note:'Pet supplement product images and label-led visuals across multiple product variants.', titles:{'08':'Lumiquor Hip & Joint Label Design','09':'Lumiquor Salmon Oil Label Design','10':'Lumiquor Daily 8 Label Design','11':'Lumiquor Pet Dental Label Design','12':'Lumiquor Turkey Tail Label Design'} },
   { no:'04', slug:'mb1', name:'MB1', count:13, note:'Product image set for supplement marketing, storefront education, and offer presentation.' },
   { no:'05', slug:'mr-bugz', name:'Mr Bugz', count:7, note:'Bold pest-control product visuals with packaging-forward compositions and retail-ready clarity.' },
-  { no:'06', slug:'puproot', name:'Puproot', count:5, note:'Pet product packaging and ecommerce image set with clean product storytelling.' },
-  { no:'07', slug:'sofyre', name:'Sofyre', count:7, note:'Packaging and product image designs for repellents and consumer safety products.' }
+  { no:'06', slug:'puproot', name:'Puproot', count:6, note:'Pet product packaging and ecommerce image set with clean product storytelling.', titles:{'06':'Puproot 60 Chews Packaging Label'} },
+  { no:'07', slug:'sofyre', name:'Sofyre', count:13, note:'Packaging and product image designs for repellents and consumer safety products.', titles:{'08':'Sofyre Mosquito Patch Packaging Front','09':'Sofyre Mosquito Patch Packaging Back','10':'Sofyre Repellent Packaging Front','11':'Sofyre Repellent Packaging Back','12':'Sofyre Spider Repellent Packaging Front','13':'Sofyre Spider Repellent Packaging Back'} }
 ];
 const gallery = document.getElementById('pp-gallery');
-const version = '20260512-product-packaging';
+const version = '20260512-product-packaging-labels';
 function pad(n){return String(n).padStart(2,'0')}
 gallery.innerHTML = collections.map(brand => `
   <section class="pp-brand" id="${brand.slug}">
@@ -135,8 +137,9 @@ gallery.innerHTML = collections.map(brand => `
       ${Array.from({length:brand.count},(_,i)=>{
         const num = pad(i + 1);
         const src = `${assetBase}${brand.slug}/${num}.jpg?v=${version}`;
-        const title = `${brand.name} Design ${num}`;
-        return `<figure class="pp-card">
+        const title = brand.titles?.[num] || `${brand.name} Design ${num}`;
+        const isLabel = Boolean(brand.titles?.[num]);
+        return `<figure class="pp-card${isLabel ? ' pp-card-label' : ''}">
           <button class="pp-preview" type="button" data-src="${src}" data-title="${title}" aria-label="Open ${title}">
             <img src="${src}" alt="${title}" loading="lazy">
           </button>
