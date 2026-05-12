@@ -54,7 +54,7 @@
             </a>
             <div class="dd-divider"></div>
             <a href="contact/" style="padding:8px 14px">
-              <span class="dd-text"><span class="dd-title" style="color:var(--orange)">&rarr; Get a free quote</span><span class="dd-sub">Tell us about your project</span></span>
+              <span class="dd-text"><span class="dd-title" style="color:var(--orange)">&rarr; Hire me</span><span class="dd-sub">Tell me about your project</span></span>
             </a>
           </div>
         </li>
