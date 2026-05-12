@@ -230,6 +230,23 @@ section > *:not(.marquee-bar):not(.bento-stats):not(.hero-bg):not(.hero-wired):n
 }
 .btn-ghost:hover{border-color:var(--orange-border);background:var(--orange-dim)}
 
+.cta-pixel-avatar{
+  display:block;
+  width:clamp(158px,22vw,238px);
+  max-width:74vw;
+  height:auto;
+  margin:-24px auto 18px;
+  object-fit:contain;
+  image-rendering:pixelated;
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.42)) drop-shadow(0 0 18px rgba(255,77,0,.18));
+}
+@media(max-width:760px){
+  .cta-pixel-avatar{
+    width:clamp(148px,50vw,220px);
+    margin:-18px auto 16px;
+  }
+}
+
 /* ---------- PAGE HERO ---------- */
 .page-hero{
   min-height:60vh;display:flex;flex-direction:column;justify-content:flex-end;
