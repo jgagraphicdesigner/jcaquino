@@ -16,8 +16,11 @@ html,body{overflow-x:hidden}
 .pp-page{background:var(--bg);color:var(--white);position:relative}
 .pp-page::before{content:'';position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,77,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,77,0,.025) 1px,transparent 1px);background-size:56px 56px;z-index:0}
 .pp-page>*{position:relative;z-index:1}
-.pp-shell{width:min(1180px,calc(100% - 56px));margin:0 auto}
-.pp-hero{min-height:74vh;display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:48px;align-items:center;padding:calc(var(--nav-h) + 56px) 24px 78px;background:linear-gradient(120deg,rgba(10,5,0,.98),rgba(24,10,1,.92)),radial-gradient(circle at 82% 24%,rgba(255,77,0,.12),transparent 34%)}
+.pp-shell{width:min(1320px,calc(100% - 64px));max-width:none!important;margin:0 auto}
+.pp-hero{background:var(--bg);min-height:74vh!important;display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:42px;align-items:center;padding:calc(var(--nav-h) + 42px) 24px 74px!important;overflow:hidden}
+.pp-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,7,0,.96),rgba(26,14,2,.84)),radial-gradient(circle at 82% 22%,rgba(255,77,0,.12),transparent 36%),radial-gradient(circle at 12% 82%,rgba(255,77,0,.09),transparent 30%);z-index:0}
+.pp-hero>*{position:relative;z-index:1}
+.pp-hero-copy{width:min(100%,560px);justify-self:end}
 .pp-kicker,.pp-num,.pp-card span{font-family:'Press Start 2P',monospace;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 16px rgba(255,77,0,.35)}
 .pp-kicker{font-size:9px;line-height:1.9;margin-bottom:20px}
 .pp-title{font-family:'Press Start 2P',monospace;font-size:clamp(22px,3.9vw,46px);line-height:1.5;letter-spacing:1px;margin:0 0 24px}
@@ -25,7 +28,7 @@ html,body{overflow-x:hidden}
 .pp-sub{font-size:16px;line-height:1.9;color:var(--white-dim);font-weight:600;max-width:600px;margin:0}
 .pp-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
 .pp-tags span{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--orange-border);border-radius:999px;padding:8px 13px;color:var(--orange);background:var(--orange-dim)}
-.pp-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52);padding:14px}
+.pp-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(100%,720px);justify-self:start;border:1px solid var(--frost-border);border-radius:22px;background:rgba(255,255,255,.035);box-shadow:0 26px 84px rgba(0,0,0,.52);padding:14px}
 .pp-collage img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:#080300}
 .pp-showcase{padding:86px 0 104px;background:linear-gradient(180deg,rgba(15,7,1,.98),rgba(9,4,0,1))}
 .pp-intro{display:grid;grid-template-columns:.72fr 1.28fr;gap:38px;align-items:end;margin-bottom:58px}
@@ -57,15 +60,15 @@ html,body{overflow-x:hidden}
 .pp-dialog-top strong{font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.65;color:var(--orange)}
 .pp-dialog-close{border:1px solid var(--orange-border);background:rgba(255,77,0,.09);color:var(--orange);border-radius:999px;width:40px;height:40px;font-size:24px;line-height:1;cursor:pointer}
 .pp-dialog img{display:block;width:100%;height:auto;max-height:calc(min(90vh,920px) - 70px);object-fit:contain;background:#070300}
-@media(max-width:1080px){.pp-hero{grid-template-columns:1fr}.pp-collage{max-width:680px}.pp-intro{grid-template-columns:1fr}.pp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.pp-shell{width:min(100% - 34px,1180px)}.pp-hero{padding:116px 20px 64px;min-height:auto}.pp-title{font-size:clamp(22px,8.6vw,34px);line-height:1.5}.pp-sub,.pp-intro p,.pp-cta p{font-size:15px}.pp-collage{gap:8px;padding:10px;border-radius:17px}.pp-collage img{border-radius:10px}.pp-showcase{padding:62px 0 76px}.pp-brand{margin-bottom:54px}.pp-brand-head{gap:12px}.pp-brand-head .pp-num{font-size:13px;min-width:42px}.pp-brand-head h2{font-size:15px}.pp-grid{grid-template-columns:1fr 1fr;gap:12px}.pp-card figcaption{min-height:auto}.pp-dialog{width:calc(100vw - 24px);max-height:84vh}.pp-dialog img{max-height:calc(84vh - 70px)}}
+@media(max-width:1080px){.pp-hero{grid-template-columns:1fr}.pp-hero-copy,.pp-collage{justify-self:center}.pp-collage{max-width:680px}.pp-intro{grid-template-columns:1fr}.pp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){#cursor,#cursor-ring{display:none!important}.pp-shell{width:min(100% - 36px,1180px)}.pp-hero{grid-template-columns:1fr;padding:118px 20px 66px!important;min-height:auto!important}.pp-hero-copy,.pp-collage{width:100%;justify-self:stretch}.pp-title{font-size:clamp(22px,8.7vw,34px);line-height:1.5;letter-spacing:1px}.pp-sub,.pp-intro p,.pp-cta p{font-size:15px}.pp-tags span{font-size:10px;padding:8px 11px;white-space:normal}.pp-collage{gap:8px;padding:10px;border-radius:17px}.pp-collage img{border-radius:10px}.pp-showcase{padding:62px 0 76px}.pp-brand{margin-bottom:54px}.pp-brand-head{gap:12px}.pp-brand-head .pp-num{font-size:13px;min-width:42px}.pp-brand-head h2{font-size:15px}.pp-grid{grid-template-columns:1fr 1fr;gap:12px}.pp-card figcaption{min-height:auto}.pp-dialog{width:calc(100vw - 24px);max-height:84vh}.pp-dialog img{max-height:calc(84vh - 70px)}}
 @media(max-width:480px){.pp-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main class="pp-page">
   <section class="pp-hero">
-    <div>
+    <div class="pp-hero-copy">
       <div class="pp-kicker">// Ecommerce / Product Creative</div>
       <h1 class="pp-title">Product Images,<br><em>Packaging &amp; Label Design</em></h1>
       <p class="pp-sub">A focused collection of ecommerce product imagery, packaging directions, and label design visuals for supplement, pet, wellness, and consumer product brands.</p>

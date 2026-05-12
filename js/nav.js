@@ -52,6 +52,10 @@
               <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg></span>
               <span class="dd-text"><span class="dd-title">Brand Identity</span><span class="dd-sub">Logos, systems & guidelines</span></span>
             </a>
+            <a href="services/product-images-packaging-label-design/" data-page="product-images-packaging-label-design">
+              <span class="dd-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2M8 17v2h8v-2M8 11h8"/></svg></span>
+              <span class="dd-text"><span class="dd-title">Product Images &amp; Packaging</span><span class="dd-sub">Product visuals, packaging &amp; labels</span></span>
+            </a>
             <div class="dd-divider"></div>
             <a href="contact/" style="padding:8px 14px">
               <span class="dd-text"><span class="dd-title" style="color:var(--orange)">&rarr; Hire me</span><span class="dd-sub">Tell me about your project</span></span>
@@ -94,6 +98,7 @@
           <h3>Services</h3>
           <a href="services/">All services</a>
           <a href="services/ecom-ads/">Ecommerce ad creative</a>
+          <a href="services/product-images-packaging-label-design/">Product images &amp; packaging</a>
           <a href="services/ghl-funnels/">GHL systems &amp; funnels</a>
           <a href="services/app-development/">App development</a>
           <a href="services/email-marketing/">Email marketing</a>
