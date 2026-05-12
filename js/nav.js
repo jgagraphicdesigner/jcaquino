@@ -100,8 +100,8 @@
           <a href="services/brand-identity/">Brand identity</a>
         </nav>
 
-        <nav class="footer-column" aria-label="Footer company links">
-          <h3>Studio</h3>
+        <nav class="footer-column" aria-label="Footer profile links">
+          <h3>Profile</h3>
           <a href="about/">About</a>
           <a href="work/">Work</a>
           <a href="process/">Process</a>
