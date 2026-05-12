@@ -110,7 +110,7 @@
 
         <div class="footer-column footer-contact-block">
           <h3>Start here</h3>
-          <p>Have a campaign, funnel, app, or identity system to build? Send the details and we'll map the cleanest next step.</p>
+          <p>Have a campaign, funnel, app, or identity system to build? Send the details and I'll map the cleanest next step.</p>
           <a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" class="footer-contact-link" target="_blank" rel="noopener">Hire me -&gt;</a>
         </div>
       </div>
