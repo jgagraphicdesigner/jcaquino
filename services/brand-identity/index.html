@@ -88,6 +88,7 @@
 .page-hero-sub { font-size: 15px !important; line-height: 1.85 !important; max-width: 520px !important; text-align: left !important; }
 .page-hero-actions { justify-content: flex-start !important; max-width: none !important; }
 
+.service-work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:48px}.service-work-card{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);overflow:hidden;border:1px solid var(--frost-border);border-radius:var(--radius-lg);background:rgba(255,130,30,.06);color:var(--white);text-decoration:none;transition:transform .24s,border-color .24s,box-shadow .24s}.service-work-card:hover{transform:translateY(-4px);border-color:var(--orange-border);box-shadow:0 18px 48px rgba(0,0,0,.3),0 0 28px rgba(255,77,0,.08)}.service-work-card.is-wide{grid-column:1/-1}.service-work-media{position:relative;min-height:260px;background:linear-gradient(135deg,var(--bg2),var(--bg3));overflow:hidden}.service-work-media::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,77,0,.16),transparent 62%);z-index:0}.service-work-media img{position:relative;z-index:1;width:100%;height:100%;min-height:260px;object-fit:cover;display:block}.service-work-media.is-ad-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:16px}.service-work-media.is-ad-grid img{min-height:0;aspect-ratio:1/1;border-radius:10px;border:1px solid rgba(255,255,255,.09)}.service-work-content{padding:32px;display:flex;flex-direction:column;justify-content:center;min-width:0}.service-work-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;line-height:1.6}.service-work-title{font-family:'Press Start 2P',monospace;font-size:clamp(17px,2vw,23px);line-height:1.45;letter-spacing:.04em;margin-bottom:14px}.service-work-desc{font-size:14px;line-height:1.85;color:var(--white-dim);font-weight:500;margin-bottom:18px}.service-work-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}.service-work-tags span{font-size:10px;font-weight:700;color:var(--white-dim);border:1px solid var(--frost-border);background:var(--white-faint);border-radius:999px;padding:5px 10px}.service-work-link{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}@media(max-width:900px){.service-work-grid{grid-template-columns:1fr}.service-work-card,.service-work-card.is-wide{grid-template-columns:1fr}.service-work-media,.service-work-media img{min-height:220px}.service-work-content{padding:26px 22px}}
 </style>
 </head>
 <body>
@@ -147,7 +148,32 @@
       <div class="what-desc">A full brand guide covering logo usage, color rules, typography, spacing, do's and don'ts so you, your team, and any future designer always stay on-brand.</div>
     </div>
   </div>
-</section> <section style="text-align:center">
+</section>
+<section style="background:var(--bg2)">
+  <div class="section-label reveal">Related Work</div>
+  <h2 class="section-heading reveal">Brand work<br><em>with full</em><br>visual systems.</h2>
+  <div class="service-work-grid">
+    <a href="work/prop-moves-brand-identity/" class="service-work-card reveal">
+      <div class="service-work-media"><img src="assets/projects/prop-moves-brand-identity.png" alt="Prop Moves brand identity billboard mockup"></div>
+      <div class="service-work-content">
+        <div class="service-work-kicker">Brand Identity</div>
+        <div class="service-work-title">Prop Moves Identity</div>
+        <div class="service-work-desc">A bold identity system for a real estate investment brand, with logo direction, visual language, typography, palette, and brand applications.</div>
+        <div class="service-work-tags"><span>Logo System</span><span>Visual Identity</span><span>Guidelines</span></div>
+        <span class="service-work-link">View case study -&gt;</span>
+      </div>
+    </a>    <a href="work/relivex-ecommerce-brand/" class="service-work-card reveal">
+      <div class="service-work-media"><img src="assets/projects/relivex-ecommerce-brand.jpg" alt="ReliveX ecommerce brand assets"></div>
+      <div class="service-work-content">
+        <div class="service-work-kicker">Ecommerce Brand</div>
+        <div class="service-work-title">ReliveX Brand System</div>
+        <div class="service-work-desc">A practical ecommerce brand toolkit across logo direction, packaging, Shopify imagery, print collateral, and creative assets for a product-led customer journey.</div>
+        <div class="service-work-tags"><span>Packaging</span><span>Shopify Images</span><span>Creative Assets</span></div>
+        <span class="service-work-link">View case study -&gt;</span>
+      </div>
+    </a>  </div>
+</section>
+<section style="text-align:center">
   <h2 class="section-heading reveal">Ready to build<br><em>your brand?</em></h2>
   <p class="reveal" style="color:var(--white-dim);font-size:16px;max-width:420px;margin:16px auto 40px;line-height:1.85;font-weight:500">Explore the work, then reach out if this kind of brand thinking fits your next project.</p>
   <a href="contact/" class="btn-primary reveal"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>HIRE ME</a>
