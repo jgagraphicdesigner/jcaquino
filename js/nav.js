@@ -23,7 +23,7 @@
   /* Nav */
   document.body.insertAdjacentHTML('afterbegin',`
   <nav id="site-nav">
-    <a href="/" class="nav-logo"><img src="/JGA_logo.svg" alt="JGA Studios" class="nav-logo-img"></a>
+    <a href="/" class="nav-logo"><img src="/assets/team/jc.png" alt="JC Aquino" class="nav-logo-img"></a>
     <div class="nav-inner">
       <ul class="nav-center" id="nav-menu">
         <li><a href="/" data-page="home">Home</a></li>
@@ -61,7 +61,7 @@
         <li><a href="/about/" data-page="about">About</a></li>
         <li><a href="/work/" data-page="work">Work</a></li>
         <li><a href="/process/" data-page="process">Process</a></li>
-        <li><a href="/contact/" class="nav-cta" data-page="contact">Let's talk &rarr;</a></li>
+        <li><a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" class="nav-cta" data-page="contact" target="_blank" rel="noopener">Hire me &rarr;</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -78,14 +78,14 @@
         <div>
           <div class="footer-eyebrow">// Ready when you are</div>
           <h2>Let's build the next system that moves your brand.</h2>
-          <p>Ad creative, funnels, brand identity, email, and custom apps, shaped into one clear growth path.</p>
+          <p>Ad creative, funnels, brand identity, and custom apps shaped into one clear growth path.</p>
         </div>
-        <a href="/contact/" class="footer-action">Start a project -&gt;</a>
+        <a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" class="footer-action" target="_blank" rel="noopener">Hire me on Upwork -&gt;</a>
       </section>
 
       <div class="footer-main">
         <div class="footer-brand-block">
-          <a href="/" class="footer-logo" aria-label="JGA Studios home"><img src="/JGA_logo.svg" alt="JGA Studios" class="footer-logo-img"><span>JGA Studios</span></a>
+          <a href="/" class="footer-logo" aria-label="JC Aquino home"><img src="/assets/team/jc.png" alt="JC Aquino" class="footer-logo-img"><span>JC Aquino</span></a>
           <p>Creative and marketing digital studio for ecommerce brands, service businesses, and teams that need sharper design, practical systems, and measurable output.</p>
           <div class="footer-pills"><span>PH based</span><span>Global clients</span><span>Design + systems</span></div>
         </div>
@@ -105,19 +105,19 @@
           <a href="/about/">About</a>
           <a href="/work/">Work</a>
           <a href="/process/">Process</a>
-          <a href="/contact/">Let's talk</a>
+          <a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" target="_blank" rel="noopener">Hire me</a>
         </nav>
 
         <div class="footer-column footer-contact-block">
           <h3>Start here</h3>
           <p>Have a campaign, funnel, app, or identity system to build? Send the details and we'll map the cleanest next step.</p>
-          <a href="/contact/" class="footer-contact-link">Get a quote -&gt;</a>
+          <a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" class="footer-contact-link" target="_blank" rel="noopener">Hire me -&gt;</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; ${footerYear} JGA Studios. All rights reserved.</p>
-        <div class="footer-bottom-links"><a href="/">Home</a><a href="/services/">Services</a><a href="/contact/">Contact</a></div>
+        <p>&copy; ${footerYear} JC Aquino. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="/">Home</a><a href="/services/">Services</a><a href="https://www.upwork.com/freelancers/jovenchrisaquino?mp_source=share" target="_blank" rel="noopener">Hire me</a></div>
       </div>
     </div>
   </footer>`);
